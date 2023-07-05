@@ -11,7 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').vue()
+mix
+    .js('resources/js/app.js', 'public/js').vue()
+    .js('resources/js/libraries/toasting.js', 'public/js/libraries')
+    .postCss('resources/css/libraries/toasting.css', 'public/css/libraries')
     .postCss('resources/css/app.css', 'public/css', [
         require('tailwindcss')
-    ]);
+    ])
+    .disableNotifications();
+if (mix.inProduction()) {
+    mix.version();
+}
