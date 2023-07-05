@@ -3,6 +3,8 @@
 /public/hot
 /public/storage
 /public/themes
+/public/js
+/public/css
 /public/vendor
 /public/tmp
 /storage/*.key
