@@ -3,6 +3,7 @@
 use App\Models\Notify;
 use App\Models\Option;
 use Illuminate\Database\Eloquent\Collection;
+use Ramsey\Uuid\Type\Integer;
 
 if (!function_exists('option')) {
     function option($name, $default = '')
@@ -45,5 +46,19 @@ if (!function_exists('getNotify')) {
     function getNotify(): Collection|array
     {
         return Notify::query()->where('author', auth()->user()->id)->get();
+    }
+}
+
+if (!function_exists('getNotify')) {
+    function getNotify(): Collection|array
+    {
+        return Notify::query()->where('author', auth()->user()->id)->get();
+    }
+}
+
+if (!function_exists('discountPrice')) {
+    function discountPrice($price, $discount): integer
+    {
+        return ($price * $discount)/100;
     }
 }

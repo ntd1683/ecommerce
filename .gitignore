@@ -22,6 +22,7 @@ yarn-error.log
 .DS_Store
 /**/*/http-client.private.env.json
 /bootstrap/ssr
+/public/fonts
 /storage/credentials.json
 resources/views/test.blade.php
 app/Http/Controllers/TestController.php

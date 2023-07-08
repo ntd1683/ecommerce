@@ -21,6 +21,9 @@
         "vue-loader": "^16.8.3"
     },
     "dependencies": {
+        "jquery": "^3.7.0",
+        "simple-line-icons": "^2.5.5",
+        "swiper": "^10.0.3",
         "vue": "^3.3.4"
     }
 }
