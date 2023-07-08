@@ -1,11 +1,11 @@
-import { createApp } from 'vue'
+// import { createApp } from 'vue'
 
-import example from './component/example.vue'
+// import example from './component/example.vue'
 
 // Vue app
-const app = createApp({})
+// const app = createApp({})
 
 // Init Vue Component
-app.component('v-example', example)
+// app.component('v-example', example)
 
-app.mount('#app')
+// app.mount('#app')
