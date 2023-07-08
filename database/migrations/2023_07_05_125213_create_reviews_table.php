@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('name')->nullable();
             $table->string('career')->nullable();
-            $table->string('contant')->nullable();
+            $table->string('content')->nullable();
             $table->string('image')->nullable();
             $table->integer('star_rating')->nullable();
             $table->string('pin')->default('1');

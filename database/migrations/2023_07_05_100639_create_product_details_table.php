@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('product_details', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user')->nullable();
-            $table->bigInteger('product')->nullable();
+            $table->bigInteger('user_id')->nullable();
+            $table->bigInteger('product_id')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
