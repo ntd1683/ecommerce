@@ -2,6 +2,28 @@ import $ from 'jquery';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
+function setCookie(name, value, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
 var $window = $(window),
     $body = $("body");
@@ -9,11 +31,26 @@ var $window = $(window),
 // banner on top
 $('#button-banner-notify').click(() => {
     $('#banner-notify').css('display', 'none');
+    setCookie('bannerNotify', 'yes', 1000);
 });
 
+if(getCookie('bannerNotify') !== "") {
+    if($('#banner-notify').length) {
+        $('#banner-notify').css('display', 'none');
+    }
+}
+
+// Privacy Cookie
 $('.button-privacy').click(() => {
     $('#privacy').css('display', 'none');
+    setCookie('privacyCookie', 'yes', 1000)
 });
+
+if(getCookie('privacyCookie') !== "") {
+    if($('#privacy').length) {
+        $('#privacy').css('display', 'none');
+    }
+}
 /*----------------------------------
 # header sticky
 -----------------------------------*/
