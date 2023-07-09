@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('review_rating', function (Blueprint $table) {
+        Schema::create('review_ratings', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('product');
-            $table->bigInteger('user');
+            $table->bigInteger('product_id');
+            $table->bigInteger('user_id');
             $table->longText('comment')->nullable();
             $table->integer('star_rating')->nullable();
             $table->boolean('status')->default(0);
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('review_rating');
+        Schema::dropIfExists('review_ratings');
     }
 };

@@ -10,8 +10,8 @@ class Review_Ratings extends Model
     use HasFactory;
 
     protected $fillable = [
-        'product',
-        'user',
+        'product_id',
+        'user_id',
         'comment',
         'star_rating',
         'status'

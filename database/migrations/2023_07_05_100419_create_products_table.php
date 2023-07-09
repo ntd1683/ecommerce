@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('SKU');
-            $table->string('category')->nullable();
+            $table->string('product_category_id')->nullable();
             $table->string('price');
             $table->string('discount')->nullable();
             $table->string('pin')->default('0');

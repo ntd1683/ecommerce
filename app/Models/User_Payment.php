@@ -10,7 +10,7 @@ class User_Payment extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user',
+        'user_id',
         'name_payment',
         'provide',
         'type',
