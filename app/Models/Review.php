@@ -5,20 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Notify extends Model
+class Review extends Model
 {
     use HasFactory;
 
-    protected $table = "notify";
-
-    public $timestamps = true;
-
     protected $fillable = [
         'title',
-        'icon',
+        'name',
+        'career',
         'content',
-        'author',
-        'link',
-        'type',
+        'image',
+        'star_rate',
+        'pin'
     ];
 }

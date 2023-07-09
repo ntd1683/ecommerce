@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('shopping_sessions', function (Blueprint $table) {
+        Schema::create('shopping_session', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
             $table->bigInteger('total');
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('shopping_sessions');
+        Schema::dropIfExists('shopping_session');
     }
 };

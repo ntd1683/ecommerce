@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('product_inventories', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('product');
+            $table->bigInteger('product_id');
             $table->integer('quantity');
         });
     }

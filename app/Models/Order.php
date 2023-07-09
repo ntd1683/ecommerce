@@ -4,12 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-class Option extends Model
+
+class Order extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'value',
+        'user_id',
+        'total',
+        'payment_id',
+        'code'
     ];
 }

@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('review_ratings', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('product');
-            $table->bigInteger('user');
+            $table->bigInteger('product_id');
+            $table->bigInteger('user_id');
             $table->longText('comment')->nullable();
             $table->integer('star_rating')->nullable();
             $table->boolean('status')->default(0);
