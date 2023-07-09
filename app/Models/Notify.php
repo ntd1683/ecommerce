@@ -9,13 +9,16 @@ class Notify extends Model
 {
     use HasFactory;
 
-    protected $table = 'notify';
+    protected $table = "notify";
+
+    public $timestamps = true;
+
     protected $fillable = [
-        'icon',
-        'name',
         'title',
+        'icon',
         'content',
+        'author',
         'link',
-        'type'
+        'type',
     ];
 }

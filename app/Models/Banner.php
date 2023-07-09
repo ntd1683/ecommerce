@@ -9,10 +9,15 @@ class Banner extends Model
 {
     use HasFactory;
 
+    protected $table = "banner";
+
+    public $timestamps = true;
+
     protected $fillable = [
         'title',
         'content',
         'banner',
-        'link'
+        'pin',
+        'link',
     ];
 }
