@@ -10,7 +10,7 @@ class Payment_Detail extends Model
     use HasFactory;
 
     protected $fillable = [
-        'order_code',
+        'order_id',
         'amount',
         'provider',
         'status',

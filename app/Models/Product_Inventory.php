@@ -10,7 +10,7 @@ class Product_Inventory extends Model
     use HasFactory;
 
     protected $fillable = [
-        'product',
+        'product_id',
         'quantity'
     ];
 }

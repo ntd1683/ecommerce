@@ -14,7 +14,7 @@ class Address extends Model
         'address2',
         'district',
         'province',
-        'user',
+        'user_id',
         'type'
     ];
 
