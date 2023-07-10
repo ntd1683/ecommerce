@@ -33,13 +33,14 @@
 <!-- Content -->
 {{ $slot }}
 <!-- End Content -->
-<x-user.layouts.partials.scrollUp />
+<x-user.scrollUp />
 
 <x-user.layouts.partials.privacy />
 
 <!-- Footer -->
 <x-user.layouts.partials.footer />
 <!-- End Footer -->
+<x-user.modal />
 
 {{--<script src="{{ asset('js/app.js')}}" defer></script>--}}
 <script src="{{ asset('js/main.js')}}" defer></script>

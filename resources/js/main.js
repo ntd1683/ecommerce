@@ -86,7 +86,6 @@ $offCanvasToggle.on("click", function (e) {
     }
 });
 $(".offcanvas-close, .offcanvas-overlay").on("click", function (e) {
-    console.log('123');
     e.preventDefault();
     $body.removeClass("offcanvas-open");
     $offCanvas.removeClass("offcanvas-open");

@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('order_details', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('order');
-            $table->bigInteger('product');
+            $table->bigInteger('order_id');
+            $table->bigInteger('product_id');
             $table->integer('quantity');
             $table->softDeletes();
             $table->timestamps();
