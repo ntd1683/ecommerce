@@ -69,7 +69,7 @@
     padding-bottom: 1.25rem;
 }
 
-.translate-x-translate-x-full-120, .offcanvas-open, .menu-expand::after {
+.translate-x-translate-x-full-120, .offcanvas-open, .menu-expand::after, .before\:rotate-115::before, .before\:transform::before {
     --tw-translate-x: 0;
     --tw-translate-y: 0;
     --tw-rotate: 0;
@@ -231,4 +231,42 @@
     margin-left: auto;
     padding-right: 16px;
     padding-left: 16px;
+}
+
+.before\:empty::before {
+    content: "";
+}
+
+.before\:transform::before {
+    transform: var(--tw-transform);
+}
+
+.before\:w-5::before {
+    width: 1.25rem;
+}
+
+.before\:rotate-115::before {
+    --tw-rotate: 115deg;
+    transform: var(--tw-transform);
+}
+
+.before\:top-3::before {
+    top: 0.75rem;
+}
+
+.before\:absolute::before {
+    position: absolute;
+}
+
+.before\:-right-5::before {
+    right: -1.25rem;
+}
+
+.before\:h-1px::before {
+    height: 1px;
+}
+
+.before\:bg-dark::before {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 34 38/var(--tw-bg-opacity));
 }
