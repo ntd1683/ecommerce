@@ -11,4 +11,9 @@ class PageController extends Controller
     {
         return view('user/page/aboutUs');
     }
+
+    public function cart(): View
+    {
+        return view('user/page/cart');
+    }
 }

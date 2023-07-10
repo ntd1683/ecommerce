@@ -14,3 +14,9 @@ Breadcrumbs::for('aboutUs', function ($trail) {
     $trail->parent('home');
     $trail->push(trans('About US'), route('aboutUs'));
 });
+
+// Cart
+Breadcrumbs::for('cart', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('Your Shopping Cart'), route('cart'));
+});
