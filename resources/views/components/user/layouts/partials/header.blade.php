@@ -164,7 +164,7 @@
                         </li>
                         <li class="main-menu__item"><a
                                 class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all"
-                                href="contact-us.html">Contact</a></li>
+                                href="{{ route('contactUs') }}">Contact</a></li>
                     </ul>
                 </nav>
 

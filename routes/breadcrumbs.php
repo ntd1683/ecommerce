@@ -14,3 +14,10 @@ Breadcrumbs::for('aboutUs', function ($trail) {
     $trail->parent('home');
     $trail->push(trans('About US'), route('aboutUs'));
 });
+
+// Contact Us
+
+Breadcrumbs::for('contactUs', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('Contact US'), route('contactUs'));
+});
