@@ -17,7 +17,7 @@
                     <ul class="flex flex-wrap">
                         <li class="main-menu__item relative group">
                             <a class="block py-10 xl:pr-6 md:pr-5 capitalize font-normal text-md text-primary hover:text-orange transition-all"
-                               href="https://template.hasthemes.com/">Home</a>
+                               href="{{ route('index') }}">Home</a>
                             <ul class="submenu bg-white py-3 px-8 shadow transition-all absolute left-0 top-full opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:-translate-y-3 transform z-10 min-w-max">
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
@@ -252,7 +252,7 @@
 <div id="offcanvas-mobile-menu"
      class="offcanvas left-auto right-0  transform translate-x-translate-x-full-120 fixed font-normal text-sm top-0 z-50 h-screen w-72 sm:w-80 lg:w-96 transition-all ease-in-out duration-300 bg-white">
 
-    <div class="px-8 py-12 h-5/6 overflow-y-auto">
+    <div class="px-8 py-12 h-5/6 overflow-y-hidden">
 
         <!-- search form start -->
 
@@ -271,7 +271,7 @@
 
         <!-- close button start -->
         <button
-            class="offcanvas-close bg-dark group transition-all hover:text-orange text-white w-10 h-10 flex items-center justify-center absolute -left-10 top-0"
+            class="offcanvas-close group transition-all hover:text-orange text-dark w-10 h-10 flex items-center justify-center absolute top-2 right-0 text-base"
             aria-label="offcanvas"><i class="icon-close transition-all transform group-hover:rotate-90"></i></button>
         <!-- close button end -->
 

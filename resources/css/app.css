@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+::before,
+::after {
+    --tw-content: "";
+}
+
+/*  modal menu style */
+.modal.modal-open {
+    display: block;
+    opacity: 1;
+}
+
 .is-sticky {
     --tw-ring-offset-shadow: 0 0 #0000;
     --tw-ring-shadow: 0 0 #0000;
@@ -58,7 +69,7 @@
     padding-bottom: 1.25rem;
 }
 
-.translate-x-translate-x-full-120, .offcanvas-open {
+.translate-x-translate-x-full-120, .offcanvas-open, .menu-expand::after {
     --tw-translate-x: 0;
     --tw-translate-y: 0;
     --tw-rotate: 0;
