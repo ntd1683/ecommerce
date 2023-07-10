@@ -135,7 +135,7 @@
                             <ul class="submenu bg-white py-3 px-8 shadow transition-all absolute left-0 top-full opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:-translate-y-3 transform z-10 min-w-max">
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
-                                        href="about-us.html">About Page</a></li>
+                                        href="{{ route('aboutUs') }}">About Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
                                         href="cart.html">Cart Page</a></li>
