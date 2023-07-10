@@ -214,10 +214,66 @@
     font-size: 14px;
 }
 
+
 .container {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding-right: 16px;
     padding-left: 16px;
+}
+
+@media (min-width: 320px) {
+    .container {
+        max-width: 320px;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 576px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 992px;
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+.container {
+    max-width: 100%;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1170px;
+    }
 }
