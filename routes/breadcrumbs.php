@@ -12,12 +12,12 @@ Breadcrumbs::for('home', function ($trail) {
 
 Breadcrumbs::for('aboutUs', function ($trail) {
     $trail->parent('home');
-    $trail->push(trans('About US'), route('aboutUs'));
+    $trail->push(trans('About US'), route('about-us'));
 });
 
 // Contact Us
 
 Breadcrumbs::for('contactUs', function ($trail) {
     $trail->parent('home');
-    $trail->push(trans('Contact US'), route('contactUs'));
+    $trail->push(trans('Contact US'), route('contact-us'));
 });
