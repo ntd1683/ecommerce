@@ -138,7 +138,7 @@
                                         href="{{ route('aboutUs') }}">About Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
-                                        href="cart.html">Cart Page</a></li>
+                                        href="{{ route('cart') }}">Cart Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
                                         href="checkout.html">Checkout Page</a></li>
