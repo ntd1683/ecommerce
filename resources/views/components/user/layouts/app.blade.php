@@ -41,7 +41,17 @@
 <!-- Footer -->
 <x-user.layouts.partials.footer />
 <!-- End Footer -->
-<x-user.modal />
+
+<x-user.modalShop />
+
+<x-user.modal name="banner">
+    <img src="https://i.scdn.co/image/ab67616d0000b273f42504b5150f32e4bfd920dd" alt="image">
+</x-user.modal>
+<script>
+    window.addEventListener('load', () => {
+        document.getElementById('modal_open_banner').click();
+    })
+</script>
 
 {{--<script src="{{ asset('js/app.js')}}" defer></script>--}}
 <script src="{{ asset('js/main.js')}}" defer></script>

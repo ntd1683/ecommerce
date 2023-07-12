@@ -1,68 +1,61 @@
-<!-- Modals -->
-<!-- modal-overlay start -->
-<div class="modal-overlay hidden fixed inset-0 bg-black opacity-50 z-10"></div>
-<!-- modal-overlay end -->
-<!-- modal-mobile-menu start -->
-<div id="modal-cart" class="modal fixed opacity-0 transition-opacity duration-300 ease-linear md:w-11/12 md:max-w-1000 hidden z-40 left-8 right-8 md:left-1/2 top-1/2 transform -translate-y-1/2 md:-translate-x-1/2 p-7 bg-white">
-    <div class="grid md:grid-cols-2 gap-4">
-        <div class="w-full">
-            <img class="w-full h-full" src="assets/images/products/lg/product1.webp" alt="product image" loading="lazy" width="432" height="480">
-        </div>
-        <div>
-            <button class="text-black text-lg absolute top-7 right-7 modal-close"><i class="icon-close"></i></button>
-
-            <h3 class="text-dark font-medium text-md lg:text-lg leading-none mb-4">Airpod product kiebd</h3>
-            <h5 class="font-bold text-md leading-none text-orange mb-8">
-                $130.00
-                <del class="font-normal text-base mr-1 inline-block">$110.00</del>
-            </h5>
-
-            <p class="mb-5 text-sm">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,</p>
-
-            <select class="w-full h-12 border border-solid border-gray-300  px-5 py-2 appearance-none" style="background: rgba(0,0,0,0) url('assets/images/icon/qcv-arrow-down.webp') no-repeat scroll right 20px center;">
-                <option value="red">red</option>
-                <option value="green">green</option>
-                <option value="blue">blue</option>
-            </select>
-
-            <div class="flex flex-wrap items-center mt-8">
-                <div class="flex count border border-solid border-gray-300 p-2 h-11">
-                    <button class="decrement flex-auto w-5 leading-none" aria-label="button">-</button>
-                    <input type="number" min="1" max="100" step="1" value="1" class="quantity__input flex-auto w-8 text-center focus:outline-none input-appearance-none">
-                    <button class="increment flex-auto w-5 leading-none" aria-label="button">+</button>
+@props([
+    'name',
+])
+<div id="modal_{{ $name }}" class="transition relative z-10 ease-out duration-300 opacity-0 hidden"
+     aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div id="content_modal_{{ $name }}"
+             class="transition flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 ease-out duration-300 translate-y-4 sm:translate-y-0 sm:scale-95 opacity-0">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">
+                <div>
+                    {{ $slot }}
                 </div>
-                <div class="ml-2 sm:ml-8">
-                    <button class="bg-black leading-none py-4 px-5 md:px-8 font-normal text-sm h-11 text-white transition-all hover:bg-orange">Add to Cart</button>
+                <div class="mt-5 sm:mt-6">
+                    <button id="modal_back_{{ $name }}" type="button"
+                            class="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ __('Go back to dashboard') }}</button>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
-<!-- modal-mobile-menu end -->
 
+<button id="modal_open_{{ $name }}" class="opacity-0">{{ __('Open') }} {{ $name }}</button>
 
-<!-- modal-overlay start -->
-<div class="modal-overlay hidden fixed inset-0 bg-black opacity-50 z-30"></div>
-<!-- modal-overlay end -->
-<!-- modal-mobile-menu start -->
-<div id="modal-addto-cart" class="modal fixed opacity-0 transition-opacity duration-300 ease-linear md:w-11/12 md:max-w-1000 hidden z-50 left-8 right-8 md:left-1/2 top-1/2 transform -translate-y-1/2 md:-translate-x-1/2 p-7 bg-white mx-auto">
+@push('js')
+    <script>
+        let modal = document.querySelector('#modal_{{ $name }}')
+        let contentModal = document.querySelector('#content_modal_{{ $name }}')
 
+        window.onclick = function (e) {
+            let modal = document.getElementById('modal_{{ $name }}')
+            let contentModal = document.querySelector('#content_modal_{{ $name }}')
+            if (e.target.parentElement !== contentModal) {
+                if (e.target.parentElement === modal) {
+                    modal.classList.remove("opacity-100")
+                    modal.classList.add("opacity-0", "hidden", "ease-in", "duration-200")
+                    contentModal.classList.add("opacity-0", "translate-y-4", "sm:translate-y-0", "sm:scale-95")
+                    contentModal.classList.remove("opacity-100", "!translate-y-0", "!sm:scale-100")
+                }
+            }
+        }
 
-    <div class="md:flex md:flex-wrap">
-        <div class="md:mr-5 md:flex-30 mb-5 md:mb-0">
-            <img class="w-full" src="assets/images/products/lg/product1.webp" alt="product image" loading="lazy" width="432" height="480">
-        </div>
-        <div class="md:flex-auto">
-            <button class="text-black text-lg absolute top-7 right-7 modal-close"><i class="icon-close"></i></button>
-            <h3 class="text-dark font-medium text-md sm:text-lg mb-4">Airpod product kiebd</h3>
-            <p class="text-dark text-sm flex flex-wrap items-center"><i class="icon-check text-lg mr-5"></i> Added to cart successfully!</p>
-            <div class="mt-8">
-                <a href="#" class="bg-black leading-none py-2 px-5 font-normal text-sm text-white transition-all hover:bg-orange mr-5">View Cart</a>
-                <a href="#" class="bg-black leading-none py-2 px-5 font-normal text-sm text-white transition-all hover:bg-orange">Checkout</a>
-            </div>
-        </div>
-    </div>
+        document.querySelector('#modal_back_{{ $name }}').addEventListener('click', (e) => {
+            e.preventDefault();
 
-</div>
-<!-- modal-mobile-menu end -->
+            modal.classList.remove("opacity-100")
+            modal.classList.add("opacity-0", "hidden", "ease-in", "duration-200")
+            contentModal.classList.add("opacity-0", "translate-y-4", "sm:translate-y-0", "sm:scale-95")
+            contentModal.classList.remove("opacity-100", "!translate-y-0", "!sm:scale-100")
+        })
+
+        document.querySelector('#modal_open_{{ $name }}').addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.remove("opacity-0", "hidden")
+            modal.classList.add("opacity-100")
+            contentModal.classList.remove("opacity-0", "translate-y-4", "sm:translate-y-0", "sm:scale-95")
+            contentModal.classList.add("opacity-100", "!translate-y-0", "!sm:scale-100")
+        })
+    </script>
+@endpush
