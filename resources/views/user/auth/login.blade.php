@@ -24,10 +24,10 @@
                                                 <input id="remember" type="checkbox" name="remember">
                                                 <label for="remember" class="cursor-pointer">{{ __('Remember me') }}</label>
                                             </div>
-                                            <a href="#" class="inline-block text-orange">{{ __('Forgot Password?') }}</a>
+                                            <a href="{{ route("forgot-password") }}" class="inline-block text-orange">{{ __('Forgot Password?') }}</a>
                                         </div>
                                         <div class="button-box">
-                                            <x-user.form.button.primary type="submit"> {{ __('Login') }} </x-user.form.button.primary>
+                                            <x-user.form.buttons.primary type="submit"> {{ __('Login') }} </x-user.form.buttons.primary>
                                         </div>
                                     </form>
                                 </div>
@@ -52,9 +52,9 @@
                                         <x-user.form.inputs name="email" placeholder="Email" type="email" :value="old('email')"/>
                                         <x-user.form.inputs.password name="password" placeholder="Password" />
                                         <x-user.form.inputs.password name="password_confirmation" placeholder="Password Confirmation" />
-                                            <x-user.form.button.primary type="submit">
+                                            <x-user.form.buttons.primary type="submit">
                                                 {{ __('Register') }}
-                                            </x-user.form.button.primary>
+                                            </x-user.form.buttons.primary>
                                     </form>
                                 </div>
                             </div>
