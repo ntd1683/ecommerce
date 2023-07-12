@@ -325,3 +325,9 @@
     --tw-bg-opacity: 1;
     background-color: rgb(31 34 38/var(--tw-bg-opacity));
 }
+
+.shop-tab-nav .active {
+    --tw-text-opacity: 1;
+    background-color: rgb(252 101 57/var(--tw-text-opacity));
+    color: #FFFFFF;
+}

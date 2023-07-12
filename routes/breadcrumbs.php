@@ -21,3 +21,9 @@ Breadcrumbs::for('contactUs', function ($trail) {
     $trail->parent('home');
     $trail->push(trans('Contact US'), route('contact-us'));
 });
+
+// Account
+Breadcrumbs::for('account', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('Account'), route('account'));
+});
