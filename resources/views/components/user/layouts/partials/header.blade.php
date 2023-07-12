@@ -150,7 +150,7 @@
                                         href="login-register.html">Login & Register Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
-                                        href="account.html">Account Page</a></li>
+                                        href="{{ route('account') }}">Account Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
                                         href="whishlist.html">Wishlist Page</a></li>

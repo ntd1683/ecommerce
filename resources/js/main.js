@@ -39,7 +39,6 @@ if(getCookie('bannerNotify') !== "") {
         $('#banner-notify').css('display', 'none');
     }
 }
-
 // Privacy Cookie
 $('.button-privacy').click(() => {
     $('#privacy').css('display', 'none');
@@ -520,7 +519,29 @@ var BlogCarousel = new Swiper(".service-carousel .swiper-container", {
         },
     },
 });
+/*---------------------------------
+      SHOP TAB - Account page
+  -----------------------------------*/
+const ShopTabs = function (tab) {
+    function init() {
+        let tabContent = $(".shop-tab-content", tab);
+        let tabnav = $(".shop-tab-nav", tab);
 
+        tabContent.not(".active").hide();
+        tabnav.show();
+
+        $("li", tabnav).on("click", function () {
+            $(this).addClass("active").siblings().removeClass("active");
+            tabContent.hide();
+            $($("a", this).attr("href")).show();
+
+            return false;
+        });
+    }
+
+    init();
+};
+ShopTabs("#shoptab");
 
 
 /*---------------------------------
@@ -551,3 +572,4 @@ function scrollToTop() {
     });
 }
 scrollToTop();
+

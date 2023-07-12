@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomepageController::class, '__invoke'])->name('index');
 Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
+Route::get('/account', [PageController::class, 'account'])->name('account');
