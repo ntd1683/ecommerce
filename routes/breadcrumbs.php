@@ -21,3 +21,9 @@ Breadcrumbs::for('contactUs', function ($trail) {
     $trail->parent('home');
     $trail->push(trans('Contact US'), route('contact-us'));
 });
+
+// Shop Grid
+Breadcrumbs::for('shopGrid3Column', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('Shop Grid 3 Column'), route('shop-grid-3-column'));
+});
