@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
         for ($i = 1; $i <= 10; $i++) {
             $arr[] = [
                 'name' => $faker->firstName . ' ' . $faker->lastName,
-                'birthday' => $faker->dateTime,
+                'birthdate' => $faker->dateTime,
                 'gender' => $faker->boolean,
                 'level' => $faker->randomElement(UserLevelEnum::getValues()),
                 'phone' => $faker->phoneNumber,

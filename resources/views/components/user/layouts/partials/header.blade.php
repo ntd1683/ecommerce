@@ -211,12 +211,27 @@
                             <h4 class="text-md text-dark font-normal capitalize tracking-wide pb-5 border-b border-solid border-gray-600 mb-5">
                                 Account</h4>
                             <ul>
-                                <li class="my-4"><a href="login-register.html"
-                                                    class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">Login</a>
+                                @if(auth()->check())
+                                <li class="my-4">
+                                    <a href="{{ route('account') }}"
+                                                    class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">
+                                        {{ auth()->user()->name }}
+                                    </a>
                                 </li>
-                                <li class="mt-4"><a href="account.html"
-                                                    class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">Create
-                                        Account</a></li>
+                                <li class="my-4">
+                                    <a href="{{ route('logout') }}"
+                                                    class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">
+                                        {{ __('Log out') }}
+                                    </a>
+                                </li>
+                                @else
+                                    <li class="my-4">
+                                        <a href="{{ route('login-register') }}"
+                                           class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">
+                                            {{ __('Login Or Register') }}
+                                        </a>
+                                    </li>
+                                @endif
                             </ul>
                         </div>
 

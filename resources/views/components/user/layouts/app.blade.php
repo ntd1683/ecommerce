@@ -13,7 +13,8 @@
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
-
+    <link rel="stylesheet" href="{{ asset('css/libraries/toasting.css') }}">
+    <script src="{{ asset('js/libraries/toasting.js') }}"></script>
     <style>
         :root {
             --primary-color: {{ option('primary_color', '#8D524D') }};
@@ -44,6 +45,28 @@
 
 {{--<script src="{{ asset('js/app.js')}}" defer></script>--}}
 <script src="{{ asset('js/main.js')}}" defer></script>
+<script>
+    window.addEventListener('load', function () {
+        @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        toasting.create({
+            "title": "Error",
+            "text": "{{ $error }}",
+            "type": "error",
+            "progressBarType": "rainbow"
+        });
+        @endforeach
+        @endif
+        @if (session()->has('success'))
+        toasting.create({
+            "title": "Success",
+            "text": "{{session()->get('success')}}",
+            "type": "success",
+            "progressBarType": "rainbow"
+        });
+        @endif
+    });
+</script>
 @stack('js')
 </body>
 </html>

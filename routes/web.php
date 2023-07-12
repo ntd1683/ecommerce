@@ -2,7 +2,10 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\user\AuthController;
 use App\Http\Controllers\user\HomepageController;
+use App\Http\Middleware\CheckLoginMiddleware;
+use App\Http\Middleware\CheckLogoutMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +19,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Auth
+Route::group([
+    'middleware' => CheckLogoutMiddleware::class,
+], function () {
+    Route::get('/login-register', [AuthController::class, 'login'])->name('login-register');
+    Route::post('/process-login', [AuthController::class, 'processLogin'])->name('process-login');
+    Route::post('/process-register', [AuthController::class, 'processRegister'])->name('process-register');
+
+    Route::get('forgot-password', [AuthController::class, 'forgotPassword'])->name('forgot-password');
+    Route::post('forgot-password', [AuthController::class, 'processForgotPassword'])->name('process-forgot-password');
+
+    Route::get('reset-password', [AuthController::class, 'resetPassword'])->name('reset-password');
+    Route::post('reset-password', [AuthController::class, 'processResetPassword'])->name('process-reset-password');
+});
+
+//Login
+Route::group([
+    'middleware' => CheckLoginMiddleware::class,
+], function () {
+    Route::get('/account', [PageController::class, 'account'])->name('account');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+});
 Route::get('/', [HomepageController::class, '__invoke'])->name('index');
 Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
-Route::get('/account', [PageController::class, 'account'])->name('account');
