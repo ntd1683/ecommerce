@@ -14,10 +14,10 @@ const mix = require('laravel-mix');
 mix
     .js('resources/js/app.js', 'public/js').vue()
     .js('resources/js/main.js', 'public/js')
+    .js('resources/js/account.js', 'public/js')
     .js('resources/js/libraries/toasting.js', 'public/js/libraries')
     .postCss('resources/css/libraries/toasting.css', 'public/css/libraries')
     .sass('resources/css/style.scss', 'public/css/libraries')
-    .css('resources/css/main.css', 'public/css')
     .postCss('resources/css/app.css', 'public/css', [
         require('tailwindcss')
     ])

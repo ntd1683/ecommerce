@@ -1,18 +1,21 @@
-// import { createApp } from 'vue'
+import emitter from 'tiny-emitter/instance'
+import { createApp } from 'vue'
 
-// import example from './component/example.vue'
+import modal from './components/modal.vue'
 
 // Vue app
-// const app = createApp({})
+const app = createApp({
+    data() {
+        return {
+            showModal: false,
+        }
+    },
+})
 
-// Init Vue Component
-// app.component('v-example', example)
-//
-// function setCookie(cname, cvalue, exdays) {
-//     const d = new Date();
-//     d.setTime(d.getTime() + (exdays*24*60*60*1000));
-//     let expires = "expires="+ d.toUTCString();
-//     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-// }
 
-// app.mount('#app')
+app.component('v-modal', modal)
+
+app.mount('#modal')
+
+// Emitter
+window.$event = emitter
