@@ -28,3 +28,4 @@ resources/views/test.blade.php
 app/Http/Controllers/TestController.php
 public/css/app.css
 public/js/app.js
+routes/test.php

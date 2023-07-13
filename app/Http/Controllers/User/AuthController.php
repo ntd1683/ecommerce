@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\user;
+namespace App\Http\Controllers\User;
 
 use App\Events\UserRegisterEvent;
 use App\Http\Controllers\Controller;
@@ -9,9 +9,9 @@ use App\Http\Requests\LoginRequest;
 use App\Http\Requests\ProcessResetPasswordRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\ResetPasswordRequest;
+use App\Http\Requests\VerifyEmailRequest;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -110,5 +110,15 @@ class AuthController extends Controller
             'email_verified' => 1,
         ]);
         return redirect()->route('login-register')->with('success', trans('Change Password Successfully !!!'));
+    }
+
+    public function verifyEmail(VerifyEmailRequest $request)
+    {
+        User::where(['remember_token' => $request->get('token')])->update([
+            'email_verified' => 1,
+            'remember_token' => null,
+        ]);
+
+        return redirect()->route('index')->with('success', trans('Verify Email Successfully !!!'));
     }
 }

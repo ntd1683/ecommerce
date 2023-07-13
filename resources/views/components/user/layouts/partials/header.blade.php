@@ -6,7 +6,7 @@
         <div class="flex items-center lg:relative">
             <div class="w-6/12 lg:w-2/12">
                 <div class="logo">
-                    <a href="#">
+                    <a href="{{ route('index') }}">
                         <img src="{{ asset('images/logo.webp') }}" alt="logo" loading="lazy"
                                                    width="125" height="45"/>
                     </a>

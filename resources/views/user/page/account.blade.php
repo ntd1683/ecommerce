@@ -1,5 +1,6 @@
 <x-user.layouts.app>
     {{ Breadcrumbs::render('account') }}
+
     <div class="pb-24 mt-16">
         <div class="container">
 
@@ -241,19 +242,35 @@
                                 <form action="#">
                                     <div class="grid grid-cols-12 gap-x-5">
                                         <div class="col-span-12 mb-5">
-                                            <x-user.form.inputs id="full-name" placeholder="Full Name" name="name" :value="old('name', auth()->user()->name)" />
+                                            <x-user.form.inputs id="full-name" placeholder="Full Name" name="name"
+                                                                :value="old('name', auth()->user()->name)"/>
                                         </div>
 
                                         <div class="col-span-12 mb-5">
-                                            <x-user.form.inputs name="birthdate" placeholder="xx/xx/xxxx" type="date" :value="old('birthdate',auth()->user()->birthdate)"/>
+                                            <x-user.form.inputs name="birthdate" placeholder="xx/xx/xxxx" type="date"
+                                                                :value="old('birthdate',auth()->user()->birthdate)"/>
                                         </div>
 
                                         <div class="col-span-12 mb-5">
-                                            <x-user.form.inputs name="phone" placeholder="0123xxxxxxx" :value="old('phone', auth()->user()->phone)"/>
+                                            <x-user.form.inputs name="phone" placeholder="0123xxxxxxx"
+                                                                :value="old('phone', auth()->user()->phone)"/>
                                         </div>
 
                                         <div class="col-span-12 mb-5">
-                                            <x-user.form.inputs name="email" placeholder="Email" type="email" :value="old('email', auth()->user()->email)"/>
+                                            <div id="modal">
+                                                <div class="text-end text-base">
+                                                    <button type="button" class="text-primary hover:text-secondary"
+                                                            @click="showModal = true" id="verify_email">Verify your
+                                                        email
+                                                    </button>
+                                                </div>
+                                                <v-modal :open="showModal" @close="showModal = false">
+                                                    <x-user.form.buttons.primary id="submit_email_verify" type="button">
+                                                        <x-user.animateSpin class="hidden" id="loading_verify_email"/>
+                                                        {{ __('Verify Email') }}
+                                                    </x-user.form.buttons.primary>
+                                                </v-modal>
+                                            </div>
                                         </div>
 
                                         <div class="col-span-12 mb-5">
@@ -262,12 +279,14 @@
 
                                         <div class="col-span-12 lg:col-span-6 mb-5">
                                             <x-user.form.inputs.password
-                                                id="new-pwd" placeholder="New Password" type="password" name="new_password" />
+                                                id="new-pwd" placeholder="New Password" type="password"
+                                                name="new_password"/>
                                         </div>
 
                                         <div class="col-span-12 lg:col-span-6 mb-5">
                                             <x-user.form.inputs.password
-                                                id="new-pwd" placeholder="Confirmation New Password" type="password" name="new_password_confirmation" />
+                                                id="new-pwd_cf" placeholder="Confirmation New Password" type="password"
+                                                name="new_password_confirmation"/>
                                         </div>
 
                                         <div class="col-span-12">
@@ -284,5 +303,11 @@
             </div>
         </div>
     </div>
+    <form action="{{ route('ajax.verifyEmail') }}" id="form_verify_email" class="hidden">
+        @csrf
+    </form>
     @include('user.homepage.newsLetter')
+    @push('js')
+        <script src="{{ asset('js/account.js') }}"></script>
+    @endpush
 </x-user.layouts.app>
