@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\PageController;
-use App\Http\Controllers\TestController;
-use App\Http\Controllers\user\AuthController;
-use App\Http\Controllers\user\HomepageController;
+use App\Http\Controllers\User\Ajax\AjaxAccountController;
+use App\Http\Controllers\User\AuthController;
+use App\Http\Controllers\User\HomepageController;
 use App\Http\Middleware\CheckLoginMiddleware;
 use App\Http\Middleware\CheckLogoutMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -39,8 +39,15 @@ Route::group([
     'middleware' => CheckLoginMiddleware::class,
 ], function () {
     Route::get('/account', [PageController::class, 'account'])->name('account');
+
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::get('verify-email', [AuthController::class, 'verifyEmail'])->name('verify-email');
 });
+
 Route::get('/', [HomepageController::class, '__invoke'])->name('index');
 Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
+Route::prefix('ajax')->name('ajax.')->group(function () {
+    Route::post('verify-email', [AjaxAccountController::class , 'verifyEmail'])->name('verifyEmail');
+});

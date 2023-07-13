@@ -44,16 +44,7 @@
 
 <x-user.modalShop />
 
-<x-user.modal name="banner">
-    <img src="https://i.scdn.co/image/ab67616d0000b273f42504b5150f32e4bfd920dd" alt="image">
-</x-user.modal>
-<script>
-    window.addEventListener('load', () => {
-        document.getElementById('modal_open_banner').click();
-    })
-</script>
-
-{{--<script src="{{ asset('js/app.js')}}" defer></script>--}}
+<script src="{{ asset('js/app.js')}}" defer></script>
 <script src="{{ asset('js/main.js')}}" defer></script>
 <script>
     window.addEventListener('load', function () {
@@ -70,8 +61,16 @@
         @if (session()->has('success'))
         toasting.create({
             "title": "Success",
-            "text": "{{session()->get('success')}}",
+            "text": "{{ session()->get('success') }}",
             "type": "success",
+            "progressBarType": "rainbow"
+        });
+        @endif
+        @if (session()->has('error'))
+        toasting.create({
+            "title": "Error",
+            "text": "{{ session()->get('error') }}",
+            "type": "error",
             "progressBarType": "rainbow"
         });
         @endif
