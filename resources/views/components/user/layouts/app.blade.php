@@ -48,7 +48,7 @@
 <script src="{{ asset('js/main.js')}}" defer></script>
 <script>
     window.addEventListener('load', function () {
-        @if ($errors->any())
+        @if (isset($errors))
         @foreach ($errors->all() as $error)
         toasting.create({
             "title": "Error",
