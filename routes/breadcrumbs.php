@@ -27,3 +27,9 @@ Breadcrumbs::for('account', function ($trail) {
     $trail->parent('home');
     $trail->push(trans('Account'), route('account'));
 });
+
+// Cart
+Breadcrumbs::for('cart', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('Your Shopping Cart'), route('cart'));
+});
