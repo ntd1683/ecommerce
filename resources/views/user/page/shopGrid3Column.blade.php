@@ -56,7 +56,7 @@
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="assets/images/products/drone/product1.webp"
+                                            <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                                  alt="product image" loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -163,7 +163,7 @@
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="assets/images/products/drone/product2.webp"
+                                            <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                                  alt="product image" loading="lazy" width="432" height="480"/>
 
                                             <!-- actions start -->
@@ -221,7 +221,7 @@
                                 <div class="w-full md:w-1/2 lg:w-1/3 px-4 py-4">
                                     <div
                                         class="border border-solid border-gray-300 transition-all hover:shadow-product group relative">
-                                        <img class="w-full h-full" src="assets/images/products/drone/product3.webp"
+                                        <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                              alt="product image" loading="lazy" width="432" height="480"/>
                                         <!-- actions start -->
 
@@ -284,7 +284,7 @@
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="assets/images/products/drone/product4.webp"
+                                            <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                                  alt="product image" loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -391,7 +391,7 @@
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="assets/images/products/drone/product5.webp"
+                                            <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                                  alt="product image" loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -481,7 +481,7 @@
                                             <div
                                                 class="absolute w-full bottom-0 group-hover:opacity-0 group-hover:invisible transition-all">
                                                 <div class="countdown bg-dark item-1 flex flex-wrap justify-evenly p-2"
-                                                     data-countdown="2022/11/20" data-format="short">
+                                                     data-countdown="2023/7/14" data-format="short">
                                                     <div class="countdown__item flex flex-wrap items-baseline flex-col">
                                                         <span
                                                             class="countdown__time mr-1 text-base text-white font-500 daysLeft"></span>
@@ -492,7 +492,7 @@
                                                         <span
                                                             class="countdown__time mr-1 text-base text-white font-500 hoursLeft"></span>
                                                         <span
-                                                            class="countdown__text capitalize text-sm text-white font-light hoursText"></span>
+                                                            class="countdown__text capitalize text-sm text-white font-light hoursText">Hour</span>
                                                     </div>
                                                     <div class="countdown__item flex flex-wrap items-baseline flex-col">
                                                         <span
@@ -531,7 +531,7 @@
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="assets/images/products/bags/product1.webp"
+                                            <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                                  alt="product image" loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -638,7 +638,7 @@
                                             class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                         <span
                                             class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                        <img class="w-full h-full" src="assets/images/products/bags/product2.webp"
+                                        <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                              alt="product image" loading="lazy" width="432" height="480"/>
 
                                         <!-- actions start -->
@@ -702,7 +702,7 @@
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="assets/images/products/bags/product5.webp"
+                                            <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                                  alt="product image" loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -809,7 +809,7 @@
                                             class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                         <span
                                             class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                        <img class="w-full h-full" src="assets/images/products/bags/product3.webp"
+                                        <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                              alt="product image" loading="lazy" width="432" height="480"/>
 
                                         <!-- actions start -->
@@ -872,7 +872,7 @@
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="assets/images/products/bags/product4.webp"
+                                            <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                                  alt="product image" loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -977,7 +977,7 @@
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="assets/images/products/drone/product1.webp"
+                                            <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                                  alt="product image" loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -1084,7 +1084,7 @@
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="assets/images/products/drone/product2.webp"
+                                            <img class="w-full h-full" src="{{ asset('images/hutech.webp') }}"
                                                  alt="product image" loading="lazy" width="432" height="480"/>
 
                                             <!-- actions start -->
@@ -1156,7 +1156,7 @@
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/drone/product1.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -1278,7 +1278,7 @@
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/drone/product2.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
 
                                             <!-- actions start -->
@@ -1350,7 +1350,7 @@
                                         class="border border-solid border-gray-300 transition-all hover:shadow-product group relative flex flex-wrap flex-col md:flex-row">
                                         <div class="relative overflow-hidden md:w-1/3">
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/drone/product3.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -1428,7 +1428,7 @@
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/drone/product4.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -1549,7 +1549,7 @@
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/drone/product5.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -1703,7 +1703,7 @@
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/bags/product1.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -1824,7 +1824,7 @@
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/bags/product2.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -1902,7 +1902,7 @@
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/bags/product5.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -2022,7 +2022,7 @@
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/bags/product3.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -2098,7 +2098,7 @@
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/bags/product4.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -2215,7 +2215,7 @@
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/drone/product1.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
@@ -2336,7 +2336,7 @@
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
                                             <img class="md:absolute w-full md:h-full md:object-cover"
-                                                 src="assets/images/products/drone/product2.webp" alt="product image"
+                                                 src="{{ asset('images/hutech.webp') }}" alt="product image"
                                                  loading="lazy" width="432" height="480"/>
 
                                             <!-- actions start -->
