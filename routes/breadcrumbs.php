@@ -33,3 +33,51 @@ Breadcrumbs::for('cart', function ($trail) {
     $trail->parent('home');
     $trail->push(trans('Your Shopping Cart'), route('cart'));
 });
+
+// Error
+Breadcrumbs::for('404Error', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('404 Not Found'));
+});
+
+// Error
+Breadcrumbs::for('401Error', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('401 Not Found'));
+});
+
+// Error
+Breadcrumbs::for('402Error', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('402 Not Found'));
+});
+
+// Error
+Breadcrumbs::for('403Error', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('403 Not Found'));
+});
+
+// Error
+Breadcrumbs::for('419Error', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('419 Not Found'));
+});
+
+// Error
+Breadcrumbs::for('429Error', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('429 Not Found'));
+});
+
+// Error
+Breadcrumbs::for('500Error', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('500 Not Found'));
+});
+
+// Error
+Breadcrumbs::for('503Error', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('503 Not Found'));
+});
