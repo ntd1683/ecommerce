@@ -68,6 +68,7 @@ if (!function_exists('getTitle')) {
     {
         $arrRouteName = explode('.', request()->route()->getName());
         if($arrRouteName[0] == 'admin') {
+            $tmp = $arrRouteName[1];
             if($arrRouteName[1] == 'index') {
                 $tmp = 'dashboard';
             }

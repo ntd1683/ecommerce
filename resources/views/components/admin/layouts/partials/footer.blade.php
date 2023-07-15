@@ -1,4 +1,4 @@
-<footer class="absolute w-full bottom-0 bg-blueGray-800 pb-6">
+<footer class="w-full bg-blueGray-800 pb-6 absolute">
     <div class="container mx-auto px-4">
         <hr class="mb-6 border-b-1 border-blueGray-600" />
         <div

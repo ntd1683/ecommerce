@@ -28,16 +28,17 @@
 </head>
 <body class="text-blueGray-700 antialiased">
 <noscript>You need to enable JavaScript to run this app.</noscript>
-<?php
-?>
 <div id="root">
-    <x-admin.layouts.partials.sidebar />
+    <x-admin.layouts.partials.sidebar/>
     <div class="relative md:ml-64 bg-blueGray-50">
-        <x-admin.layouts.partials.header />
+        <x-admin.layouts.partials.header/>
         <div class="relative bg-pink-600 md:pt-32 pb-32 pt-12">
             @include('admin.homepage.analystic')
         </div>
-        {{ $slot }}
+        <div class="px-4 md:px-10 mx-auto w-full -m-24 mb-1">
+            {{ $slot }}
+        </div>
+        <x-admin.layouts.partials.footer/>
     </div>
 </div>
 <script src="{{ asset('js/admin/main.js') }}"></script>

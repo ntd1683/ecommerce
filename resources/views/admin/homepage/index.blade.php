@@ -1,5 +1,4 @@
 <x-admin.layouts.app>
-    <div class="px-4 md:px-10 mx-auto w-full -m-24">
         <div class="flex flex-wrap">
             <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
                 <div
@@ -429,6 +428,4 @@
                 </div>
             </div>
         </div>
-        <x-admin.layouts.partials.footer />
-    </div>
 </x-admin.layouts.app>

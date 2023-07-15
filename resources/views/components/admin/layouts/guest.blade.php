@@ -15,7 +15,7 @@
         href="{{ asset('css/admin/style.css') }}"
     />
     <link rel="stylesheet" href="{{ asset('css/admin/app.css') }}"/>
-    <title>Login | Notus Tailwind JS by Creative Tim</title>
+    <title>{{ getTitle() }}</title>
 
     <link rel="stylesheet" href="{{ asset('css/libraries/toasting.css') }}">
     <script src="{{ asset('js/libraries/toasting.js') }}"></script>
