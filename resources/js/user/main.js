@@ -1,24 +1,11 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import '../libraries/password'
 
 $("input[type=date]").click((e) => {
     e.target.showPicker();
 });
-
-window.addEventListener('load', () => {
-    let iconPassword = document.querySelectorAll('.show-password')
-    iconPassword.forEach((each) => {
-        each.addEventListener('click', () => {
-            let parent = each.parentNode.querySelector('input')
-            if(parent.getAttribute('type') === "text") {
-                parent.setAttribute('type', 'password')
-            } else {
-                parent.setAttribute('type', 'text')
-            }
-        })
-    })
-})
 
 function setCookie(name, value, exdays) {
     const d = new Date();

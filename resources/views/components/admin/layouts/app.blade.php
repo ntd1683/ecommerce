@@ -15,10 +15,21 @@
         href="{{ asset('css/admin/style.css') }}"
     />
     <link rel="stylesheet" href="{{ asset('css/admin/app.css') }}"/>
-    <title>Dashboard | Notus Tailwind JS by Creative Tim</title>
+    <title>{{ getTitle() }}</title>
+    <link rel="stylesheet" href="{{ asset('css/libraries/toasting.css') }}">
+    <script src="{{ asset('js/libraries/toasting.js') }}"></script>
+    <style>
+        :root {
+            --primary-color: {{ option('primary_color', '#8D524D') }};
+            --secondary-color: {{ option('secondary_color', '#FF80B5') }};
+        }
+    </style>
+    @stack('css')
 </head>
 <body class="text-blueGray-700 antialiased">
 <noscript>You need to enable JavaScript to run this app.</noscript>
+<?php
+?>
 <div id="root">
     <x-admin.layouts.partials.sidebar />
     <div class="relative md:ml-64 bg-blueGray-50">
@@ -32,5 +43,36 @@
 <script src="{{ asset('js/admin/main.js') }}"></script>
 <script type="text/javascript">
 </script>
+<script>
+    window.addEventListener('load', function () {
+        @if (isset($errors))
+        @foreach ($errors->all() as $error)
+        toasting.create({
+            "title": "Error",
+            "text": "{{ $error }}",
+            "type": "error",
+            "progressBarType": "rainbow"
+        });
+        @endforeach
+        @endif
+        @if (session()->has('success'))
+        toasting.create({
+            "title": "Success",
+            "text": "{{ session()->get('success') }}",
+            "type": "success",
+            "progressBarType": "rainbow"
+        });
+        @endif
+        @if (session()->has('error'))
+        toasting.create({
+            "title": "Error",
+            "text": "{{ session()->get('error') }}",
+            "type": "error",
+            "progressBarType": "rainbow"
+        });
+        @endif
+    });
+</script>
+@stack('js')
 </body>
 </html>

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import "chart.js/dist/Chart.js";
 import { createPopper } from '@popperjs/core';
+import '../libraries/password'
 
 /* Make dynamic date appear */
 (function () {
