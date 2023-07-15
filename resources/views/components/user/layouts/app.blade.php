@@ -44,8 +44,8 @@
 
 <x-user.modalShop />
 
-<script src="{{ asset('js/app.js')}}" defer></script>
-<script src="{{ asset('js/main.js')}}" defer></script>
+<script src="{{ asset('js/user/app.js')}}" defer></script>
+<script src="{{ asset('js/user/main.js')}}" defer></script>
 <script>
     window.addEventListener('load', function () {
         @if (isset($errors))

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->boolean('email_verified')->default('0');
             $table->boolean('phone_verified')->default('0');
             $table->string('password');
-            $table->string('avatar_url');
+            $table->string('avatar')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

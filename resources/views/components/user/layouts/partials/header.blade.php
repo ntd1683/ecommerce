@@ -7,7 +7,7 @@
             <div class="w-6/12 lg:w-2/12">
                 <div class="logo">
                     <a href="{{ route('index') }}">
-                        <img src="{{ asset('images/logo.webp') }}" alt="logo" loading="lazy"
+                        <img src="{{ asset('images/user/logo.webp') }}" alt="logo" loading="lazy"
                                                    width="125" height="45"/>
                     </a>
                 </div>

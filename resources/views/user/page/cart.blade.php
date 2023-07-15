@@ -21,7 +21,7 @@
                         <tr>
                             <td class="w-32 p-3 border border-solid border-gray-300 text-center">
                                 <a href="#">
-                                    <img src="{{ asset('images/hutech.webp') }}" alt="product image"></a>
+                                    <img src="{{ asset('images/user/hutech.webp') }}" alt="product image"></a>
                             </td>
                             <td class="p-3 border border-solid border-gray-300 text-center">
                                 <a href="#" class="transition-all hover:text-orange">Birpod product
@@ -49,7 +49,7 @@
                         <tr>
                             <td class="w-32 p-3 border border-solid border-gray-300 text-center">
                                 <a href="#">
-                                    <img src="{{ asset('images/hutech.webp') }}" alt="product image"></a>
+                                    <img src="{{ asset('images/user/hutech.webp') }}" alt="product image"></a>
                             </td>
                             <td class="p-3 border border-solid border-gray-300 text-center">
                                 <a href="#" class="transition-all hover:text-orange">Birpod product
@@ -77,7 +77,7 @@
                         <tr>
                             <td class="w-32 p-3 border border-solid border-gray-300 text-center">
                                 <a href="#">
-                                    <img src="{{ asset('images/hutech.webp') }}" alt="product image"></a>
+                                    <img src="{{ asset('images/user/hutech.webp') }}" alt="product image"></a>
                             </td>
                             <td class="p-3 border border-solid border-gray-300 text-center">
                                 <a href="#" class="transition-all hover:text-orange">Birpod product
@@ -105,7 +105,7 @@
                         <tr>
                             <td class="w-32 p-3 border border-solid border-gray-300 text-center">
                                 <a href="#">
-                                    <img src="{{ asset('images/hutech.webp') }}" alt="product image"></a>
+                                    <img src="{{ asset('images/user/hutech.webp') }}" alt="product image"></a>
                             </td>
                             <td class="p-3 border border-solid border-gray-300 text-center">
                                 <a href="#" class="transition-all hover:text-orange">Birpod product

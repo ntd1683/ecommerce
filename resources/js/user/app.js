@@ -1,7 +1,7 @@
 import emitter from 'tiny-emitter/instance'
 import { createApp } from 'vue'
 
-import modal from './components/modal.vue'
+import modal from '../components/modal.vue'
 
 // Vue app
 const app = createApp({

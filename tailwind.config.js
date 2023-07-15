@@ -10,7 +10,7 @@ module.exports = {
     theme: {
         colors: {
             'dark': '#1F2226',
-            'orange': '#FC6539',
+            'orange': colors.orange,
             'bg-custom': '#F7F2F1',
             'primary': 'var(--primary-color)',
             'primaryHover': 'var(--primary-hover-color)',
@@ -24,6 +24,9 @@ module.exports = {
             'indigo': colors.indigo,
             'yellow': colors.yellow,
             'red': colors.red,
+            'pink': colors.pink,
+            'blue': colors.blue,
+            'blueGray': colors.blueGray,
         },
         extend: {},
     },

@@ -1,11 +1,11 @@
 <footer>
     <!-- footer start -->
-    <div class="bg-gray bg-no-repeat bg-center bg-cover pt-24" style="background-image:url('{{ asset('images/shape.webp') }}')">
+    <div class="bg-gray bg-no-repeat bg-center bg-cover pt-24" style="background-image:url('{{ asset('images/user/shape.webp') }}')">
         <div class="container">
 
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-12 md:col-span-6 lg:col-span-6 mb-10">
-                    <a href="index.html" class="inline-block mb-4"><img src="{{ asset('images/logo.webp') }}" alt="logo" loading="lazy" width="125" height="45" /></a>
+                    <a href="index.html" class="inline-block mb-4"><img src="{{ asset('images/user/logo.webp') }}" alt="logo" loading="lazy" width="125" height="45" /></a>
                     <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor inci ut labore et dolore</p>
 
                     <div class="flex flex-wrap items-center justify-start">
@@ -61,7 +61,7 @@
 
                 <div class="flex flex-wrap items-center justify-center md:justify-end">
                     <a href="#">
-                        <img class="w-auto h-10" src="{{ asset('images/hutech.webp') }}" alt="payment logo" loading="lazy" />
+                        <img class="w-auto h-10" src="{{ asset('images/user/hutech.webp') }}" alt="payment logo" loading="lazy" />
                     </a>
                 </div>
             </div>
