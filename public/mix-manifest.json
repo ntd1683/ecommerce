@@ -1,9 +1,12 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/js/main.js": "/js/main.js",
-    "/js/account.js": "/js/account.js",
+    "/js/user/app.js": "/js/user/app.js",
+    "/js/user/main.js": "/js/user/main.js",
+    "/js/user/account.js": "/js/user/account.js",
     "/js/libraries/toasting.js": "/js/libraries/toasting.js",
-    "/css/libraries/style.css": "/css/libraries/style.css",
-    "/css/app.css": "/css/app.css",
+    "/js/admin/app.js": "/js/admin/app.js",
+    "/js/admin/main.js": "/js/admin/main.js",
+    "/css/admin/style.css": "/css/admin/style.css",
+    "/css/user/style.css": "/css/user/style.css",
+    "/css/admin/app.css": "/css/admin/app.css",
     "/css/libraries/toasting.css": "/css/libraries/toasting.css"
 }

@@ -56,6 +56,34 @@ if (!function_exists('getNotify')) {
     }
 }
 
+if (!function_exists('getNameRouteMain')) {
+    function getNameRouteMain(): string
+    {
+        return explode('.', request()->route()->getName())[0];
+    }
+}
+
+if (!function_exists('getTitle')) {
+    function getTitle(): string
+    {
+        $arrRouteName = explode('.', request()->route()->getName());
+        if($arrRouteName[0] == 'admin') {
+            $tmp = $arrRouteName[1];
+            if($arrRouteName[1] == 'index') {
+                $tmp = 'dashboard';
+            }
+            $suffix = 'admin - ' . $tmp;
+        } else if($arrRouteName[0] == 'index'){
+            return option('site_name', config('app.name', 'Laravel'));
+        } else {
+            $suffix = $arrRouteName[0];
+        }
+        $suffix = ucwords($suffix);
+
+        return option('site_name', config('app.name', 'Laravel')) . ' | ' . $suffix;
+    }
+}
+
 if (!function_exists('discountPrice')) {
     function discountPrice($price, $discount): integer
     {

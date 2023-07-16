@@ -6,7 +6,7 @@
         <div class="container">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-5">
                 <div class="flex flex-wrap items-center mb-10 lg:mb-0">
-                    <img src="{{ asset('images/service1.webp') }}" alt="images">
+                    <img src="{{ asset('images/user/service1.webp') }}" alt="images">
                 </div>
                 <div>
                     <div class="mb-10">
@@ -28,7 +28,7 @@
     <!-- about us section end -->
 
     <!-- testimonial section start -->
-    <div class="testimonial-area bg-gray-light py-24 bg-no-repeat bg-cover bg-center group" style="background-image: url('{{ asset('images/slide/slide5.webp') }}');">
+    <div class="testimonial-area bg-gray-light py-24 bg-no-repeat bg-cover bg-center group" style="background-image: url('{{ asset('images/user/slide/slide5.webp') }}');">
         <div class="container">
             <div class="grid grid-cols-12 gap-x-4">
                 <div class="col-span-12">
@@ -44,14 +44,14 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="w-40 h-40 rounded-full mx-auto overflow-hidden">
-                                        <img src="{{ asset('images/logo.webp') }}" alt="image">
+                                        <img src="{{ asset('images/user/logo.webp') }}" alt="image">
                                     </div>
                                     <p class="my-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit.</p>
                                     <h5 class="font-semibold text-sm text-dark uppercase">Hester Perkins</h5>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="w-40 h-40 rounded-full mx-auto overflow-hidden">
-                                        <img src="{{ asset('images/logo.webp') }}" alt="image">
+                                        <img src="{{ asset('images/user/logo.webp') }}" alt="image">
                                     </div>
                                     <p class="my-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit.</p>
                                     <h5 class="font-semibold text-sm text-dark uppercase">Hester Perkins</h5>
@@ -93,7 +93,7 @@
                                     <div class="swiper-slide">
                                         <div class="bg-gray-light group">
                                             <div class="relative">
-                                                <a href="#" class="block"><img class="w-full h-full" src="{{ asset('images/logo.webp') }}" alt="team image" loading="lazy" width="270" height="330" /></a>
+                                                <a href="#" class="block"><img class="w-full h-full" src="{{ asset('images/user/logo.webp') }}" alt="team image" loading="lazy" width="270" height="330" /></a>
                                                 <div class="absolute w-full top-1/2 left-0 transform translate-y-1/2 bg-white flex flex-wrap items-center justify-center p-3 transition-all group-hover:-translate-y-1/2 invisible opacity-0 group-hover:visible group-hover:opacity-100 duration-500">
                                                     <a href="#" class="w-8 h-8 rounded-full flex flex-wrap items-center justify-center text-white text-sm mx-1
                                      transition-all border border-solid border-transparent hover:bg-white hover:border-facebook bg-facebook hover:text-facebook"><i class="icon-social-facebook"></i></a>
@@ -114,7 +114,7 @@
                                     <div class="swiper-slide">
                                         <div class="bg-gray-light group">
                                             <div class="relative">
-                                                <a href="#" class="block"><img class="w-full h-full" src="{{ asset('images/logo.webp') }}" alt="team image" loading="lazy" width="270" height="330" /></a>
+                                                <a href="#" class="block"><img class="w-full h-full" src="{{ asset('images/user/logo.webp') }}" alt="team image" loading="lazy" width="270" height="330" /></a>
                                                 <div class="absolute w-full top-1/2 left-0 transform translate-y-1/2 bg-white flex flex-wrap items-center justify-center p-3 transition-all group-hover:-translate-y-1/2 invisible opacity-0 group-hover:visible group-hover:opacity-100 duration-500">
                                                     <a href="#" class="w-8 h-8 rounded-full flex flex-wrap items-center justify-center text-white text-sm mx-1
                                      transition-all border border-solid border-transparent hover:bg-white hover:border-facebook bg-facebook hover:text-facebook"><i class="icon-social-facebook"></i></a>

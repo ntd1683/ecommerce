@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\User\Ajax\AjaxAccountController;
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\HomepageController;

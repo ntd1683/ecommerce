@@ -10,7 +10,7 @@
                                 <!-- swiper-slide start -->
                                 <div class="swiper-slide">
                                     <div class="text-center">
-                                        <img class="block mx-auto mb-6" src="{{ asset('images/service1.webp') }}"
+                                        <img class="block mx-auto mb-6" src="{{ asset('images/user/service1.webp') }}"
                                              alt="service image" loading="lazy" width="80" height="80"/>
                                         <h3><a class="block text-base md:text-md hover:text-orange transition-all font-medium">{{ __('FOOD SAFETY') }}</a>
                                         </h3>
@@ -22,7 +22,7 @@
                                 <!-- swiper-slide start -->
                                 <div class="swiper-slide">
                                     <div class="text-center">
-                                        <img class="block mx-auto mb-6" src="{{ asset('images/service2.webp') }}"
+                                        <img class="block mx-auto mb-6" src="{{ asset('images/user/service2.webp') }}"
                                              alt="service image" loading="lazy" width="80" height="80"/>
                                         <h3><a href="#"
                                                class="block text-base md:text-md hover:text-orange transition-all font-medium">HD
@@ -36,7 +36,7 @@
                                 <!-- swiper-slide start -->
                                 <div class="swiper-slide">
                                     <div class="text-center">
-                                        <img class="block mx-auto mb-6" src="{{ asset('images/service3.webp') }}"
+                                        <img class="block mx-auto mb-6" src="{{ asset('images/user/service3.webp') }}"
                                              alt="service image" loading="lazy" width="80" height="80"/>
                                         <h3><a href="#"
                                                class="block text-base md:text-md hover:text-orange transition-all font-medium">Power

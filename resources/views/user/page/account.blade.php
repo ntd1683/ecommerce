@@ -308,6 +308,6 @@
     </form>
     @include('user.homepage.newsLetter')
     @push('js')
-        <script src="{{ asset('js/account.js') }}"></script>
+        <script src="{{ asset('js/user/account.js') }}"></script>
     @endpush
 </x-user.layouts.app>

@@ -9,7 +9,7 @@
         <link rel="shortcut icon" href="{{ asset(option('site_favicon')) }}">
     @endif
 
-    <title>{{ option('site_name', config('app.name', 'Laravel')) }}</title>
+    <title>{{ getTitle() }}</title>
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
@@ -44,8 +44,8 @@
 
 <x-user.modalShop />
 
-<script src="{{ asset('js/app.js')}}" defer></script>
-<script src="{{ asset('js/main.js')}}" defer></script>
+<script src="{{ asset('js/user/app.js')}}" defer></script>
+<script src="{{ asset('js/user/main.js')}}" defer></script>
 <script>
     window.addEventListener('load', function () {
         @if (isset($errors))

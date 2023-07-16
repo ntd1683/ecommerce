@@ -16,8 +16,8 @@ class CheckShopMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user()->level != 1) {
-            abort(403);
+        if (Auth::guest() || Auth::user()->level < 1) {
+            return redirect()->route('admin.login')->withErrors('You do not have permission to access this site!!!');
         }
 
         return $next($request);
