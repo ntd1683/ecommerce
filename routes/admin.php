@@ -18,6 +18,7 @@ Route::group([
     'middleware' => CheckShopMiddleware::class,
 ], function () {
     Route::get('/', [HomepageController::class, '__invoke'])->name('index');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
-Route::get('/test', [TestController::class, 'test']);
+Route::get('/test', [TestController::class, 'test'])->name('test');

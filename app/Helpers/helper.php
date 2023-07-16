@@ -35,20 +35,6 @@ if (!function_exists('optionSave')) {
     }
 }
 
-if (!function_exists('getNameRouteMain')) {
-    function getNameRouteMain(): string
-    {
-        return explode('.', request()->route()->getName())[0];
-    }
-}
-
-if (!function_exists('getNotify')) {
-    function getNotify(): Collection|array
-    {
-        return Notify::query()->where('author', auth()->user()->id)->get();
-    }
-}
-
 if (!function_exists('getNotify')) {
     function getNotify(): Collection|array
     {
@@ -59,7 +45,13 @@ if (!function_exists('getNotify')) {
 if (!function_exists('getNameRouteMain')) {
     function getNameRouteMain(): string
     {
-        return explode('.', request()->route()->getName())[0];
+        $arrRouteName = explode('.', request()->route()->getName());
+
+        if($arrRouteName[0] == 'admin') {
+            return $arrRouteName[1];
+        }
+
+        return $arrRouteName[0];
     }
 }
 
