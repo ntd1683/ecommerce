@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\User\Ajax\AjaxAccountController;
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\HomepageController;
+use App\Http\Controllers\UserPaymentController;
 use App\Http\Middleware\CheckLoginMiddleware;
 use App\Http\Middleware\CheckLogoutMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -40,6 +42,9 @@ Route::group([
     'middleware' => CheckLoginMiddleware::class,
 ], function () {
     Route::get('/account', [PageController::class, 'account'])->name('account');
+    Route::post('/change-information', [ProfileController::class, 'update'])->name('account.change-information');
+    Route::post('/change-password', [ProfileController::class, 'changePassword'])->name('account.change-password');
+    Route::post('/change-payment', [UserPaymentController::class, 'store'])->name('user-payment.store');
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
@@ -50,6 +55,10 @@ Route::get('/', [HomepageController::class, '__invoke'])->name('index');
 Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
 Route::get('/cart', [PageController::class, 'cart'])->name('cart');
+
+//Ajax
 Route::prefix('ajax')->name('ajax.')->group(function () {
-    Route::post('verify-email', [AjaxAccountController::class , 'verifyEmail'])->name('verifyEmail');
+    Route::post('account/verify-email', [AjaxAccountController::class , 'verifyEmail'])->name('account.verify-email');
+    Route::post('account/avatar', [AjaxAccountController::class , 'uploadAvatar'])->name('account.avatar');
+    Route::post('account/change-password', [AjaxAccountController::class , 'changePassword'])->name('account.change-password');
 });

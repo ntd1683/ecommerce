@@ -51,6 +51,7 @@
     </div>
 </div>
 <script src="{{ asset('js/admin/main.js') }}"></script>
+<script src="{{ asset('js/admin/app.js') }}"></script>
 <script type="text/javascript">
 </script>
 <script>

@@ -5,16 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User_Payment extends Model
+class ReviewRatings extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        'product_id',
         'user_id',
-        'name_payment',
-        'provide',
-        'type',
-        'expired',
-        'qr'
+        'comment',
+        'star_rating',
+        'status'
     ];
 }

@@ -6,18 +6,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Address extends Model
+class UserPayment extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'address1',
-        'address2',
-        'district',
-        'province',
         'user_id',
-        'type'
+        'name_payment',
+        'provide',
+        'type',
+        'expired',
+        'qr'
     ];
+
+    public $timestamps = false;
 
     public function user(): BelongsTo
     {

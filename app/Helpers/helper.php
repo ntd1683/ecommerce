@@ -76,6 +76,13 @@ if (!function_exists('getTitle')) {
     }
 }
 
+if (!function_exists('userPayment')) {
+    function userPayment()
+    {
+        return auth()->user()->userPayments()->first();
+    }
+}
+
 if (!function_exists('discountPrice')) {
     function discountPrice($price, $discount): integer
     {
