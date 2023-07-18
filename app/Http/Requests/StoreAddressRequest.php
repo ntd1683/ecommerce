@@ -11,7 +11,7 @@ class StoreAddressRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return auth()->check();
     }
 
     /**
@@ -22,7 +22,14 @@ class StoreAddressRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'address_1' => ['required', 'string'],
+            'address_2' => ['nullable', 'string'],
+            'district' => ['nullable', 'string'],
+            'district_id' => ['nullable', 'string'],
+            'province' => ['nullable', 'string'],
+            'province_id' => ['nullable', 'string'],
+            'ward' => ['nullable', 'string'],
+            'ward_id' => ['nullable', 'string'],
         ];
     }
 }

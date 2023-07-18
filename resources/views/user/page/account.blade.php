@@ -8,25 +8,25 @@
                 <div class="col-span-12 lg:col-span-4">
                     <ul class="shop-tab-nav account-nav flex flex-wrap flex-col">
                         <li class="@if($tab == 'dashboard') active @endif">
-                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-200 block"
+                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
                                href="#dashboad">{{ __('Dashboad') }}</a></li>
                         <li class="@if($tab == 'orders') active @endif">
-                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-200 block"
+                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
                                href="#orders">{{ __('Orders') }}</a></li>
                         <li class="@if($tab == 'payment-method') active @endif">
-                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-200 block"
+                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
                                href="#payment-method">{{ __('Payment Method') }}</a></li>
                         <li class="@if($tab == 'address') active @endif">
-                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-200 block"
+                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
                                href="#address">{{ __('Address') }}</a></li>
                         <li class="@if($tab == 'account') active @endif"><a
-                                class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-200 block"
+                                class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
                                 href="#account">{{ __('Account Details') }}</a></li>
                         <li class="@if($tab == 'changePassword') active @endif"><a
-                                class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-gray-200 block"
+                                class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
                                 href="#changePassword">{{ __('Change Password') }}</a></li>
                         <li>
-                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-orange  text-base border-t border-l border-r border-b border-gray-200 block"
+                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-b border-gray-200 block"
                                href="{{ route('logout') }}">{{ __('Logout') }}</a></li>
                     </ul>
                 </div>
@@ -197,30 +197,45 @@
 
                             <div class="p-8 border border-gray-200">
                                 <h3 class="font-semibold text-xl lg:text-2xl capitalize pb-5 mb-5 border-b border-gray-200 leading-none">
-                                    Billing Address</h3>
+                                    {{ __('Address') }}</h3>
                                 <div class="text-base lg:text-base leading-loose lg:leading-loose ">
-                                    <address class="not-italic">
-                                        <p><strong>Alex Tuntuni</strong></p>
-                                        <p>
-                                            1355 Market St, Suite 900 <br>
-                                            San Francisco, CA 94103
-                                        </p>
-                                        <p>Mobile: (123) 456-7890</p>
-                                    </address>
-                                    <a href="#" class="transition-all hover:text-orange">{{ __('Edit Address') }}</a>
-                                    <form action="{{ route('address.store') }}">
+                                    <form action="{{ route('address.store') }}" method="post">
                                         @csrf
                                         <div class="grid grid-cols-12 gap-x-5">
                                             <div class="col-span-12 mb-5">
-                                                <x-user.form.inputs name="address_1" value="{{ option('address_1', addresses()->address_1) }}" />
+                                                <x-user.form.inputs name="address_1" value="{{ old('address_1', addresses()->address_1 ?? '' ) }}" />
                                             </div>
                                             <div class="col-span-12 mb-5">
-                                                <x-user.form.inputs name="address_2" value="{{ option('address_2', addresses()->address_2) }}" />
+                                                <x-user.form.inputs name="address_2" value="{{ old('address_2', addresses()->address_2 ?? '' ) }}" />
                                             </div>
                                             <div class="col-span-12 mb-5">
-                                                <x-user.form.inputs.select name="district">
-
+                                                <label class="text-lg">{{ __('Province') }}</label>
+                                                <input type="hidden" id="url_province" value="{{ route('ajax.ghn.get-provinces') }}">
+                                                <input type="hidden" name="province" id="province">
+                                                <x-user.form.inputs.select name="province_id" class="select-2-province" id="province_id">
+                                                    <option value="{{ addresses()->province_id ?? '' }}">{{ addresses()->province ?? '' }}</option>
                                                 </x-user.form.inputs.select>
+                                            </div>
+                                            <div class="col-span-12 mb-5">
+                                                <label class="text-lg">{{ __('District') }}</label>
+                                                <input type="hidden" id="url_district" value="{{ route('ajax.ghn.get-district') }}">
+                                                <input type="hidden" name="district" id="district">
+                                                <x-user.form.inputs.select name="district_id" class="select-2-district" id="district_id">
+                                                    <option value="{{ addresses()->district_id ?? '' }}">{{ addresses()->district ?? '' }}</option>
+                                                </x-user.form.inputs.select>
+                                            </div>
+                                            <div class="col-span-12 mb-5">
+                                                <label class="text-lg">{{ __('Ward') }}</label>
+                                                <input type="hidden" id="url_ward" value="{{ route('ajax.ghn.get-ward') }}">
+                                                <input type="hidden" name="ward" id="ward">
+                                                <x-user.form.inputs.select name="ward_id" class="select-2-ward">
+                                                    <option value="{{ addresses()->ward_id ?? '' }}">{{ addresses()->ward ?? '' }}</option>
+                                                </x-user.form.inputs.select>
+                                            </div>
+                                            <div class="col-span-12 mb-5">
+                                                <x-user.form.buttons.primary type="submit">
+                                                    {{ __('Update Address') }}
+                                                </x-user.form.buttons.primary>
                                             </div>
                                         </div>
                                     </form>

@@ -58,6 +58,9 @@ if (!function_exists('getNameRouteMain')) {
 if (!function_exists('getTitle')) {
     function getTitle(): string
     {
+        if(request()->route() == null) {
+            return config('app.name', 'Laravel');
+        }
         $arrRouteName = explode('.', request()->route()->getName());
         if($arrRouteName[0] == 'admin') {
             $tmp = $arrRouteName[1];
@@ -71,6 +74,7 @@ if (!function_exists('getTitle')) {
             $suffix = $arrRouteName[0];
         }
         $suffix = ucwords($suffix);
+
 
         return option('site_name', config('app.name', 'Laravel')) . ' | ' . $suffix;
     }

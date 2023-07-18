@@ -7,6 +7,7 @@ use App\Http\Trait\ResponseTrait;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 class GHNController extends Controller
 {
@@ -16,6 +17,7 @@ class GHNController extends Controller
     {
         $url = "https://online-gateway.ghn.vn/shiip/public-api/master-data/province";
         $name = $request->get('province') ?: '';
+        $name = Str::title($name);
         $token = config('services.ghn.token');
 
         $client = new Client();
@@ -52,6 +54,7 @@ class GHNController extends Controller
 
         $province_id = $request->get('province') ?: 202;
         $name = $request->get('district') ?: '';
+        $name = Str::title($name);
 
         $client = new Client();
 
@@ -88,8 +91,9 @@ class GHNController extends Controller
         $url = "https://online-gateway.ghn.vn/shiip/public-api/master-data/ward?district_id";
         $token = config('services.ghn.token');
 
-        $district_id = $request->get('district_id') ?: 3695;
+        $district_id = $request->get('district') ?: 3695;
         $name = $request->get('ward') ?: '';
+        $name = Str::title($name);
 
         $client = new Client();
 

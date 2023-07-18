@@ -1,5 +1,5 @@
 <script setup>
-import { ref, defineProps,  onMounted } from 'vue'
+import { ref,  onMounted } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 
 let { open } = defineProps({
