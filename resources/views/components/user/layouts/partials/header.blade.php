@@ -50,7 +50,8 @@
                                                 href="shop-grid-4-column.html">Shop Grid 4 Column</a></li>
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
-                                                href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a></li>
+                                                href="{{ route('shop-grid-left-sidebar') }}">Shop Grid Left Sidebar</a>
+                                        </li>
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
                                                 href="shop-grid-right-sidebar.html">shop Grid Right Sidebar</a></li>
