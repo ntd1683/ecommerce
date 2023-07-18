@@ -7,6 +7,7 @@
     "/js/admin/main.js": "/js/admin/main.js",
     "/css/admin/style.css": "/css/admin/style.css",
     "/css/user/style.css": "/css/user/style.css",
-    "/css/admin/app.css": "/css/admin/app.css",
-    "/css/libraries/toasting.css": "/css/libraries/toasting.css"
+    "/css/user/app.css": "/css/user/app.css",
+    "/css/libraries/toasting.css": "/css/libraries/toasting.css",
+    "/css/admin/app.css": "/css/admin/app.css"
 }

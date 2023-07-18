@@ -18,7 +18,7 @@ mix
     .js('resources/js/libraries/toasting.js', 'public/js/libraries')
     .postCss('resources/css/libraries/toasting.css', 'public/css/libraries')
     .sass('resources/css/user/style.scss', 'public/css/user')
-    .postCss('resources/css/user/app.css', 'public/css/admin', [
+    .postCss('resources/css/user/app.css', 'public/css/user', [
         require('tailwindcss')
     ])
     .postCss('resources/css/admin/app.css', 'public/css/admin', [
