@@ -78,9 +78,9 @@ class User extends Authenticatable
         });
     }
 
-    public function addresses(): HasMany
+    public function addresses(): HasOne
     {
-        return $this->hasMany(Address::class);
+        return $this->hasOne(Address::class);
     }
 
     public function userPayments(): HasOne

@@ -155,28 +155,33 @@
                             <div class="p-8 border border-gray-200">
                                 <h3 class="font-bold text-xl lg:text-2xl capitalize pb-5 mb-5 border-b border-gray-200 leading-none">{{ __('Payment Method')  }}</h3>
                                 <p class="font-medium p-4 text-base lg:text-base ">{{ __('You Can Not Saved Your Payment Method Yet.') }} </p>
-                                <form action="{{ route('user-payment.store') }}" method="post" enctype="multipart/form-data">
+                                <form action="{{ route('user-payment.store') }}" method="post"
+                                      enctype="multipart/form-data">
                                     @csrf
                                     <div class="grid grid-cols-12 gap-x-5">
                                         <div class="col-span-12 mb-5">
-                                            <x-user.form.inputs id="name_payment" placeholder="{{ __('Name Payment') }}" name="name_payment"
+                                            <x-user.form.inputs id="name_payment" placeholder="{{ __('Name Payment') }}"
+                                                                name="name_payment"
                                                                 :value="old('name_payment', userPayment()->name_payment ?? '' )"/>
                                         </div>
                                         <div class="col-span-12 mb-5">
-                                            <x-user.form.inputs id="provide" placeholder="{{ __('Provide') }}" name="provide"
+                                            <x-user.form.inputs id="provide" placeholder="{{ __('Provide') }}"
+                                                                name="provide"
                                                                 :value="old('provide', userPayment()->provide ?? '' )"/>
                                         </div>
                                         <div class="col-span-12 mb-5">
                                             <x-user.form.inputs.select id="type" name="type">
                                                 <option value="-1">{{ __('Select Type') }}</option>
                                                 @foreach(\App\Enums\UserPaymentTyeEnum::getArrayView() as $key => $value)
-                                                    <option value="{{ $value }}" @selected(old('type', userPayment()->type ?? '' ) == $value)>{{ $key }}</option>
+                                                    <option
+                                                        value="{{ $value }}" @selected(old('type', userPayment()->type ?? '' ) == $value)>{{ $key }}</option>
                                                 @endforeach
                                             </x-user.form.inputs.select>
                                         </div>
 
                                         <div class="col-span-12 mb-5">
-                                            <x-user.form.inputs.image name="qr" value="{{  old('qr', userPayment()->qr ?? '' ) }}"/>
+                                            <x-user.form.inputs.image name="qr"
+                                                                      value="{{  old('qr', userPayment()->qr ?? '' ) }}"/>
                                         </div>
 
                                         <div class="col-span-12">
@@ -203,6 +208,22 @@
                                         <p>Mobile: (123) 456-7890</p>
                                     </address>
                                     <a href="#" class="transition-all hover:text-orange">{{ __('Edit Address') }}</a>
+                                    <form action="{{ route('address.store') }}">
+                                        @csrf
+                                        <div class="grid grid-cols-12 gap-x-5">
+                                            <div class="col-span-12 mb-5">
+                                                <x-user.form.inputs name="address_1" value="{{ option('address_1', addresses()->address_1) }}" />
+                                            </div>
+                                            <div class="col-span-12 mb-5">
+                                                <x-user.form.inputs name="address_2" value="{{ option('address_2', addresses()->address_2) }}" />
+                                            </div>
+                                            <div class="col-span-12 mb-5">
+                                                <x-user.form.inputs.select name="district">
+
+                                                </x-user.form.inputs.select>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
 
                             </div>
@@ -214,13 +235,17 @@
                                     @csrf
                                     <div class="grid grid-cols-12 gap-x-5">
                                         <div class="col-span-12 mb-5">
-                                            <x-user.form.inputs.password id="old_password" placeholder="Password" name="old_password" />
+                                            <x-user.form.inputs.password id="old_password" placeholder="Password"
+                                                                         name="old_password"/>
                                         </div>
                                         <div class="col-span-12 mb-5">
-                                            <x-user.form.inputs.password id="new_password" placeholder="New Password" name="new_password" />
+                                            <x-user.form.inputs.password id="new_password" placeholder="New Password"
+                                                                         name="new_password"/>
                                         </div>
                                         <div class="col-span-12 mb-5">
-                                            <x-user.form.inputs.password id="new_password_confirmation" placeholder="Confirm New Password" name="new_password_confirmation" />
+                                            <x-user.form.inputs.password id="new_password_confirmation"
+                                                                         placeholder="Confirm New Password"
+                                                                         name="new_password_confirmation"/>
                                         </div>
                                         <div class="col-span-12">
                                             <x-user.form.buttons.primary id="button_change_password" type="submit">
@@ -241,12 +266,16 @@
                                             <x-user.form.inputs id="full-name" placeholder="Full Name" name="name"
                                                                 :value="old('name', auth()->user()->name)"/>
                                         </div>
-                                            <div class="col-span-6 mb-5">
-                                                <x-user.form.inputs.radio value="1" name="gender" :checked="old('gender', auth()->user()->gender)" id="gender1">{{ __('Male') }}</x-user.form.inputs.radio>
-                                            </div>
-                                            <div class="col-span-6 mb-5">
-                                                <x-user.form.inputs.radio value="0" name="gender" :checked="old('gender', auth()->user()->gender)" id="gender0">{{ __('Female') }}</x-user.form.inputs.radio>
-                                            </div>
+                                        <div class="col-span-6 mb-5">
+                                            <x-user.form.inputs.radio value="1" name="gender"
+                                                                      :checked="old('gender', auth()->user()->gender)"
+                                                                      id="gender1">{{ __('Male') }}</x-user.form.inputs.radio>
+                                        </div>
+                                        <div class="col-span-6 mb-5">
+                                            <x-user.form.inputs.radio value="0" name="gender"
+                                                                      :checked="old('gender', auth()->user()->gender)"
+                                                                      id="gender0">{{ __('Female') }}</x-user.form.inputs.radio>
+                                        </div>
 
                                         <div class="col-span-12 mb-5">
                                             <x-user.form.inputs name="birthdate" placeholder="xx/xx/xxxx" type="date"
@@ -261,19 +290,22 @@
                                         <div class="col-span-12 mb-5">
 
                                             @if(! auth()->user()->email_verified)
-                                            <div id="modal">
-                                                <div class="text-end text-base">
-                                                    <button type="button" class="text-primary hover:text-secondary"
-                                                            @click="showModal = true" id="verify_email">{{ __('Verify your email') }}
-                                                    </button>
+                                                <div id="modal">
+                                                    <div class="text-end text-base">
+                                                        <button type="button" class="text-primary hover:text-secondary"
+                                                                @click="showModal = true"
+                                                                id="verify_email">{{ __('Verify your email') }}
+                                                        </button>
+                                                    </div>
+                                                    <v-modal :open="showModal" @close="showModal = false">
+                                                        <x-user.form.buttons.primary id="submit_email_verify"
+                                                                                     type="button">
+                                                            <x-user.animateSpin class="hidden"
+                                                                                id="loading_verify_email"/>
+                                                            {{ __('Verify Email') }}
+                                                        </x-user.form.buttons.primary>
+                                                    </v-modal>
                                                 </div>
-                                                <v-modal :open="showModal" @close="showModal = false">
-                                                    <x-user.form.buttons.primary id="submit_email_verify" type="button">
-                                                        <x-user.animateSpin class="hidden" id="loading_verify_email"/>
-                                                        {{ __('Verify Email') }}
-                                                    </x-user.form.buttons.primary>
-                                                </v-modal>
-                                            </div>
                                             @endif
                                             <x-user.form.inputs name="email" placeholder="0123xxxxxxx"
                                                                 :value="old('email', auth()->user()->email)"/>

@@ -83,6 +83,13 @@ if (!function_exists('userPayment')) {
     }
 }
 
+if (!function_exists('addresses')) {
+    function addresses()
+    {
+        return auth()->user()->addresses()->first();
+    }
+}
+
 if (!function_exists('discountPrice')) {
     function discountPrice($price, $discount): integer
     {

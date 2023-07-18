@@ -25,6 +25,7 @@
         "@popperjs/core": "^2.11.8",
         "chart.js": "^2.9.4",
         "jquery": "^3.7.0",
+        "select2": "^4.1.0-rc.0",
         "simple-line-icons": "^2.5.5",
         "swiper": "^10.0.3",
         "tiny-emitter": "^2.1.0",

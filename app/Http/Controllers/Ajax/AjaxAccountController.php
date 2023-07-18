@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User\Ajax;
+namespace App\Http\Controllers\Ajax;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Ajax\AjaxUploadAvatarRequest;
