@@ -274,7 +274,7 @@
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-3 right-3">Sale</span>
                                             <span
                                                 class="font-medium uppercase text-sm text-black inline-block py-1 px-2 leading-none absolute top-10 right-3">-11%</span>
-                                            <img class="w-full h-full" src="assets/images/products/drone/product1.webp"
+                                            <img class="w-full h-full" src="{{ asset('images/service3.webp') }}"
                                                  alt="product image" loading="lazy" width="432" height="480"/>
                                             <!-- actions start -->
 
