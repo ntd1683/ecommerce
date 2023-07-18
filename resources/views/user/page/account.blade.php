@@ -8,25 +8,25 @@
                 <div class="col-span-12 lg:col-span-4">
                     <ul class="shop-tab-nav account-nav flex flex-wrap flex-col">
                         <li class="@if($tab == 'dashboard') active @endif">
-                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
+                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-secondary  text-base border-t border-l border-r border-gray-200 block"
                                href="#dashboad">{{ __('Dashboad') }}</a></li>
                         <li class="@if($tab == 'orders') active @endif">
-                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
+                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-secondary  text-base border-t border-l border-r border-gray-200 block"
                                href="#orders">{{ __('Orders') }}</a></li>
                         <li class="@if($tab == 'payment-method') active @endif">
-                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
+                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-secondary  text-base border-t border-l border-r border-gray-200 block"
                                href="#payment-method">{{ __('Payment Method') }}</a></li>
                         <li class="@if($tab == 'address') active @endif">
-                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
+                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-secondary  text-base border-t border-l border-r border-gray-200 block"
                                href="#address">{{ __('Address') }}</a></li>
                         <li class="@if($tab == 'account') active @endif"><a
-                                class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
+                                class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-secondary  text-base border-t border-l border-r border-gray-200 block"
                                 href="#account">{{ __('Account Details') }}</a></li>
                         <li class="@if($tab == 'changePassword') active @endif"><a
-                                class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-gray-200 block"
+                                class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-secondary  text-base border-t border-l border-r border-gray-200 block"
                                 href="#changePassword">{{ __('Change Password') }}</a></li>
                         <li>
-                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-primary  text-base border-t border-l border-r border-b border-gray-200 block"
+                            <a class="font-medium py-4 px-5 leading-none uppercase transition-all hover:text-white hover:bg-secondary  text-base border-t border-l border-r border-b border-gray-200 block"
                                href="{{ route('logout') }}">{{ __('Logout') }}</a></li>
                     </ul>
                 </div>

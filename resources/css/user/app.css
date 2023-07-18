@@ -628,6 +628,6 @@
 
 .shop-tab-nav .active {
     --tw-text-opacity: 1;
-    background-color: rgb(252 101 57/var(--tw-text-opacity));
+    @apply bg-primary;
     color: #FFFFFF;
 }
