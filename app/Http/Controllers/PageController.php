@@ -26,4 +26,9 @@ class PageController extends Controller
     {
         return view('user/page/account');
     }
+
+    public function shopGridLeftSideBar(): view
+    {
+        return view('user/page/shopGridLeftSideBar');
+    }
 }

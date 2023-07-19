@@ -50,6 +50,7 @@ Route::get('/', [HomepageController::class, '__invoke'])->name('index');
 Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
 Route::get('/cart', [PageController::class, 'cart'])->name('cart');
+Route::get('/shop-grid-left-sidebar', [PageController::class, 'shopGridLeftSideBar'])->name('shop-grid-left-sidebar');
 Route::prefix('ajax')->name('ajax.')->group(function () {
-    Route::post('verify-email', [AjaxAccountController::class , 'verifyEmail'])->name('verifyEmail');
+    Route::post('verify-email', [AjaxAccountController::class, 'verifyEmail'])->name('verifyEmail');
 });

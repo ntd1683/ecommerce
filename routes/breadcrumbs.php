@@ -34,6 +34,12 @@ Breadcrumbs::for('cart', function ($trail) {
     $trail->push(trans('Your Shopping Cart'), route('cart'));
 });
 
+// Shop Grid 3 Column
+Breadcrumbs::for('shopGridLeftSideBar', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('Shop Grid Left Side Bar'), route('shop-grid-left-sidebar'));
+});
+
 // Error
 Breadcrumbs::for('404Error', function ($trail) {
     $trail->parent('home');
