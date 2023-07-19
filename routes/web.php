@@ -58,6 +58,7 @@ Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
 Route::get('/cart', [PageController::class, 'cart'])->name('cart');
 Route::get('/shop-grid-left-sidebar', [PageController::class, 'shopGridLeftSideBar'])->name('shop-grid-left-sidebar');
+Route::get('/check-out', [PageController::class, 'checkOut'])->name('check-out');
 
 //Ajax
 Route::prefix('ajax')->name('ajax.')->group(function () {
@@ -70,3 +71,4 @@ Route::prefix('ajax')->name('ajax.')->group(function () {
     Route::get('GHN/get-district', [GHNController::class, 'getDistrict'])->name('ghn.get-district');
     Route::get('GHN/get-ward', [GHNController::class, 'getWard'])->name('ghn.get-ward');
 });
+

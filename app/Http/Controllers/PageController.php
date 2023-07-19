@@ -32,4 +32,9 @@ class PageController extends Controller
     {
         return view('user/page/shopGridLeftSideBar');
     }
+
+    public function checkOut(): View
+    {
+        return view('user/page/checkOut');
+    }
 }
