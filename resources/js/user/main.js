@@ -699,6 +699,36 @@ $(".checkout-toggle2").on("click", function () {
   });
 //
 
+/*-------------------------
+    Accordion animation
+    --------------------------*/
+//
+$(".set > button").on("click", function () {
+    if ($(".content").is(":visible")) {
+      $(".content").slideUp(300);
+    }
+    if ($(this).next(".content").is(":visible")) {
+      $(this).next(".content").slideUp(300);
+    } else {
+      $(this).next(".content").slideDown(300);
+    }
+  });
+
+    $(".faq > button").click(function () {
+      if ($('.faq-content').is(':visible')) {
+          $(".faq-content").slideUp(300);
+          $(".plusminus").text('+');
+      }
+      if ($(this).next(".faq-content").is(':visible')) {
+          $(this).next(".faq-content").slideUp(300);
+          $(this).children(".plusminus").text('+');
+      } else {
+          $(this).next(".faq-content").slideDown(300);
+          $(this).children(".plusminus").text('-');
+      }
+  });
+//
+
 /*---------------------------------
       Scroll Up
   -----------------------------------*/

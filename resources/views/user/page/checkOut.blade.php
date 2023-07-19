@@ -103,8 +103,8 @@
                         </form>
 
                         <div class="text-base font-medium checkout-account mb-5">
-                            <input id="id2" class="checkout-toggle2" type="checkbox">
-                            <label for="id2">Create an account?</label>
+                            <input id = "id2" class="checkout-toggle2" type="checkbox">
+                            <label for = "id2">Create an account?</label>
                         </div>
                         <div class="checkout-account-toggle open-toggle2 mb-30 hidden">
                             <input
@@ -259,11 +259,10 @@
                             </div>
                             <div class="accordion">
                                 <div class="set mb-4">
-                                    <x-user.form.buttons.primary class="text-lg font-semibold active"
-                                                                 aria-label="button">
+                                    <button class="text-base font-semibold active" aria-label="button">
                                         Direct bank transfer
-                                    </x-user.form.buttons.primary>
-                                    <div class="text-base content overflow-hidden p-4 bg-white mt-3">
+                                    </button>
+                                    <div class="content overflow-hidden p-4 bg-white mt-3">
                                         <p>
                                             Please send a check to Store Name, Store Street,
                                             Store Town, Store State / County, Store Postcode.

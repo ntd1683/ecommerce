@@ -349,3 +349,23 @@
     background-color: rgb(252 101 57/var(--tw-text-opacity));
     color: #FFFFFF;
 }
+
+/*author: Nguyen Hung css font*/
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+small {
+    font-size: 80%;
+  }
+/*author: Nguyen Hung css font*/  
