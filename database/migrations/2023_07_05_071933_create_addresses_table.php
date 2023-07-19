@@ -11,12 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('address', function (Blueprint $table) {
+        Schema::create('addresses', function (Blueprint $table) {
             $table->id();
             $table->string('address_1')->nullable();
             $table->string('address_2')->nullable();
+            $table->string('ward')->nullable();
+            $table->string('ward_id')->nullable();
             $table->string('district')->nullable();
+            $table->string('district_id')->nullable();
             $table->string('province')->nullable();
+            $table->string('province_id')->nullable();
             $table->bigInteger('user_id');
             $table->boolean('type')->default('0');
             $table->timestamps();

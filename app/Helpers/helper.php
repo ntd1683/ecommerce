@@ -35,20 +35,6 @@ if (!function_exists('optionSave')) {
     }
 }
 
-if (!function_exists('getNameRouteMain')) {
-    function getNameRouteMain(): string
-    {
-        return explode('.', request()->route()->getName())[0];
-    }
-}
-
-if (!function_exists('getNotify')) {
-    function getNotify(): Collection|array
-    {
-        return Notify::query()->where('author', auth()->user()->id)->get();
-    }
-}
-
 if (!function_exists('getNotify')) {
     function getNotify(): Collection|array
     {
@@ -59,13 +45,22 @@ if (!function_exists('getNotify')) {
 if (!function_exists('getNameRouteMain')) {
     function getNameRouteMain(): string
     {
-        return explode('.', request()->route()->getName())[0];
+        $arrRouteName = explode('.', request()->route()->getName());
+
+        if($arrRouteName[0] == 'admin') {
+            return $arrRouteName[1];
+        }
+
+        return $arrRouteName[0];
     }
 }
 
 if (!function_exists('getTitle')) {
     function getTitle(): string
     {
+        if(request()->route() == null) {
+            return config('app.name', 'Laravel');
+        }
         $arrRouteName = explode('.', request()->route()->getName());
         if($arrRouteName[0] == 'admin') {
             $tmp = $arrRouteName[1];
@@ -80,7 +75,22 @@ if (!function_exists('getTitle')) {
         }
         $suffix = ucwords($suffix);
 
+
         return option('site_name', config('app.name', 'Laravel')) . ' | ' . $suffix;
+    }
+}
+
+if (!function_exists('userPayment')) {
+    function userPayment()
+    {
+        return auth()->user()->userPayments()->first();
+    }
+}
+
+if (!function_exists('addresses')) {
+    function addresses()
+    {
+        return auth()->user()->addresses()->first();
     }
 }
 

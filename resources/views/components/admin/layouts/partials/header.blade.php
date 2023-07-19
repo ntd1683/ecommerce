@@ -7,8 +7,7 @@
         <a
             class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
             href="./index.html"
-        >Dashboard</a
-        >
+        >Dashboard</a>
         <form
             class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
         >
@@ -45,27 +44,7 @@
                 class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
                 id="user-dropdown"
             >
-                <a
-                    href="#pablo"
-                    class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Action</a
-                ><a
-                    href="#pablo"
-                    class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Another action</a
-                ><a
-                    href="#pablo"
-                    class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Something else here</a
-                >
-                <div
-                    class="h-0 my-2 border border-solid border-blueGray-100"
-                ></div>
-                <a
-                    href="#pablo"
-                    class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Seprated link</a
-                >
+                <x-admin.layouts.partials.menuAction />
             </div>
         </ul>
     </div>

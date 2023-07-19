@@ -16,79 +16,78 @@
                 <nav class="main-menu">
                     <ul class="flex flex-wrap">
                         <li class="main-menu__item relative group">
-                            <a class="block py-10 xl:pr-6 md:pr-5 capitalize font-normal text-md text-primary hover:text-orange transition-all"
+                            <a class="block py-10 xl:pr-6 md:pr-5 capitalize font-normal tehover:text-secondary hover:text-secondary transition-all"
                                href="{{ route('index') }}">Home</a>
                             <ul class="submenu bg-white py-3 px-8 shadow transition-all absolute left-0 top-full opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:-translate-y-3 transform z-10 min-w-max">
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="index.html">Airpod</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="index-2.html">Smartwatch</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="index-3.html">Drone</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="index-4.html">BackPack</a></li>
                             </ul>
                         </li>
 
                         <li class="main-menu__item group">
-                            <a class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all"
+                            <a class="block py-10 xl:px-6 md:px-5 capitalize font-normal tehover:text-secondary hover:text-secondary transition-all"
                                href="#">Shop</a>
                             <ul class="mega-menu flex flex-wrap bg-white py-5 px-8 shadow transition-all absolute left-0 top-full opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:-translate-y-3 transform z-10">
                                 <li class="flex-auto px-4">
-                                    <a class="font-normal text-base capitalize text-dark pb-5 border-b block border-solid border-gray-600 mb-6 tracking-wide transition-all hover:text-orange"
+                                    <a class="font-normal text-base capitalize text-dark pb-5 border-b block border-solid border-gray-600 mb-6 tracking-wide transition-all hover:text-secondary"
                                        href="#">Shop Grid </a>
                                     <ul class="pb-2">
                                         <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
+                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="shop-grid-3-column.html">Shop Grid 3 Column</a></li>
                                         <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
+                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="shop-grid-4-column.html">Shop Grid 4 Column</a></li>
                                         <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
-                                                href="{{ route('shop-grid-left-sidebar') }}">Shop Grid Left Sidebar</a>
-                                        </li>
+                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
+                                                href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a></li>
                                         <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
+                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="shop-grid-right-sidebar.html">shop Grid Right Sidebar</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="flex-auto px-4">
-                                    <a class="font-normal text-base capitalize text-dark pb-5 border-b block border-solid border-gray-600 mb-6 tracking-wide transition-all hover:text-orange"
+                                    <a class="font-normal text-base capitalize text-dark pb-5 border-b block border-solid border-gray-600 mb-6 tracking-wide transition-all hover:text-secondary"
                                        href="shop-list.html">shop list</a>
                                     <ul class="pb-2">
                                         <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
+                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="shop-list.html">Shop List</a></li>
                                         <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
+                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
                                         <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
+                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="flex-auto px-4">
-                                    <a class="font-normal text-base capitalize text-dark pb-5 border-b block border-solid border-gray-600 mb-6 tracking-wide transition-all hover:text-orange"
+                                    <a class="font-normal text-base capitalize text-dark pb-5 border-b block border-solid border-gray-600 mb-6 tracking-wide transition-all hover:text-secondary"
                                        href="#">Product Types</a>
                                     <ul class="pb-2">
                                         <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
+                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="single-product.html">Shop Single</a></li>
                                         <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
+                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="single-product-configurable.html">Shop Variable</a></li>
                                         <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
+                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="single-product-affiliate.html">Shop Affiliate</a></li>
                                         <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-orange transition-all"
+                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="single-product-group.html">Shop Group</a></li>
                                     </ul>
                                 </li>
@@ -99,72 +98,72 @@
                             </ul>
                         </li>
                         <li class="main-menu__item relative group"><a
-                                class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all"
+                                class="block py-10 xl:px-6 md:px-5 capitalize font-normal tehover:text-secondary hover:text-secondary transition-all"
                                 href="#">Blog</a>
 
                             <ul class="submenu bg-white py-3 px-8 shadow transition-all absolute left-0 top-full opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:-translate-y-3 transform z-10 min-w-max">
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="blog-grid-3-column.html">Blog Grid 3 Column</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="blog-grid-2-column.html">Blog Grid 2 Column</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="blog-list.html">Blog list</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="blog-list-right-sidebar.html"> Blog List Right Sideba</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="blog-details.html"> Blog details</a></li>
                             </ul>
 
                         </li>
                         <li class="main-menu__item relative group"><a
-                                class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all"
+                                class="block py-10 xl:px-6 md:px-5 capitalize font-normal tehover:text-secondary hover:text-secondary transition-all"
                                 href="#">pages</a>
                             <ul class="submenu bg-white py-3 px-8 shadow transition-all absolute left-0 top-full opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:-translate-y-3 transform z-10 min-w-max">
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="{{ route('about-us') }}">About Page</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="{{ route('cart') }}">Cart Page</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="checkout.html">Checkout Page</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="compare.html">Compare Page</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="login-register.html">Login & Register Page</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="{{ route('account') }}">Account Page</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="whishlist.html">Wishlist Page</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="faq.html">Frequently Questions</a></li>
                                 <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-orange"
+                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="404.html">Error 404</a></li>
                             </ul>
                         </li>
                         <li class="main-menu__item"><a
-                                class="block py-10 xl:px-6 md:px-5 capitalize font-normal text-md text-primary hover:text-orange transition-all"
+                                class="block py-10 xl:px-6 md:px-5 capitalize font-normal tehover:text-secondary hover:text-secondary transition-all"
                                 href="{{ route('contact-us') }}">Contact</a></li>
                     </ul>
                 </nav>
@@ -174,14 +173,14 @@
             <div class="w-6/12 lg:w-3/12">
                 <ul class="flex items-center justify-end">
                     <li class="ml-6 hidden lg:block">
-                        <button class="search-toggle text-right text-primary text-md hover:text-orange transition-all"
+                        <button class="search-toggle text-hover:text-secondary text-md hover:text-secondary transition-all"
                                 aria-label="icon-settings">
                             <i class="icon-magnifier"></i>
                         </button>
                     </li>
                     <li class="ml-6">
                         <a href="#offcanvas-cart"
-                           class="text-primary text-md hover:text-orange transition-all relative offcanvas-toggle">
+                           class="text-primary text-md hover:text-secondary transition-all relative offcanvas-toggle">
                             <span
                                 class="w-5 h-5 bg-dark text-white text-sm rounded-full font-normal flex flex-wrap items-center justify-center absolute -top-3 left-2 leading-none">4</span>
                             <i class="icon-bag"></i>
@@ -190,7 +189,7 @@
 
                     </li>
                     <li id="toggle-menu" class="ml-6 hidden lg:block relative">
-                        <button class="text-primary text-md hover:text-orange transition-all toggle-menu"
+                        <button class="text-primary text-md hover:text-secondary transition-all toggle-menu"
                                 aria-label="icon-settings">
                             <i class="icon-settings"></i>
                         </button>
@@ -200,13 +199,13 @@
                                 Currency</h4>
                             <ul>
                                 <li class="my-4"><a href="#"
-                                                    class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">USD
+                                                    class="text-base text-dark hover:text-secondary transition-all font-light capitalize tracking-wide">USD
                                         - US Dollar</a></li>
                                 <li class="my-4"><a href="#"
-                                                    class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">EUR
+                                                    class="text-base text-dark hover:text-secondary transition-all font-light capitalize tracking-wide">EUR
                                         - Euro</a></li>
                                 <li class="my-4"><a href="#"
-                                                    class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">GBP
+                                                    class="text-base text-dark hover:text-secondary transition-all font-light capitalize tracking-wide">GBP
                                         - British Pound</a></li>
                             </ul>
                             <h4 class="text-md text-dark font-normal capitalize tracking-wide pb-5 border-b border-solid border-gray-600 mb-5">
@@ -215,20 +214,20 @@
                                 @if(auth()->check())
                                 <li class="my-4">
                                     <a href="{{ route('account') }}"
-                                                    class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">
+                                                    class="text-base text-dark hover:text-secondary transition-all font-light capitalize tracking-wide">
                                         {{ auth()->user()->name }}
                                     </a>
                                 </li>
                                 <li class="my-4">
                                     <a href="{{ route('logout') }}"
-                                                    class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">
+                                                    class="text-base text-dark hover:text-secondary transition-all font-light capitalize tracking-wide">
                                         {{ __('Log out') }}
                                     </a>
                                 </li>
                                 @else
                                     <li class="my-4">
                                         <a href="{{ route('login-register') }}"
-                                           class="text-base text-dark hover:text-orange transition-all font-light capitalize tracking-wide">
+                                           class="text-base text-dark hover:text-secondary transition-all font-light capitalize tracking-wide">
                                             {{ __('Login Or Register') }}
                                         </a>
                                     </li>
@@ -240,7 +239,7 @@
                     </li>
                     <li class="ml-6 lg:hidden">
                         <a href="#offcanvas-mobile-menu"
-                           class="offcanvas-toggle text-primary text-md hover:text-orange transition-all"><i
+                           class="offcanvas-toggle text-primary text-md hover:text-secondary transition-all"><i
                                 class="icon-menu"></i></a>
                     </li>
                 </ul>
@@ -287,7 +286,7 @@
 
         <!-- close button start -->
         <button
-            class="offcanvas-close group transition-all hover:text-orange text-dark w-10 h-10 flex items-center justify-center absolute top-2 right-0 text-base"
+            class="offcanvas-close group transition-all hover:text-secondary text-dark w-10 h-10 flex items-center justify-center absolute top-2 right-0 text-base"
             aria-label="offcanvas"><i class="icon-close transition-all transform group-hover:rotate-90"></i></button>
         <!-- close button end -->
 
@@ -300,16 +299,16 @@
                     <a href="#" class="block capitalize font-normal text-base my-2 py-1 font-roboto">Home</a>
                     <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
                         <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                href="index.html">Airpod</a></li>
                         <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                href="index-2.html">Smartwatch</a></li>
                         <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                href="index-3.html">Drone</a></li>
                         <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                href="index-4.html">BackPack</a></li>
                     </ul>
                 </li>
@@ -317,77 +316,77 @@
                     <a href="#" class="block capitalize font-normal text-base my-2 py-1 font-roboto">Shop</a>
                     <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
                         <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                href="#">Shop Grid</a>
                             <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="shop-grid-3-column.html">Shop Grid 3 Column</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="shop-grid-4-column.html">Shop Grid 4 Column</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="shop-grid-right-sidebar.html">shop Grid Right Sidebar</a>
                                 </li>
 
                             </ul>
                         </li>
                         <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                href="#">shop list</a>
                             <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="shop-list.html">Shop List</a></li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="shop-list-right-sidebar.html">Shop List right Sidebar</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                href="#">blogs</a>
                             <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="blog-grid-3-column.html">Blog Grid 3 Column</a></li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="blog-grid-4-column.html">Blog Grid 4 Column</a></li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
 
                             </ul>
                         </li>
                         <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                href="#">Product Types</a>
                             <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
                                 <li>
-                                    <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="single-product.html">Shop Single</a></li>
                                 <li>
-                                    <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="single-product-configurable.html">Shop Variable</a></li>
                                 <li>
-                                    <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="single-product-affiliate.html">Shop Affiliate</a></li>
                                 <li>
-                                    <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="single-product-group.html">Shop Group</a></li>
 
                             </ul>
@@ -398,41 +397,41 @@
                     <a href="#" class="block capitalize font-normal text-base my-2 py-1 font-roboto">Blog</a>
                     <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
                         <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                href="#">Blog Grid</a>
                             <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="blog-grid-3-column.html">Blog Grid 3 column</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="blog-grid-2-column.html">Blog Grid 2 column</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-orange"
+                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                href="#">Blog List</a>
                             <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="blog-list-left-sidebar.html">Blog List Left Sidebar</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="blog-list-right-sidebar.html">Blog List Right Sidebar</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-orange"
+                                    <a class="text-sm pt-3 px-10 pb-1 text-dark font-light block font-roboto transition-all hover:text-secondary"
                                        href="blog-details.html">Blog details</a>
                                 </li>
                             </ul>
@@ -454,26 +453,26 @@
         <nav>
             <ul id="settings-menu">
                 <li class="block mb-3">
-                    <a class="flex flex-wrap justify-between mb-3 text-base text-dark hover:text-orange"
+                    <a class="flex flex-wrap justify-between mb-3 text-base text-dark hover:text-secondary"
                        href="javascript:void(0)">Currency <i class="icon-arrow-down"></i></a>
                     <ul class="sub-category hidden py-5 px-6 shadow">
                         <li class="my-2 block"><a
-                                class="font-light text-sm tracking-wide text-dark block hover:text-orange" href="#">EUR
+                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="#">EUR
                                 €</a></li>
                         <li class="my-2 block"><a
-                                class="font-light text-sm tracking-wide text-dark block hover:text-orange" href="#">USD
+                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="#">USD
                                 $</a></li>
                     </ul>
                 </li>
                 <li class="block mb-3">
-                    <a class="flex flex-wrap justify-between mb-3 text-base text-dark hover:text-orange"
+                    <a class="flex flex-wrap justify-between mb-3 text-base text-dark hover:text-secondary"
                        href="javascript:void(0)">Account <i class="icon-arrow-down"></i></a>
                     <ul class="sub-category hidden py-5 px-6 shadow">
                         <li class="my-2 block"><a
-                                class="font-light text-sm tracking-wide text-dark block hover:text-orange" href="#">English</a>
+                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="#">English</a>
                         </li>
                         <li class="my-2 block"><a
-                                class="font-light text-sm tracking-wide text-dark block hover:text-orange" href="#">Français</a>
+                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="#">Français</a>
                         </li>
                     </ul>
                 </li>
@@ -491,7 +490,7 @@
     <div class="p-8">
         <div class="flex flex-wrap justify-between items-center pb-6 mb-6 border-b border-solid border-gray-600">
             <h4 class="font-normal text-md text-dark capitalize">Shoping Cart</h4>
-            <button class="offcanvas-close hover:text-orange" aria-label="close icon"><i class="icon-close"></i>
+            <button class="offcanvas-close hover:text-secondary" aria-label="close icon"><i class="icon-close"></i>
             </button>
         </div>
         <ul class="h-96 overflow-y-auto">
@@ -500,12 +499,12 @@
                     <a href="#"><img src="assets/images/cart/product1.webp" alt="product image" loading="lazy"
                                      width="90" height="100"/></a>
                     <button
-                        class="absolute top-3 left-3 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all hover:text-orange">
+                        class="absolute top-3 left-3 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all hover:text-secondary">
                         <i class="icon-close"></i></button>
                 </div>
                 <div class="flex-1">
                     <h4>
-                        <a class="font-light text-sm md:text-base text-dark hover:text-orange transition-all tracking-wide"
+                        <a class="font-light text-sm md:text-base text-dark hover:text-secondary transition-all tracking-wide"
                            href="#">Birpod product unsde - m / gold</a>
                     </h4>
                     <span
@@ -518,12 +517,12 @@
                                                                     alt="product image" loading="lazy" width="90"
                                                                     height="100"/></a>
                     <button
-                        class="absolute top-3 left-3 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all hover:text-orange">
+                        class="absolute top-3 left-3 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all hover:text-secondary">
                         <i class="icon-close"></i></button>
                 </div>
                 <div class="flex-1">
                     <h4>
-                        <a class="font-light text-sm md:text-base text-dark hover:text-orange transition-all tracking-wide"
+                        <a class="font-light text-sm md:text-base text-dark hover:text-secondary transition-all tracking-wide"
                            href="https://template.hasthemes.com/#">Airpod product kiebd - red</a>
                     </h4>
                     <span
@@ -535,12 +534,12 @@
                     <a href="#"><img src="assets/images/cart/product3.webp" alt="product image" loading="lazy"
                                      width="90" height="100"/></a>
                     <button
-                        class="absolute top-3 left-3 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all hover:text-orange">
+                        class="absolute top-3 left-3 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all hover:text-secondary">
                         <i class="icon-close"></i></button>
                 </div>
                 <div class="flex-1">
                     <h4>
-                        <a class="font-light text-sm md:text-base text-dark hover:text-orange transition-all tracking-wide"
+                        <a class="font-light text-sm md:text-base text-dark hover:text-secondary transition-all tracking-wide"
                            href="#">Airpod product ides - navy</a>
                     </h4>
                     <span

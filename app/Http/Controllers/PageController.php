@@ -22,9 +22,10 @@ class PageController extends Controller
         return view('user/page/cart');
     }
 
-    public function account(): View
+    public function account(Request $request): View
     {
-        return view('user/page/account');
+        $tab = $request->get('tab') ?: 'dashboard';
+        return view('user/page/account', compact('tab'));
     }
 
     public function shopGridLeftSideBar(): view
