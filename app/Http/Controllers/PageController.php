@@ -27,4 +27,9 @@ class PageController extends Controller
         $tab = $request->get('tab') ?: 'dashboard';
         return view('user/page/account', compact('tab'));
     }
+
+    public function shopGridLeftSideBar(): view
+    {
+        return view('user/page/shopGridLeftSideBar');
+    }
 }
