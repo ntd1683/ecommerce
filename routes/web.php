@@ -51,5 +51,7 @@ Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
 Route::get('/cart', [PageController::class, 'cart'])->name('cart');
 Route::prefix('ajax')->name('ajax.')->group(function () {
-    Route::post('verify-email', [AjaxAccountController::class , 'verifyEmail'])->name('verifyEmail');
+    Route::post('verify-email', [AjaxAccountController::class, 'verifyEmail'])->name('verifyEmail');
 });
+Route::get('/check-out', [PageController::class, 'checkOut'])->name('check-out');
+

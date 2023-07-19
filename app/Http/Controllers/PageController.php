@@ -26,4 +26,9 @@ class PageController extends Controller
     {
         return view('user/page/account');
     }
+
+    public function checkOut(): View
+    {
+        return view('user/page/checkOut');
+    }
 }
