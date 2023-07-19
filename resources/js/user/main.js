@@ -687,6 +687,18 @@ const CustomTabs = function (tab) {
 };
 CustomTabs("#maintab");
 
+  /*-------------------------
+    Create an account toggle
+    --------------------------*/
+// 
+$(".checkout-toggle2").on("click", function () {
+    $(".open-toggle2").slideToggle(1000);
+  });
+  $(".checkout-toggle").on("click", function () {
+    $(".open-toggle").slideToggle(1000);
+  });
+//
+
 /*---------------------------------
       Scroll Up
   -----------------------------------*/
