@@ -16,12 +16,21 @@
     />
     <link rel="stylesheet" href="{{ asset('css/admin/app.css') }}"/>
     <title>{{ getTitle() }}</title>
+
     <link rel="stylesheet" href="{{ asset('css/libraries/toasting.css') }}">
     <script src="{{ asset('js/libraries/toasting.js') }}"></script>
     <style>
         :root {
-            --primary-color: {{ option('primary_color', '#8D524D') }};
+            --primary-color: {{ option('primary_color', '#db2777') }};
             --secondary-color: {{ option('secondary_color', '#FF80B5') }};
+        }
+
+        .active {
+            color: var(--primary-color) !important;
+        }
+
+        .active:hover {
+            color: var(--secondary-color) !important;
         }
     </style>
     @stack('css')
@@ -42,6 +51,7 @@
     </div>
 </div>
 <script src="{{ asset('js/admin/main.js') }}"></script>
+<script src="{{ asset('js/admin/app.js') }}"></script>
 <script type="text/javascript">
 </script>
 <script>

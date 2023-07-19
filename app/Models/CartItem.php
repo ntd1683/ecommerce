@@ -5,12 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product_Image_Detail extends Model
+class CartItem extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'product_id',
-        'product_image_id'
+    protected $fillable =[
+        'session',
+        'product',
+        'quantity'
     ];
 }

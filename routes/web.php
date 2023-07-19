@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\AddressController;
+use App\Http\Controllers\Ajax\AjaxAccountController;
+use App\Http\Controllers\Ajax\GHNController;
 use App\Http\Controllers\PageController;
-use App\Http\Controllers\TestController;
-use App\Http\Controllers\User\Ajax\AjaxAccountController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\HomepageController;
+use App\Http\Controllers\UserPaymentController;
 use App\Http\Middleware\CheckLoginMiddleware;
 use App\Http\Middleware\CheckLogoutMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -40,6 +43,10 @@ Route::group([
     'middleware' => CheckLoginMiddleware::class,
 ], function () {
     Route::get('/account', [PageController::class, 'account'])->name('account');
+    Route::post('/change-information', [ProfileController::class, 'update'])->name('account.change-information');
+    Route::post('/change-password', [ProfileController::class, 'changePassword'])->name('account.change-password');
+    Route::post('/change-payment', [UserPaymentController::class, 'store'])->name('user-payment.store');
+    Route::post('/change-address', [AddressController::class, 'store'])->name('address.store');
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
@@ -50,8 +57,18 @@ Route::get('/', [HomepageController::class, '__invoke'])->name('index');
 Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
 Route::get('/cart', [PageController::class, 'cart'])->name('cart');
-Route::prefix('ajax')->name('ajax.')->group(function () {
-    Route::post('verify-email', [AjaxAccountController::class, 'verifyEmail'])->name('verifyEmail');
-});
+Route::get('/shop-grid-left-sidebar', [PageController::class, 'shopGridLeftSideBar'])->name('shop-grid-left-sidebar');
 Route::get('/check-out', [PageController::class, 'checkOut'])->name('check-out');
+
+//Ajax
+Route::prefix('ajax')->name('ajax.')->group(function () {
+    Route::post('account/verify-email', [AjaxAccountController::class , 'verifyEmail'])->name('account.verify-email');
+    Route::post('account/avatar', [AjaxAccountController::class , 'uploadAvatar'])->name('account.avatar');
+    Route::post('account/change-password', [AjaxAccountController::class , 'changePassword'])->name('account.change-password');
+
+//    GHN
+    Route::get('GHN/get-province', [GHNController::class, 'getProvinces'])->name('ghn.get-provinces');
+    Route::get('GHN/get-district', [GHNController::class, 'getDistrict'])->name('ghn.get-district');
+    Route::get('GHN/get-ward', [GHNController::class, 'getWard'])->name('ghn.get-ward');
+});
 
