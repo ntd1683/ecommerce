@@ -14,6 +14,11 @@ class ProfileController extends Controller
         return redirect()->back()->with('success', 'Password changed successfully');
     }
 
+    public function index(): view
+    {
+        return view('admin.page.profile');
+    }
+
     public function update(StoreProfileRequest $request): RedirectResponse
     {
         $user = auth()->user();
