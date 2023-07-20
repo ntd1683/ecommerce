@@ -4,20 +4,39 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
     use HasFactory;
+    use SoftDeletes;
 
-    protected $fillable =[
+    protected $fillable = [
         'name',
         'SKU',
         'product_category_id',
         'price',
-        'discount',
+        'product_discount_id',
         'pin',
-        'unit'
+        'unit',
+        'user_id',
     ];
 
+    public $timestamps = true;
 
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function productCategory(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function discount(): BelongsTo
+    {
+        return $this->belongsTo(Discount::class);
+    }
 }

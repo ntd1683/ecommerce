@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreProductCategoryRequest;
+use App\Models\ProductCategory;
 use Illuminate\Http\Request;
 
 class ProductCategoryController extends Controller
@@ -19,15 +21,23 @@ class ProductCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.productCategory.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreProductCategoryRequest $request)
     {
-        //
+        try {
+            ProductCategory::create([
+                ...$request->validated(),
+            ]);
+
+            return redirect()->route('admin.index')->with('success', trans('Add Product Category Successfully'));
+        } catch (\Exception $e) {
+            return redirect()->route('admin.index')->withErrors(trans('Add Product Category Error'));
+        }
     }
 
     /**

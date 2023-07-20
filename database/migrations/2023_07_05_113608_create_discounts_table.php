@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('discounts', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->string('code',11)->unique();
+            $table->string('code')->unique();
             $table->integer('percent');
             $table->boolean('active')->default('0');
             $table->timestamp('expired')->nullable();
             $table->string('type')->nullable();
+            $table->bigInteger('user_id');
             $table->timestamps();
         });
     }

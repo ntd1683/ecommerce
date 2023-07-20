@@ -145,34 +145,64 @@
             <h6
                 class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
             >
-                Auth Layout Pages
+                {{ __('Product') }}
             </h6>
-            <!-- Navigation -->
 
             <ul
                 class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
             >
                 <li class="items-center">
                     <a
-                        href="../auth/login.html"
-                        class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-pink-600', 'active' => getNameRouteMain() == 'product' ])
+                        href="{{ route('admin.product.create') }}"
                     >
                         <i
-                            class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"
+                            class="fas fa-plus mr-2 text-sm"
                         ></i>
-                        Login
+                        {{ __('Create') }}
                     </a>
                 </li>
+            </ul>
+            <h6
+                class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
+            >
+                {{ __('Category') }}
+            </h6>
 
+            <ul
+                class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
+            >
                 <li class="items-center">
                     <a
-                        href="../auth/register.html"
-                        class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-pink-600', 'active' => getNameRouteMain() == 'product-category' ])
+                        href="{{ route('admin.product-category.create') }}"
                     >
                         <i
-                            class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"
+                            class="fas fa-plus mr-2 text-sm"
                         ></i>
-                        Register
+                        {{ __('Create') }}
+                    </a>
+                </li>
+            </ul>
+
+            <h6
+                class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
+            >
+                {{ __('Discount') }}
+            </h6>
+
+            <ul
+                class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
+            >
+                <li class="items-center">
+                    <a
+                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-pink-600', 'active' => getNameRouteMain() == 'discount' ])
+                        href="{{ route('admin.discount.create') }}"
+                    >
+                        <i
+                            class="fas fa-plus mr-2 text-sm"
+                        ></i>
+                        {{ __('Create') }}
                     </a>
                 </li>
             </ul>

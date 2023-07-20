@@ -54,12 +54,14 @@
                             </div>
                             <div>
                                 <label class="inline-flex items-center cursor-pointer"
-                                ><input
+                                >
+                                    <input
                                         id="customCheckLogin"
                                         type="checkbox"
                                         class="form-checkbox border-0 rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150"
                                         name="remember"
-                                    /><span
+                                    />
+                                    <span
                                         class="ml-2 text-sm font-semibold text-blueGray-600"
                                     >{{ __('Remember me') }}</span>
                                 </label>

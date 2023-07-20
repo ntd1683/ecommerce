@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreDiscountRequest;
+use App\Models\Discount;
 use Illuminate\Http\Request;
 
 class DiscountController extends Controller
@@ -19,15 +21,24 @@ class DiscountController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.discount.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreDiscountRequest $request)
     {
-        //
+        try {
+            Discount::create([
+                ...$request->validated(),
+                'user_id' => auth()->user()->id,
+            ]);
+
+            return redirect()->route('admin.index')->with('success', trans('Add Discount Successfully'));
+        } catch (\Exception $e) {
+            return redirect()->route('admin.index')->withErrors(trans('Add Discount Error'));
+        }
     }
 
     /**

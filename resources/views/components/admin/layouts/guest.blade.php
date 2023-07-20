@@ -14,7 +14,7 @@
         rel="stylesheet"
         href="{{ asset('css/admin/style.css') }}"
     />
-    <link rel="stylesheet" href="{{ asset('css/admin/app.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
     <title>{{ getTitle() }}</title>
 
     <link rel="stylesheet" href="{{ asset('css/libraries/toasting.css') }}">

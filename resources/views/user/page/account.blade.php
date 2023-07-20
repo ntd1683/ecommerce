@@ -294,7 +294,7 @@
 
                                         <div class="col-span-12 mb-5">
                                             <x-user.form.inputs name="birthdate" placeholder="xx/xx/xxxx" type="date"
-                                                                :value="old('birthdate',auth()->user()->birthdate)"/>
+                                                                :value="old('birthdate', auth()->user()->birthdate)"/>
                                         </div>
 
                                         <div class="col-span-12 mb-5">
