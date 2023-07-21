@@ -38,6 +38,7 @@ class ProductController extends Controller
             $arr = $request->validated();
             $product = Product::create([
                 ...$arr,
+                'user_id' => auth()->user()->id,
             ]);
 
             ProductInventory::create([
@@ -46,7 +47,7 @@ class ProductController extends Controller
             ]);
             if ($request->hasFile('image')) {
                 foreach ($request->file('image') as $image) {
-                    $name = 'qr_' . Str::random(5) . '.' . $image->extension();
+                    $name = 'product_' . Str::random(5) . '.' . $image->extension();
                     $path = $image->storeAs('images', $name, 'public');
 
                     $productImage = ProductImage::create([
@@ -67,6 +68,11 @@ class ProductController extends Controller
         } catch (\Exception $e) {
             return redirect()->route('admin.index')->withErrors(trans('Add Product Failed'));
         }
+    }
+
+    public function import()
+    {
+        return view('admin.product.import');
     }
 
     /**
