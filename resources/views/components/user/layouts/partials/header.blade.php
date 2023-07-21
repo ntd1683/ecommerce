@@ -415,12 +415,18 @@
                     <a class="flex flex-wrap justify-between mb-3 text-base text-dark hover:text-secondary"
                        href="javascript:void(0)">{{ __('Account') }}<i class="icon-arrow-down"></i></a>
                     <ul class="sub-category hidden py-5 px-6 ">
-                        <li class="my-2 block"><a
-                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="{{ route('account') }}">{{ auth()->user()->name }}</a>
-                        </li>
-                        <li class="my-2 block">
-                            <a class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="{{ route('logout') }}">{{ __('Logout') }}</a>
-                        </li>
+                        @if(auth()->check())
+                            <li class="my-2 block"><a
+                                    class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="{{ route('account') }}">{{ auth()->user()->name }}</a>
+                            </li>
+                            <li class="my-2 block">
+                                <a class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="{{ route('logout') }}">{{ __('Logout') }}</a>
+                            </li>
+                        @else
+                            <li class="my-2 block"><a
+                                    class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="{{ route('login-register') }}">{{ __('Login - Register') }}</a>
+                            </li>
+                        @endif
                     </ul>
                 </li>
             </ul>
