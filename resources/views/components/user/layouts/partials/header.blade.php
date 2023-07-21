@@ -141,7 +141,7 @@
                                         href="{{ route('cart') }}">Cart Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
-                                        href="checkout.html">Checkout Page</a></li>
+                                        href="{{ route('check-out') }}">Checkout Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="compare.html">Compare Page</a></li>
