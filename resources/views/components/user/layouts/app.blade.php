@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="author" content="">
-    @if (option('site_favicon'))
-        <link rel="shortcut icon" href="{{ asset(option('site_favicon')) }}">
-    @endif
+    <link rel="shortcut icon" href="{{ Storage::url(option('site_favicon')) }}">
 
     <title>{{ getTitle() }}</title>
 
@@ -17,8 +15,8 @@
     <script src="{{ asset('js/libraries/toasting.js') }}"></script>
     <style>
         :root {
-            --primary-color: {{ option('primary_color', '#8D524D') }};
-            --secondary-color: {{ option('secondary_color', '#FF80B5') }};
+            --primary-color: {{ option('primary_color', '#0d6938') }};
+            --secondary-color: {{ option('secondary_color', '#8D524D') }};
         }
     </style>
     <link rel="stylesheet" href="{{ asset('css/user/style.css') }}" />

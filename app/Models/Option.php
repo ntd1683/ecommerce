@@ -12,4 +12,6 @@ class Option extends Model
         'name',
         'value',
     ];
+
+    public $timestamps = false;
 }

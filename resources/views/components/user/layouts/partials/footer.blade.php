@@ -5,7 +5,7 @@
 
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-12 md:col-span-6 lg:col-span-6 mb-10">
-                    <a href="index.html" class="inline-block mb-4"><img src="{{ asset('images/user/logo.webp') }}" alt="logo" loading="lazy" width="125" height="45" /></a>
+                    <a href="index.html" class="inline-block mb-4"><img src="{{ Storage::url(option('site_logo')) }}" alt="logo" loading="lazy" width="125" height="45" /></a>
                     <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor inci ut labore et dolore</p>
 
                     <div class="flex flex-wrap items-center justify-start">

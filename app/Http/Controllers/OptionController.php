@@ -2,64 +2,47 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreOptionRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Illuminate\View\View;
 
 class OptionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index(): view
     {
         return view('admin.page.option');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function store(StoreOptionRequest $request)
     {
-        //
-    }
+        optionSave('site_name', $request->get('site_name'));
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        if (option('site_logo')) {
+            Storage::disk('public')->delete(option('site_logo'));
+        }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+        if ($request->hasFile('site_logo')) {
+            $fileLogo = $request->file('site_logo');
+            $nameFileLogo = 'logo_' . Str::random(5) . '.' . $fileLogo->extension();
+            $filePathLogo = $fileLogo->storeAs('images', $nameFileLogo, 'public');
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
+            optionSave('site_logo', $filePathLogo);
+        }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+        if (option('site_favicon')) {
+            Storage::disk('public')->delete(option('site_favicon'));
+        }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        if ($request->hasFile('site_favicon')) {
+            $fileFavicon = $request->file('site_favicon');
+            $nameFileFavicon = 'favicon_' . Str::random(5) . '.' . $fileFavicon->extension();
+            $filePathFavicon = $fileFavicon->storeAs('images', $nameFileFavicon, 'public');
+
+            optionSave('site_favicon', $filePathFavicon);
+        }
+
+        return redirect()->route('admin.index')->with('success', trans('Save Setting Successfully'));
     }
 }
