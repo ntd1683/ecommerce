@@ -13,4 +13,6 @@ class ProductInventory extends Model
         'product_id',
         'quantity'
     ];
+
+    public $timestamps = false;
 }

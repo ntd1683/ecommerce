@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\Ajax\AjaxAccountController;
+use App\Http\Controllers\Ajax\AjaxDiscountController;
+use App\Http\Controllers\Ajax\AjaxProductCategoryController;
 use App\Http\Controllers\Ajax\GHNController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\HomepageController;
@@ -62,6 +65,7 @@ Route::get('/check-out', [PageController::class, 'checkOut'])->name('check-out')
 
 //Ajax
 Route::prefix('ajax')->name('ajax.')->group(function () {
+//    Account
     Route::post('account/verify-email', [AjaxAccountController::class , 'verifyEmail'])->name('account.verify-email');
     Route::post('account/avatar', [AjaxAccountController::class , 'uploadAvatar'])->name('account.avatar');
     Route::post('account/change-password', [AjaxAccountController::class , 'changePassword'])->name('account.change-password');
@@ -70,5 +74,11 @@ Route::prefix('ajax')->name('ajax.')->group(function () {
     Route::get('GHN/get-province', [GHNController::class, 'getProvinces'])->name('ghn.get-provinces');
     Route::get('GHN/get-district', [GHNController::class, 'getDistrict'])->name('ghn.get-district');
     Route::get('GHN/get-ward', [GHNController::class, 'getWard'])->name('ghn.get-ward');
+
+//    Product Category
+    Route::get('product/category', [AjaxProductCategoryController::class, '__invoke'])->name('product.category.index');
+
+//    Discount
+    Route::get('discount', [AjaxDiscountController::class, '__invoke'])->name('discount.index');
 });
 

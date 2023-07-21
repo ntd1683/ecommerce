@@ -23,7 +23,7 @@
     </style>
     <link rel="stylesheet" href="{{ asset('css/user/style.css') }}" />
 
-    <link rel="stylesheet" href="{{ asset('css/user/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
     @stack('css')
 </head>
 <body class="font-poppins text-dark text-xl leading-loose">

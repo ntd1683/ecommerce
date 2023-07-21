@@ -93,3 +93,15 @@ Breadcrumbs::for('503Error', function ($trail) {
     $trail->parent('home');
     $trail->push(trans('503 Not Found'));
 });
+
+// Error
+Breadcrumbs::for('product', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('Product'));
+});
+
+// Product
+Breadcrumbs::for('product.create', function ($trail) {
+    $trail->parent('product');
+    $trail->push(trans('Create'));
+});

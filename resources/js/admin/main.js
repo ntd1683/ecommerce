@@ -3,6 +3,32 @@ import "chart.js/dist/Chart.js";
 import { createPopper } from '@popperjs/core';
 import '../libraries/password'
 
+$(function() {
+    $(document).on("change",".uploadFile", function()
+    {
+        var uploadFile = $(this);
+        var files = !!this.files ? this.files : [];
+        if (!files.length || !window.FileReader) return;
+
+        if (/^image/.test( files[0].type)){
+            var reader = new FileReader();
+            reader.readAsDataURL(files[0]);
+
+            reader.onloadend = function(){
+                uploadFile.closest(".imgUp").find('.imagePreview')[0].setAttribute('src', this.result)
+            }
+        }
+
+    });
+});
+
+$("input[type=date]").click((e) => {
+    e.target.showPicker();
+});
+$("input[type=datetime-local]").click((e) => {
+    e.target.showPicker();
+});
+
 /* Make dynamic date appear */
 (function () {
     if (document.getElementById("get-current-year")) {
