@@ -9,7 +9,7 @@ class ChangeLanguageController extends Controller
 {
     public function __invoke(Request $request)
     {
-        $language = $request->get('language') ?: 'en';
+        $language = $request->get('language') ?: 'vi';
         Session::put('lang', $language);
 
         return redirect()->back()->with('success', trans('Change Language Successfully'));

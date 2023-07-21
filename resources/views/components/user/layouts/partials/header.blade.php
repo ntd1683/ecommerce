@@ -164,6 +164,58 @@
                             <i class="icon-magnifier"></i>
                         </button>
                     </li>
+                    <li class="ml-6 hidden lg:block text-primary">
+                        <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+                        {{ __('Vi') }}
+                        <?php $oppositeLang = session()->get('lang') == 'vi' ? 'en' : 'vi' ?>
+                            <button type="button" class="mx-1 bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" role="switch" aria-checked="false" onclick="changeLanguage('{{ $oppositeLang }}')">
+                                <span class="sr-only">{{ __('Change Language') }}</span>
+                                <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+                                <span aria-hidden="true" class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+                            </button>
+                        {{ __('En') }}
+                        @push('js')
+                            <script>
+                                function changeLanguage(lang) {
+                                    window.location.href = "{{ route('change-language') }}?lang=" + lang;
+                                }
+                                // Hàm để xử lý sự kiện khi nhấp vào nút toggle
+                                function toggleSwitch() {
+                                    const button = document.querySelector('button[role="switch"]');
+                                    const isChecked = button.getAttribute('aria-checked') === 'true';
+                                    const box = button.querySelector('span[aria-hidden="true"]');
+
+                                    // Đảo trạng thái của toggle
+                                    const newChecked = !isChecked;
+
+                                    // Cập nhật thuộc tính aria-checked
+                                    button.setAttribute('aria-checked', newChecked);
+
+                                    // Cập nhật class cho nút toggle (màu nền)
+                                    if (newChecked) {
+                                        button.classList.remove('bg-gray-200');
+                                        button.classList.add('bg-primary');
+                                    } else {
+                                        button.classList.remove('bg-primary');
+                                        button.classList.add('bg-gray-200');
+                                    }
+
+                                    // Cập nhật class cho hộp chứa (vị trí)
+                                    if (newChecked) {
+                                        box.classList.add('translate-x-5');
+                                    } else {
+                                        box.classList.remove('translate-x-5');
+                                    }
+                                }
+
+                                @if(session()->get('lang') === 'en') toggleSwitch () @endif
+
+                                // Bắt sự kiện click vào nút toggle
+                                const toggleButton = document.querySelector('button[role="switch"]');
+                                toggleButton.addEventListener('click', toggleSwitch);
+                            </script>
+                        @endpush
+                    </li>
                     <li class="ml-6">
                         <a href="#offcanvas-cart"
                            class="text-primary text-md hover:text-secondary transition-all relative offcanvas-toggle">
