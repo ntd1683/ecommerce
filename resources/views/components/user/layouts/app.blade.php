@@ -77,5 +77,10 @@
     });
 </script>
 @stack('js')
+<div id="modal" class="modalBanner">
+    <v-modal :open="showModalHomepage" @close="showModalHomepage = false" name="banner">
+        <img src="https://img.ws.mms.shopee.vn/vn-11134207-7qukw-ljb4b1wnv8iae3" alt="Quang cao">
+    </v-modal>
+</div>
 </body>
 </html>
