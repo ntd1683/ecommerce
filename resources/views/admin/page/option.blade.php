@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="flex-auto px-4 lg:px-10 py-5">
-                    <form action="{{ route('admin.product.store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin.option.store') }}" method="post" enctype="multipart/form-data">
                         <h6
                             class="text-blueGray-400 text-sm mb-6 font-bold uppercase"
                         >
@@ -35,7 +35,7 @@
                                             <x-admin.form.inputs.label for="site_logo">
                                                 {{ __('Logo') }}
                                             </x-admin.form.inputs.label>
-                                            <x-admin.form.inputs.image id="site_logo"
+                                            <x-admin.form.inputs.image id="site_logo" name="site_logo"
                                                                        value="{{ old('site_logo', option('site_logo')) }}"
                                                                        class="rounded-3"/>
                                         </div>
@@ -51,27 +51,23 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="relative w-full mb-3">
-                                    <x-admin.form.inputs.label for="primary_color">
-                                        {{ __('Primary Color') }}
-                                    </x-admin.form.inputs.label>
-                                    <x-admin.form.inputs id="primary_color"
-                                                         value="{{ old('primary_color', option('primary_color')) }}"/>
-                                </div>
-                                <div class="relative w-full mb-3">
-                                    <x-admin.form.inputs.label for="secondary_color">
-                                        {{ __('Secondary Color') }}
-                                    </x-admin.form.inputs.label>
-                                    <x-admin.form.inputs id="secondary_color"
-                                                         value="{{ old('secondary_color', option('secondary_color')) }}"/>
-                                </div>
-                                @if(auth()->user()->level == 2)
+                                <div id="form-vue">
+
                                     <div class="relative w-full mb-3">
-                                        <x-admin.form.inputs.checkbox name="pin">
-                                            {{ __('Pin') }}
-                                        </x-admin.form.inputs.checkbox>
+                                        <x-admin.form.inputs.label for="primary_color">
+                                            {{ __('Primary Color') }}
+                                        </x-admin.form.inputs.label>
+                                        <x-admin.form.inputs.color id="primary_color" name="primary_color"
+                                                                   value="{{ old('primary_color', option('primary_color', '#0d6938')) }}"/>
                                     </div>
-                                @endif
+                                    <div class="relative w-full mb-3">
+                                        <x-admin.form.inputs.label for="secondary_color">
+                                            {{ __('Secondary Color') }}
+                                        </x-admin.form.inputs.label>
+                                        <x-admin.form.inputs.color id="secondary_color" name="secondary_color"
+                                                                   value="{{ old('secondary_color', option('secondary_color', '#8D524D')) }}"/>
+                                    </div>
+                                </div>
                                 <x-user.form.buttons.primary type="submit">
                                     {{ __('Submit') }}
                                 </x-user.form.buttons.primary>

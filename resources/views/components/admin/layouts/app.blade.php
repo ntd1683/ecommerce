@@ -4,11 +4,11 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="#000000"/>
-    <link rel="shortcut icon" href="../../assets/img/favicon.ico"/>
+    <link rel="shortcut icon" href="{{ Storage::url(option('site_favicon')) }}"/>
     <link
         rel="apple-touch-icon"
         sizes="76x76"
-        href="../../assets/img/apple-icon.png"
+        href="{{ Storage::url(option('site_favicon')) }}"
     />
     <link
         rel="stylesheet"
@@ -21,8 +21,8 @@
     <script src="{{ asset('js/libraries/toasting.js') }}"></script>
     <style>
         :root {
-            --primary-color: {{ option('primary_color', '#db2777') }};
-            --secondary-color: {{ option('secondary_color', '#FF80B5') }};
+            --primary-color: {{ option('primary_color', '#0d6938') }};
+            --secondary-color: {{ option('secondary_color', '#8D524D') }};
         }
 
         .active {

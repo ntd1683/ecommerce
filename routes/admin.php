@@ -25,7 +25,6 @@ Route::group([
     Route::get('/', [HomepageController::class, '__invoke'])->name('index');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-    Route::get('/option', [OptionController::class, 'index'])->name('option');
 
 //product
     Route::resource('product', ProductController::class);
@@ -33,6 +32,13 @@ Route::group([
 //product category
     Route::resource('product-category', ProductCategoryController::class);
     Route::resource('discount', DiscountController::class);
+});
+
+
+Route::group([
+    'middleware' => CheckShopMiddleware::class,
+], function () {
+    Route::resource('option', OptionController::class);
 });
 
 Route::get('/test', [TestController::class, 'test'])->name('test');

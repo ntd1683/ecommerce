@@ -4,7 +4,7 @@
         <div class="max-w-[600px] mx-auto">
             <div class="text-center">
                 <a href="#" class="inline-block">
-                    <img src="{{ asset('images/user/logo.webp') }}" alt="brand logo" loading="lazy" width="145" height="65"/>
+                    <img src="{{ Storage::url(option('site_logo')) }}" alt="brand logo" loading="lazy" width="145" height="65"/>
                 </a>
 
                 <p class="mb-10">
