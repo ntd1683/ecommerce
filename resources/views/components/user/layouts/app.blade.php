@@ -80,6 +80,6 @@
         <img src="https://img.ws.mms.shopee.vn/vn-11134207-7qukw-ljb4b1wnv8iae3" alt="Quang cao">
     </v-modal>
 </div>
-<x-user.facebookChat />
+{{--<x-user.facebookChat />--}}
 </body>
 </html>
