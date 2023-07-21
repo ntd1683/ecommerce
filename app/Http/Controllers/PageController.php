@@ -37,4 +37,12 @@ class PageController extends Controller
     {
         return view('user/page/checkOut');
     }
+    public function wishList(): View
+    {
+        return view('user/page/wishList');
+    }
+    public function frequentlyAskedQuestions(): View
+    {
+        return view('user/page/frequentlyAskedQuestions');
+    }
 }

@@ -46,6 +46,18 @@ Breadcrumbs::for('checkOut', function ($trail) {
     $trail->push(trans('Check Out'), route('check-out'));
 });
 
+// Wish List
+Breadcrumbs::for('wishList', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('Wish List'), route('wish-list'));
+});
+
+// Frequently Asked Questions
+Breadcrumbs::for('frequentlyAskedQuestions', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('Frequently Asked Questions'), route('frequently-asked-questions'));
+});
+
 // Error
 Breadcrumbs::for('404Error', function ($trail) {
     $trail->parent('home');
