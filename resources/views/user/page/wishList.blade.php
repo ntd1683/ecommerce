@@ -28,7 +28,7 @@
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="transition-all hover:text-orange">Birpod product unsde</a><span>m / gold</span>
                                 </td>
-                                <td class="p-3 border border-solid border-gray-600 text-center"><span><span>$80.00</span></span></td>
+                                <td class="p-3 border border-solid border-gray-600 text-center"><span><span>80.00 VNĐ</span></span></td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
 
                                     <div class="flex count border border-solid border-gray-300 p-2 h-11">
@@ -37,7 +37,7 @@
                                         <button class="increment flex-auto w-5 leading-none" aria-label="button">+</button>
                                     </div>
                                 </td>
-                                <td class="p-3 border border-solid border-gray-600 text-center"><span>$80.00</span></td>
+                                <td class="p-3 border border-solid border-gray-600 text-center"><span>80.00 VNĐ</span></td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="inline-block mx-1 hover:text-orange transition-all"><i class="icon-pencil"></i></a>
                                     <a href="#" class="inline-block mx-1 hover:text-orange transition-all"><i class="icon-close"></i></a>
@@ -54,7 +54,7 @@
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="transition-all hover:text-orange">Birpod product unsde</a><span>m / gold</span>
                                 </td>
-                                <td class="p-3 border border-solid border-gray-600 text-center"><span><span>$80.00</span></span></td>
+                                <td class="p-3 border border-solid border-gray-600 text-center"><span><span>80.00 VNĐ</span></span></td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
 
                                     <div class="flex count border border-solid border-gray-300 p-2 h-11">
@@ -63,7 +63,7 @@
                                         <button class="increment flex-auto w-5 leading-none" aria-label="button">+</button>
                                     </div>
                                 </td>
-                                <td class="p-3 border border-solid border-gray-600 text-center"><span>$80.00</span></td>
+                                <td class="p-3 border border-solid border-gray-600 text-center"><span>80.00 VNĐ</span></td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="inline-block mx-1 hover:text-orange transition-all"><i class="icon-pencil"></i></a>
                                     <a href="#" class="inline-block mx-1 hover:text-orange transition-all"><i class="icon-close"></i></a>
@@ -80,7 +80,7 @@
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="transition-all hover:text-orange">Birpod product unsde</a><span>m / gold</span>
                                 </td>
-                                <td class="p-3 border border-solid border-gray-600 text-center"><span><span>$80.00</span></span></td>
+                                <td class="p-3 border border-solid border-gray-600 text-center"><span><span>80.00 VNĐ</span></span></td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
 
                                     <div class="flex count border border-solid border-gray-300 p-2 h-11">
@@ -89,7 +89,7 @@
                                         <button class="increment flex-auto w-5 leading-none" aria-label="button">+</button>
                                     </div>
                                 </td>
-                                <td class="p-3 border border-solid border-gray-600 text-center"><span>$80.00</span></td>
+                                <td class="p-3 border border-solid border-gray-600 text-center"><span>80.00 VNĐ</span></td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="inline-block mx-1 hover:text-orange transition-all"><i class="icon-pencil"></i></a>
                                     <a href="#" class="inline-block mx-1 hover:text-orange transition-all"><i class="icon-close"></i></a>
@@ -106,7 +106,7 @@
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="transition-all hover:text-orange">Birpod product unsde</a><span>m / gold</span>
                                 </td>
-                                <td class="p-3 border border-solid border-gray-600 text-center"><span><span>$80.00</span></span></td>
+                                <td class="p-3 border border-solid border-gray-600 text-center"><span><span>80.00 VNĐ</span></span></td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
 
                                     <div class="flex count border border-solid border-gray-300 p-2 h-11">
@@ -115,7 +115,7 @@
                                         <button class="increment flex-auto w-5 leading-none" aria-label="button">+</button>
                                     </div>
                                 </td>
-                                <td class="p-3 border border-solid border-gray-600 text-center"><span>$80.00</span></td>
+                                <td class="p-3 border border-solid border-gray-600 text-center"><span>80.00 VNĐ</span></td>
                                 <td class="p-3 border border-solid border-gray-600 text-center">
                                     <a href="#" class="inline-block mx-1 hover:text-orange transition-all"><i class="icon-pencil"></i></a>
                                     <a href="#" class="inline-block mx-1 hover:text-orange transition-all"><i class="icon-close"></i></a>

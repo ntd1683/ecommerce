@@ -184,7 +184,7 @@
                             <span
                                 class="w-5 h-5 bg-dark text-white text-sm rounded-full font-normal flex flex-wrap items-center justify-center absolute -top-3 left-2 leading-none">4</span>
                             <i class="icon-bag"></i>
-                            <span class="text-base leading-none text-dark">$245</span>
+                            <span class="text-base leading-none text-dark">245 000 VNĐ</span>
                         </a>
 
                     </li>
@@ -508,7 +508,7 @@
                            href="#">Birpod product unsde - m / gold</a>
                     </h4>
                     <span
-                        class="font-light text-sm text-dark transition-all tracking-wide">1 x <span>$80.00</span></span>
+                        class="font-light text-sm text-dark transition-all tracking-wide">1 x <span>80.000 VNĐ</span></span>
                 </div>
             </li>
             <li class="flex flex-wrap group mb-8">
@@ -526,7 +526,7 @@
                            href="https://template.hasthemes.com/#">Airpod product kiebd - red</a>
                     </h4>
                     <span
-                        class="font-light text-sm text-dark transition-all tracking-wide">1 x <span>$99.00</span></span>
+                        class="font-light text-sm text-dark transition-all tracking-wide">1 x <span>99.000 VNĐ</span></span>
                 </div>
             </li>
             <li class="flex flex-wrap group mb-8">
@@ -543,14 +543,14 @@
                            href="#">Airpod product ides - navy</a>
                     </h4>
                     <span
-                        class="font-light text-sm text-dark transition-all tracking-wide">1 x <span>$39.00</span></span>
+                        class="font-light text-sm text-dark transition-all tracking-wide">1 x <span>39.000 VNĐ</span></span>
                 </div>
             </li>
         </ul>
         <div>
             <div
                 class="flex flex-wrap justify-between items-center py-4 my-6 border-t border-b border-solid border-gray-600 font-normal text-base text-dark capitalize">
-                Total:<span>$218.00</span>
+                Total:<span>218.000 VNĐ</span>
             </div>
             <div class="text-center">
                 <a class="py-5 px-10 block bg-white border border-solid border-gray-600 uppercase font-semibold text-base hover:bg-orange hover:border-orange hover:text-white transition-all leading-none"
