@@ -26,36 +26,13 @@ $("input[type=date]").click((e) => {
     e.target.showPicker();
 });
 
-function setCookie(name, value, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
 var $window = $(window),
     $body = $("body");
 
 // banner on top
 $('#button-banner-notify').click(() => {
     $('#banner-notify').css('display', 'none');
-    setCookie('bannerNotify', 'yes', 1000);
+    setCookie('bannerNotify', 'yes', 10);
 });
 
 if(getCookie('bannerNotify') !== "") {
@@ -63,6 +40,11 @@ if(getCookie('bannerNotify') !== "") {
         $('#banner-notify').css('display', 'none');
     }
 }
+
+$('.modalbanner').click(() => {
+    $('#modalBanner').css('display', 'none');
+    setCookie('banner', 'yes', 10);
+});
 // Privacy Cookie
 $('.button-privacy').click(() => {
     $('#privacy').css('display', 'none');
@@ -709,7 +691,7 @@ CustomTabs("#maintab");
   /*-------------------------
     Create an account toggle
     --------------------------*/
-// 
+//
 $(".checkout-toggle2").on("click", function () {
     $(".open-toggle2").slideToggle(1000);
   });

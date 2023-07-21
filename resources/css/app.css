@@ -283,3 +283,9 @@
     /* Have no idea what this is for */
     @apply cursor-default block;
     padding: 6px; }
+
+.shop-tab-nav .active {
+    --tw-text-opacity: 1;
+    @apply bg-primary;
+    color: #FFFFFF;
+}

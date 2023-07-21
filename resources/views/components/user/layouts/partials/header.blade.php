@@ -18,20 +18,6 @@
                         <li class="main-menu__item relative group">
                             <a class="block py-10 xl:pr-6 md:pr-5 capitalize font-normal tehover:text-secondary hover:text-secondary transition-all"
                                href="{{ route('index') }}">Home</a>
-                            <ul class="submenu bg-white py-3 px-8 shadow transition-all absolute left-0 top-full opacity-0 group-hover:opacity-100 invisible group-hover:visible group-hover:-translate-y-3 transform z-10 min-w-max">
-                                <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
-                                        href="index.html">Airpod</a></li>
-                                <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
-                                        href="index-2.html">Smartwatch</a></li>
-                                <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
-                                        href="index-3.html">Drone</a></li>
-                                <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
-                                        href="index-4.html">BackPack</a></li>
-                            </ul>
                         </li>
 
                         <li class="main-menu__item group">
@@ -196,20 +182,7 @@
                         <div id="settings-card"
                              class="bg-white absolute right-0 px-8 py-5 shadow w-80 opacity-0 invisible transition-all duration-300 ease-in-out z-20">
                             <h4 class="text-md text-dark font-normal capitalize tracking-wide pb-5 border-b border-solid border-gray-600 mb-5">
-                                Currency</h4>
-                            <ul>
-                                <li class="my-4"><a href="#"
-                                                    class="text-base text-dark hover:text-secondary transition-all font-light capitalize tracking-wide">USD
-                                        - US Dollar</a></li>
-                                <li class="my-4"><a href="#"
-                                                    class="text-base text-dark hover:text-secondary transition-all font-light capitalize tracking-wide">EUR
-                                        - Euro</a></li>
-                                <li class="my-4"><a href="#"
-                                                    class="text-base text-dark hover:text-secondary transition-all font-light capitalize tracking-wide">GBP
-                                        - British Pound</a></li>
-                            </ul>
-                            <h4 class="text-md text-dark font-normal capitalize tracking-wide pb-5 border-b border-solid border-gray-600 mb-5">
-                                Account</h4>
+                                {{ __('Account') }}</h4>
                             <ul>
                                 @if(auth()->check())
                                 <li class="my-4">
@@ -267,7 +240,7 @@
 <div id="offcanvas-mobile-menu"
      class="offcanvas left-auto right-0  transform translate-x-translate-x-full-120 fixed font-normal text-sm top-0 z-50 h-screen w-72 sm:w-80 lg:w-96 transition-all ease-in-out duration-300 bg-white">
 
-    <div class="px-8 py-12 h-5/6 overflow-y-hidden">
+    <div class="px-8 py-12">
 
         <!-- search form start -->
 
@@ -296,21 +269,7 @@
         <nav class="offcanvas-menu pb-10 mb-10 border-b border-solid border-gray-600">
             <ul>
                 <li class="relative block">
-                    <a href="#" class="block capitalize font-normal text-base my-2 py-1 font-roboto">Home</a>
-                    <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100">
-                        <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
-                               href="index.html">Airpod</a></li>
-                        <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
-                               href="index-2.html">Smartwatch</a></li>
-                        <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
-                               href="index-3.html">Drone</a></li>
-                        <li>
-                            <a class="text-sm py-2 px-4 text-dark font-light block font-roboto transition-all hover:text-secondary"
-                               href="index-4.html">BackPack</a></li>
-                    </ul>
+                    <a href="{{ route('index') }}" class="block capitalize font-normal text-base my-2 py-1 font-roboto">Home</a>
                 </li>
                 <li class="relative block">
                     <a href="#" class="block capitalize font-normal text-base my-2 py-1 font-roboto">Shop</a>
@@ -454,25 +413,13 @@
             <ul id="settings-menu">
                 <li class="block mb-3">
                     <a class="flex flex-wrap justify-between mb-3 text-base text-dark hover:text-secondary"
-                       href="javascript:void(0)">Currency <i class="icon-arrow-down"></i></a>
-                    <ul class="sub-category hidden py-5 px-6 shadow">
+                       href="javascript:void(0)">{{ __('Account') }}<i class="icon-arrow-down"></i></a>
+                    <ul class="sub-category hidden py-5 px-6 ">
                         <li class="my-2 block"><a
-                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="#">EUR
-                                €</a></li>
-                        <li class="my-2 block"><a
-                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="#">USD
-                                $</a></li>
-                    </ul>
-                </li>
-                <li class="block mb-3">
-                    <a class="flex flex-wrap justify-between mb-3 text-base text-dark hover:text-secondary"
-                       href="javascript:void(0)">Account <i class="icon-arrow-down"></i></a>
-                    <ul class="sub-category hidden py-5 px-6 shadow">
-                        <li class="my-2 block"><a
-                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="#">English</a>
+                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="{{ route('account') }}">{{ auth()->user()->name }}</a>
                         </li>
-                        <li class="my-2 block"><a
-                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="#">Français</a>
+                        <li class="my-2 block">
+                            <a class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="{{ route('logout') }}">{{ __('Logout') }}</a>
                         </li>
                     </ul>
                 </li>
@@ -489,7 +436,7 @@
      class="offcanvas left-auto right-0  transform translate-x-translate-x-full-120 fixed font-normal text-sm top-0 z-50 h-screen w-80 lg:w-96 transition-all ease-in-out duration-300 bg-white overflow-y-auto">
     <div class="p-8">
         <div class="flex flex-wrap justify-between items-center pb-6 mb-6 border-b border-solid border-gray-600">
-            <h4 class="font-normal text-md text-dark capitalize">Shoping Cart</h4>
+            <h4 class="font-bold text-base text-dark capitalize">Shoping Cart</h4>
             <button class="offcanvas-close hover:text-secondary" aria-label="close icon"><i class="icon-close"></i>
             </button>
         </div>
@@ -553,9 +500,10 @@
                 Total:<span>$218.00</span>
             </div>
             <div class="text-center">
-                <a class="py-5 px-10 block bg-white border border-solid border-gray-600 uppercase font-semibold text-base hover:bg-orange hover:border-orange hover:text-white transition-all leading-none"
-                   href="checkout.html">Checkout</a><a
-                    class="py-5 px-10 block bg-white border border-solid border-gray-600 uppercase font-semibold text-base hover:bg-orange hover:border-orange hover:text-white transition-all leading-none mt-3"
+                <a class="py-5 px-10 block bg-white border border-solid border-gray-600 uppercase font-semibold text-base hover:bg-secondary hover:border-secondary hover:text-white transition-all leading-none"
+                   href="checkout.html">Checkout</a>
+                <a
+                    class="py-5 px-10 block bg-white border border-solid border-gray-600 uppercase font-semibold text-base hover:bg-secondary hover:border-secondary hover:text-white transition-all leading-none mt-3"
                     href="cart.html">View Cart</a>
             </div>
         </div>

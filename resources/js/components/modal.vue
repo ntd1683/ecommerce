@@ -1,12 +1,16 @@
 <script setup>
-import { ref,  onMounted } from 'vue'
+import { ref,  onMounted, defineProps } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 
-let { open } = defineProps({
+let { open, name } = defineProps({
     open: {
         type: Boolean,
         required: true,
     },
+    name: {
+        type: String,
+        required: false,
+    }
 })
 </script>
 <template>
@@ -23,7 +27,7 @@ let { open } = defineProps({
                                 <slot/>
                             </div>
                             <div class="mt-5 sm:mt-6">
-                                <button type="button" class="btn-close inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" @click="this.$emit('close')">Cancel</button>
+                                <button type="button" :class="'btn-close inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 modal' + name" @click="this.$emit('close')">Cancel</button>
                             </div>
                         </DialogPanel>
                     </TransitionChild>
