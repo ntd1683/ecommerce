@@ -525,6 +525,31 @@ var BlogCarousel = new Swiper(".service-carousel .swiper-container", {
         },
     },
 });
+
+// swiper thumb gallery
+
+var Nav = new Swiper(".gallery-nav .swiper-container", {
+    modules: [Navigation, Pagination],
+    spaceBetween: 8,
+    slidesPerView: 4,
+    loop: true,
+    navigation: {
+        nextEl: ".gallery-nav .swiper-button-next",
+        prevEl: ".gallery-nav .swiper-button-prev",
+    },
+});
+
+var gallery = new Swiper(".gallery .swiper-container", {
+    modules: [Navigation, Pagination],
+    spaceBetween: 1,
+    spaceBetween: 0,
+    loop: false,
+    navigation: false,
+    thumbs: {
+        swiper: Nav,
+    },
+});
+
 /*---------------------------------
       SHOP TAB - Account page
   -----------------------------------*/
@@ -720,15 +745,62 @@ $(".set > button").on("click", function () {
           $(".faq-content").slideUp(300);
           $(".plusminus").text('+');
       }
-      if ($(this).next(".faq-content").is(':visible')) {
-          $(this).next(".faq-content").slideUp(300);
-          $(this).children(".plusminus").text('+');
-      } else {
-          $(this).next(".faq-content").slideDown(300);
-          $(this).children(".plusminus").text('-');
-      }
-  });
+        if ($(this).next(".faq-content").is(':visible')) {
+            $(this).next(".faq-content").slideUp(300);
+            $(this).children(".plusminus").text('+');
+        } else {
+            $(this).next(".faq-content").slideDown(300);
+            $(this).children(".plusminus").text('-');
+        }
+    });
 //
+
+
+/*--------------------------
+ # Counter
+-------------------------- */
+
+$(".count").each(function () {
+    var count = $(this),
+        input = count.find('input[type="number"]'),
+        increament = count.find(".increment"),
+        decreament = count.find(".decrement"),
+        minValue = input.attr("min"),
+        maxValue = input.attr("max");
+    increament.on("click", function () {
+        var oldValue = parseFloat(input.val());
+
+        if (oldValue >= maxValue) {
+            var newVal = oldValue;
+        } else {
+            var newVal = oldValue + 1;
+        }
+
+        count.find("input").val(newVal);
+        count.find("input").trigger("change");
+    });
+    decreament.on("click", function () {
+        var oldValue = parseFloat(input.val());
+
+        if (oldValue <= minValue) {
+            var newVal = oldValue;
+        } else {
+            var newVal = oldValue - 1;
+        }
+
+        count.find("input").val(newVal);
+        count.find("input").trigger("change");
+    });
+});
+
+$(".play-vedio").magnificPopup({
+    disableOn: 700,
+    type: "iframe",
+    mainClass: "mfp-fade",
+    removalDelay: 160,
+    preloader: true,
+    fixedContentPos: true,
+});
 
 /*---------------------------------
       Scroll Up

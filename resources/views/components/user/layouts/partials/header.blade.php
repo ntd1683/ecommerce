@@ -36,7 +36,8 @@
                                                 href="shop-grid-4-column.html">Shop Grid 4 Column</a></li>
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
-                                                href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a></li>
+                                                href="{{ route('shop-grid-left-sidebar') }}">Shop Grid Left Sidebar</a>
+                                        </li>
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="shop-grid-right-sidebar.html">shop Grid Right Sidebar</a></li>
@@ -65,7 +66,7 @@
                                     <ul class="pb-2">
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
-                                                href="single-product.html">Shop Single</a></li>
+                                                href="{{ route('product') }}">Shop Single</a></li>
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="single-product-configurable.html">Shop Variable</a></li>
@@ -127,7 +128,7 @@
                                         href="{{ route('cart') }}">Cart Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
-                                        href="checkout.html">Checkout Page</a></li>
+                                        href="{{ route('check-out') }}">Checkout Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="compare.html">Compare Page</a></li>
@@ -416,10 +417,12 @@
                        href="javascript:void(0)">{{ __('Account') }}<i class="icon-arrow-down"></i></a>
                     <ul class="sub-category hidden py-5 px-6 ">
                         <li class="my-2 block"><a
-                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="{{ route('account') }}">{{ auth()->user()->name }}</a>
+                                class="font-light text-sm tracking-wide text-dark block hover:text-secondary"
+                                href="{{ route('account') }}"></a>
                         </li>
                         <li class="my-2 block">
-                            <a class="font-light text-sm tracking-wide text-dark block hover:text-secondary" href="{{ route('logout') }}">{{ __('Logout') }}</a>
+                            <a class="font-light text-sm tracking-wide text-dark block hover:text-secondary"
+                               href="{{ route('logout') }}">{{ __('Logout') }}</a>
                         </li>
                     </ul>
                 </li>
