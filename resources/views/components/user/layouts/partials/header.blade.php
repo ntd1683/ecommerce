@@ -153,7 +153,7 @@
                                         href="{{ route('account') }}">Account Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
-                                        href="whishlist.html">Wishlist Page</a></li>
+                                        href="{{ route('wish-list') }}">Wishlist Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="faq.html">Frequently Questions</a></li>

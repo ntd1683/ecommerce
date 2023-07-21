@@ -46,6 +46,12 @@ Breadcrumbs::for('checkOut', function ($trail) {
     $trail->push(trans('Check Out'), route('check-out'));
 });
 
+// Check Out
+Breadcrumbs::for('wishList', function ($trail) {
+    $trail->parent('home');
+    $trail->push(trans('Wish List'), route('wish-list'));
+});
+
 // Error
 Breadcrumbs::for('404Error', function ($trail) {
     $trail->parent('home');

@@ -62,7 +62,7 @@ Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-u
 Route::get('/cart', [PageController::class, 'cart'])->name('cart');
 Route::get('/shop-grid-left-sidebar', [PageController::class, 'shopGridLeftSideBar'])->name('shop-grid-left-sidebar');
 Route::get('/check-out', [PageController::class, 'checkOut'])->name('check-out');
-
+Route::get('/wish-list', [PageController::class, 'wishList'])->name('wish-list');
 //Ajax
 Route::prefix('ajax')->name('ajax.')->group(function () {
 //    Account
