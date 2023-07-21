@@ -58,6 +58,46 @@
                                     <x-admin.form.inputs name="name" value="{{ auth()->user()->name }}"/>
                                 </div>
                             </div>
+                            <div class="w-full px-4">
+                                <div class="relative w-full mb-3">
+                                    <x-admin.form.inputs.label>
+                                        {{ __('Gender') }}
+                                    </x-admin.form.inputs.label>
+
+                                </div>
+                            </div>
+                            <div class="w-1/2 px-4">
+                                <div class="relative w-full mb-3">
+                                    <x-user.form.inputs.radio value="1" name="gender"
+                                                              :checked="old('gender', auth()->user()->gender)"
+                                                              id="gender1">{{ __('Male') }}</x-user.form.inputs.radio>
+                                </div>
+                            </div>
+                            <div class="w-1/2 px-4">
+                                <div class="relative w-full  ">
+                                    <x-user.form.inputs.radio value="0" name="gender"
+                                                              :checked="old('gender', auth()->user()->gender)"
+                                                              id="gender0">{{ __('Female') }}</x-user.form.inputs.radio>
+                                </div>
+                            </div>
+                            <div class="w-full px-4">
+                                <div class="relative w-full mb-3 ">
+                                    <x-admin.form.inputs.label>
+                                        {{ __('Day Of Birth') }}
+                                    </x-admin.form.inputs.label>
+                                    <x-admin.form.inputs name="birthdate" placeholder="xx/xx/xxxx" type="date"
+                                                         :value="old('birthdate',auth()->user()->birthdate)"/>
+                                </div>
+                            </div>
+                            <div class="w-full px-4">
+                                <div class="relative w-full mb-3 ">
+                                    <x-admin.form.inputs.label>
+                                        {{ __('Phone Number') }}
+                                    </x-admin.form.inputs.label>
+                                    <x-admin.form.inputs name="phone" placeholder="0123xxxxxxx"
+                                                         :value="old('phone', auth()->user()->phone)"/>
+                                </div>
+                            </div>
                         </div>
 
                         <hr class="mt-6 border-b-1 border-blueGray-300"/>
@@ -73,10 +113,12 @@
                                     <x-admin.form.inputs.label for="address1">
                                         {{ __('Address 1') }}
                                     </x-admin.form.inputs.label>
-                                    <x-admin.form.inputs name="address_1" value="{{ auth()->user()->addresses()->first()->address_1 }}"/>
+                                    {{--       {{ addresses()->address_1 ?? '' }}                             --}}
+                                    <x-admin.form.inputs name="address_1"
+                                                         :value="old('address1',auth()->user()->addresses)"/>
                                 </div>
                             </div>
-                            <div class="w-full lg:w-4/12 px-4">
+                            <div class="w-full lg:w-1/2 px-4">
                                 <div class="relative w-full mb-3">
                                     <label
                                         class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -91,7 +133,7 @@
                                     />
                                 </div>
                             </div>
-                            <div class="w-full lg:w-4/12 px-4">
+                            <div class="w-full lg:w-1/2 px-4">
                                 <div class="relative w-full mb-3">
                                     <label
                                         class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -103,21 +145,6 @@
                                         type="text"
                                         class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                         value="United States"
-                                    />
-                                </div>
-                            </div>
-                            <div class="w-full lg:w-4/12 px-4">
-                                <div class="relative w-full mb-3">
-                                    <label
-                                        class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                                        htmlFor="grid-password"
-                                    >
-                                        Postal Code
-                                    </label>
-                                    <input
-                                        type="text"
-                                        class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                        value="Postal Code"
                                     />
                                 </div>
                             </div>
@@ -149,6 +176,11 @@
                               </textarea>
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            <x-user.form.buttons.primary type="submit">
+                                {{ __('Submit') }}
+                            </x-user.form.buttons.primary>
                         </div>
                     </form>
                 </div>
@@ -254,7 +286,7 @@
             </div>
         </div>
     </div>
-    <form action="{{ route('ajax.verifyEmail') }}" id="form_verify_email" class="hidden">
+    <form action="{{ route('ajax.account.verify-email') }}" id="form_verify_email" class="hidden">
         @csrf
     </form>
     @push('js')
