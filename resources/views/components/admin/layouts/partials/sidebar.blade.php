@@ -98,7 +98,7 @@
             <ul class="md:flex-col md:min-w-full flex flex-col list-none">
                 <li class="items-center">
                     <a
-                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-pink-600', 'active' => getNameRouteMain() == 'index' ])
+                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-secondary', 'active' => getNameRouteMain() == 'index' ])
                         href="{{ route('admin.index') }}"
                     >
                         <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
@@ -121,7 +121,7 @@
             >
                 <li class="items-center">
                     <a
-                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-pink-600', 'active' => getNameRouteMain() == 'product' ])
+                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-secondary', 'active' => getNameRouteMain() == 'product' ])
                         href="{{ route('admin.product.create') }}"
                     >
                         <i
@@ -142,7 +142,7 @@
             >
                 <li class="items-center">
                     <a
-                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-pink-600', 'active' => getNameRouteMain() == 'product-category' ])
+                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-secondary', 'active' => getNameRouteMain() == 'product-category' ])
                         href="{{ route('admin.product-category.create') }}"
                     >
                         <i
@@ -164,7 +164,7 @@
             >
                 <li class="items-center">
                     <a
-                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-pink-600', 'active' => getNameRouteMain() == 'discount' ])
+                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-secondary', 'active' => getNameRouteMain() == 'discount' ])
                         href="{{ route('admin.discount.create') }}"
                     >
                         <i

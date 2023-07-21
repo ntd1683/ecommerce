@@ -8,8 +8,7 @@
                 </a>
 
                 <p class="mb-10">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.aliqua. Ut enim ad
-                    minim. Lorem ipsum dolor sit amet.
+                    {{ __('Don\'t miss the attractive products and promotions of Tay Nguyen Food - Vietnam.') }}
                 </p>
 
                 <form id="mc-form" class="relative text-center md:max-w-xl mx-auto mb-10">

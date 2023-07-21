@@ -15,6 +15,7 @@ mix
     .js('resources/js/user/app.js', 'public/js/user').vue()
     .js('resources/js/user/main.js', 'public/js/user')
     .js('resources/js/user/account.js', 'public/js/user')
+    .js('resources/js/user/facebook.js', 'public/js/user')
     .js('resources/js/libraries/toasting.js', 'public/js/libraries')
     .postCss('resources/css/libraries/toasting.css', 'public/css/libraries')
     .sass('resources/css/user/style.scss', 'public/css/user')
