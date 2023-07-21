@@ -51,7 +51,7 @@
                                     <x-admin.form.inputs.label>
                                         {{ __('Expired') }}
                                     </x-admin.form.inputs.label>
-                                    <x-admin.form.inputs name="expired" placeholder="xx/xx/xxxx" type="date"
+                                    <x-admin.form.inputs name="expired" placeholder="xx/xx/xxxx" type="datetime-local"
                                                          :value="old('expired')"/>
                                 </div>
                                 @if(auth()->user()->level == 2)

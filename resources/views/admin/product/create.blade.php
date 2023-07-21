@@ -68,9 +68,9 @@
                                             {{ __('Add Product Discount') }}
                                         </a>
                                     </div>
-{{--                                    <x-user.form.inputs.select name="product_discount_id" id="select-2-product-discount" data-ajax="{{ route('ajax.product.discount.index') }}">--}}
-{{--                                        <option value="-1">{{ __('Select Product Discount') }}</option>--}}
-{{--                                    </x-user.form.inputs.select>--}}
+                                    <x-user.form.inputs.select name="product_discount_id" id="select-2-discount" data-ajax="{{ route('ajax.discount.index') }}">
+                                        <option value="-1">{{ __('Select Product Discount') }}</option>
+                                    </x-user.form.inputs.select>
                                 </div>
                                 <div class="relative w-full mb-3">
                                     <x-admin.form.inputs.label>
@@ -91,10 +91,15 @@
                                     <x-admin.form.inputs.multipleImage name="image[]"/>
                                 </div>
                                 <div class="relative w-full mb-3">
-                                    <x-admin.form.inputs.checkbox name="pin">
-                                        {{ __('Pin') }}
-                                    </x-admin.form.inputs.checkbox>
+                                    <x-admin.form.inputs.html class="description" name="description" value="{{ old('description') }}"/>
                                 </div>
+                                @if(auth()->user()->level == 2)
+                                    <div class="relative w-full mb-3">
+                                        <x-admin.form.inputs.checkbox name="pin">
+                                            {{ __('Pin') }}
+                                        </x-admin.form.inputs.checkbox>
+                                    </div>
+                                @endif
                                 <x-user.form.buttons.primary type="submit">
                                     {{ __('Submit') }}
                                 </x-user.form.buttons.primary>

@@ -13,4 +13,6 @@ class ProductImage extends Model
         'link_image',
         'type'
     ];
+
+    public $timestamps = false;
 }

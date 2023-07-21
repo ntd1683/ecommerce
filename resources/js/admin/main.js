@@ -25,6 +25,9 @@ $(function() {
 $("input[type=date]").click((e) => {
     e.target.showPicker();
 });
+$("input[type=datetime-local]").click((e) => {
+    e.target.showPicker();
+});
 
 /* Make dynamic date appear */
 (function () {

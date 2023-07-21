@@ -78,5 +78,5 @@ Route::prefix('ajax')->name('ajax.')->group(function () {
     Route::get('product/category', [AjaxProductCategoryController::class, '__invoke'])->name('product.category.index');
 
 //    Discount
-    Route::get('discount', [AjaxDiscountController::class, '__invoke'])->name('discount');
+    Route::get('discount', [AjaxDiscountController::class, '__invoke'])->name('discount.index');
 });

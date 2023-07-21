@@ -13,4 +13,6 @@ class ProductImageDetail extends Model
         'product_id',
         'product_image_id'
     ];
+
+    public $timestamps = false;
 }

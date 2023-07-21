@@ -24,12 +24,16 @@ class StoreProductRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string'],
-            'SKU' => ['required', 'string'],
+            'sku' => ['required', 'string'],
             'product_category_id' => ['required', 'integer'],
             'price' => ['required', 'digits_between:3,19'],
             'product_discount_id' => ['nullable', 'integer'],
             'pin' => ['nullable', Rule::in([1,0])],
-            'unit' => ['nullable', 'string']
+            'unit' => ['nullable', 'string'],
+            'quantity' => ['required', 'integer'],
+            'description' => ['nullable', 'string'],
+            'images' => 'nullable',
+            'images.*' => 'mimes:jpeg,jpg,png,gif,csv,txt,pdf|max:2048',
         ];
     }
 }

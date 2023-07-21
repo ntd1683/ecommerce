@@ -14,13 +14,14 @@ class Product extends Model
 
     protected $fillable = [
         'name',
-        'SKU',
+        'sku',
         'product_category_id',
         'price',
         'product_discount_id',
         'pin',
         'unit',
         'user_id',
+        'description',
     ];
 
     public $timestamps = true;
