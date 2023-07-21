@@ -6,6 +6,7 @@ use App\Http\Controllers\DiscountController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\OptionController;
 use App\Http\Controllers\TestController;
 use App\Http\Middleware\CheckLogoutMiddleware;
 use App\Http\Middleware\CheckShopMiddleware;
@@ -24,6 +25,7 @@ Route::group([
     Route::get('/', [HomepageController::class, '__invoke'])->name('index');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/option', [OptionController::class, 'index'])->name('option');
 
 //product
     Route::resource('product', ProductController::class);
