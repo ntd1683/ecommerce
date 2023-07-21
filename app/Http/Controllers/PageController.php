@@ -42,4 +42,12 @@ class PageController extends Controller
     {
         return view('user.page.product');
     }
+    public function wishList(): View
+    {
+        return view('user/page/wishList');
+    }
+    public function frequentlyAskedQuestions(): View
+    {
+        return view('user/page/frequentlyAskedQuestions');
+    }
 }

@@ -240,11 +240,11 @@
                                 <ul class="text-base border-t border-b border-gray-300 py-5 my-6">
                                     <li class="flex flex-wrap items-center justify-between">
                                         <span>Product Name X 1</span>
-                                        <span>$329 </span>
+                                        <span>329.000 VNĐ </span>
                                     </li>
                                     <li class="flex flex-wrap items-center justify-between">
                                         <span>Product Name X 1</span>
-                                        <span>$329 </span>
+                                        <span>329.000 VNĐ </span>
                                     </li>
                                 </ul>
                                 <ul class="flex flex-wrap items-center justify-between">
@@ -254,7 +254,7 @@
                                 </ul>
                                 <ul class="flex flex-wrap items-center justify-between border-t border-b border-gray-300 py-5 my-6">
                                     <li class="text-lg font-semibold">Total</li>
-                                    <li class="text-base font-semibold " style="color: #ff0101;">$329</li>
+                                    <li class="text-base font-semibold " style="color: #ff0101;">329.000 VNĐ</li>
                                 </ul>
                             </div>
                             <div class="accordion">
@@ -262,23 +262,29 @@
                                     <button class="text-base font-semibold active" aria-label="button">
                                         Direct bank transfer
                                     </button>
-                                    <div class="content overflow-hidden p-4 bg-white mt-3">
-                                        <p>
-                                            Please send a check to Store Name, Store Street,
-                                            Store Town, Store State / County, Store Postcode.
-                                        </p>
+                                    <div class="content overflow-hidden p-4 mt-3 ">
+                                        <!-- Using utilities: -->
+                                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+                                            Bank ↓
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="set mb-4">
                                     <button class="text-base font-semibold" aria-label="button">
                                         Check payments
                                     </button>
-                                    <div class="content overflow-hidden p-4 bg-white mt-3 hidden">
-                                        <p>
-                                            Please send a check to Store Name, Store Street,
-                                            Store Town, Store State / County, Store Postcode.
-                                        </p>
+                                    <div class="content overflow-hidden p-4  mt-3 hidden mx-8">
+                                        <button class="hover:bg-white text-white font-bold py-2 px-4 rounded ">
+                                            <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-MoMo-Transparent.png?fbclid=IwAR0LajTDXj9k72Dxu92ccaxMwL_1JvrwIPlXjwVyYDNtWneb1DznAS5Oovs" alt="Momo" class="object-cover h-24 w-31">
+                                        </button>
+                                        <button class="hover:bg-white text-white font-bold py-2 px-4 rounded ">
+                                            <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Icon-VNPAY-QR.png" alt="Momo" class="object-cover h-24 w-31">
+                                        </button>
+                                        <button class="hover:bg-white text-white font-bold py-2 px-4 rounded ">
+                                            <img src="https://img.freepik.com/free-icon/paypal_318-674245.jpg" alt="Momo" class="object-cover h-24 w-31">
+                                        </button>
                                     </div>
+                                    
                                 </div>
                                 <div class="set mb-4">
                                     <button class="text-base font-semibold" aria-label="button">
