@@ -41,4 +41,8 @@ class PageController extends Controller
     {
         return view('user/page/wishList');
     }
+    public function frequentlyAskedQuestions(): View
+    {
+        return view('user/page/frequentlyAskedQuestions');
+    }
 }

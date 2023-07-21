@@ -156,7 +156,7 @@
                                         href="{{ route('wish-list') }}">Wishlist Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
-                                        href="faq.html">Frequently Questions</a></li>
+                                        href="{{ route('frequently-asked-questions') }}">Frequently Questions</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="404.html">Error 404</a></li>
