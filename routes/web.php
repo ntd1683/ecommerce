@@ -5,6 +5,7 @@ use App\Http\Controllers\Ajax\AjaxAccountController;
 use App\Http\Controllers\Ajax\AjaxDiscountController;
 use App\Http\Controllers\Ajax\AjaxProductCategoryController;
 use App\Http\Controllers\Ajax\GHNController;
+use App\Http\Controllers\ChangeLanguageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\User\HomepageController;
 use App\Http\Controllers\UserPaymentController;
 use App\Http\Middleware\CheckLoginMiddleware;
 use App\Http\Middleware\CheckLogoutMiddleware;
+use App\Http\Middleware\LocaleMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -80,5 +82,11 @@ Route::prefix('ajax')->name('ajax.')->group(function () {
 
 //    Discount
     Route::get('discount', [AjaxDiscountController::class, '__invoke'])->name('discount.index');
+});
+
+//Locale
+Route::group(['middleware' => LocaleMiddleware::class], function () {
+    Route::get('change-language', [ChangeLanguageController::class, '__invoke'])
+        ->name('change-language');
 });
 
