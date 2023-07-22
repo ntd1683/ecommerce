@@ -130,6 +130,17 @@
                         {{ __('Create') }}
                     </a>
                 </li>
+                <li class="items-center">
+                    <a
+                        @class(['text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-secondary', 'active' => getNameRouteMain() == 'product' ])
+                        href="{{ route('admin.product.import') }}"
+                    >
+                        <i
+                            class="fas fa-plus mr-2 text-sm"
+                        ></i>
+                        {{ __('Import Sheet') }}
+                    </a>
+                </li>
             </ul>
             <h6
                 class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomepageController;
 use App\Http\Controllers\DiscountController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -28,6 +29,8 @@ Route::group([
 
 //product
     Route::resource('product', ProductController::class);
+    Route::post('product/importSheet', [GoogleController::class, 'importProduct'])->name('product.importSheet');
+    Route::get('import/product', [ProductController::class, 'import'])->name('product.import');
 
 //product category
     Route::resource('product-category', ProductCategoryController::class);
