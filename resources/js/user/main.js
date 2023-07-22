@@ -543,10 +543,13 @@ var Nav = new Swiper(".gallery-nav .swiper-container", {
 var gallery = new Swiper(".gallery .swiper-container", {
     modules: [Navigation, Pagination],
     spaceBetween: 0,
-    loop: false,
-    navigation: false,
+    loop: true,
     thumbs: {
         swiper: Nav,
+    },
+    navigation: {
+        nextEl: ".gallery-nav .swiper-button-next",
+        prevEl: ".gallery-nav .swiper-button-prev",
     },
 });
 

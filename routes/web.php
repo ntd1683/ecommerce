@@ -5,6 +5,7 @@ use App\Http\Controllers\Ajax\AjaxAccountController;
 use App\Http\Controllers\Ajax\AjaxDiscountController;
 use App\Http\Controllers\Ajax\AjaxProductCategoryController;
 use App\Http\Controllers\Ajax\GHNController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -85,3 +86,8 @@ Route::prefix('ajax')->name('ajax.')->group(function () {
     Route::get('discount', [AjaxDiscountController::class, '__invoke'])->name('discount.index');
 });
 
+Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
+Route::post('cart', [CartController::class, 'addToCart'])->name('cart.store');
+Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
+Route::post('remove', [CartController::class, 'removeCart'])->name('cart.remove');
+Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
