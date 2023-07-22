@@ -36,7 +36,8 @@
                                                 href="shop-grid-4-column.html">Shop Grid 4 Column</a></li>
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
-                                                href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a></li>
+                                                href="{{ route('shop-grid-left-sidebar') }}">Shop Grid Left Sidebar</a>
+                                        </li>
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="shop-grid-right-sidebar.html">shop Grid Right Sidebar</a></li>
@@ -65,7 +66,7 @@
                                     <ul class="pb-2">
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
-                                                href="single-product.html">Shop Single</a></li>
+                                                href="{{ route('product') }}">Shop Single</a></li>
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="single-product-configurable.html">Shop Variable</a></li>
@@ -133,9 +134,6 @@
                                         href="compare.html">Compare Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
-                                        href="login-register.html">Login & Register Page</a></li>
-                                <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="{{ route('account') }}">Account Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
@@ -143,9 +141,6 @@
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="{{ route('frequently-asked-questions') }}">Frequently Questions</a></li>
-                                <li class="my-3"><a
-                                        class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
-                                        href="404.html">Error 404</a></li>
                             </ul>
                         </li>
                         <li class="main-menu__item"><a

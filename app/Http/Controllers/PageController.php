@@ -28,14 +28,19 @@ class PageController extends Controller
         return view('user.page.account', compact('tab'));
     }
 
-    public function shopGridLeftSideBar(): view
+    public function shopGridLeftSideBar(): View
     {
         return view('user.page.shopGridLeftSideBar');
     }
 
     public function checkOut(): View
     {
-        return view('user/page/checkOut');
+        return view('user.page.checkOut');
+    }
+
+    public function product(): view
+    {
+        return view('user.page.product');
     }
     public function wishList(): View
     {

@@ -64,12 +64,14 @@ Route::get('/shop-grid-left-sidebar', [PageController::class, 'shopGridLeftSideB
 Route::get('/check-out', [PageController::class, 'checkOut'])->name('check-out');
 Route::get('/wish-list', [PageController::class, 'wishList'])->name('wish-list');
 Route::get('/frequently-asked-questions', [PageController::class, 'frequentlyAskedQuestions'])->name('frequently-asked-questions');
+Route::get('/product', [PageController::class, 'product'])->name('product');
+
 //Ajax
 Route::prefix('ajax')->name('ajax.')->group(function () {
 //    Account
-    Route::post('account/verify-email', [AjaxAccountController::class , 'verifyEmail'])->name('account.verify-email');
-    Route::post('account/avatar', [AjaxAccountController::class , 'uploadAvatar'])->name('account.avatar');
-    Route::post('account/change-password', [AjaxAccountController::class , 'changePassword'])->name('account.change-password');
+    Route::post('account/verify-email', [AjaxAccountController::class, 'verifyEmail'])->name('account.verify-email');
+    Route::post('account/avatar', [AjaxAccountController::class, 'uploadAvatar'])->name('account.avatar');
+    Route::post('account/change-password', [AjaxAccountController::class, 'changePassword'])->name('account.change-password');
 
 //    GHN
     Route::get('GHN/get-province', [GHNController::class, 'getProvinces'])->name('ghn.get-provinces');
