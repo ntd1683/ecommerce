@@ -56,7 +56,7 @@
                                             <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                                                 <span class="text-gray-500 sm:text-sm">Đ</span>
                                             </div>
-                                            <x-admin.form.inputs name="price" value="{{ old('price') }}" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 sm:text-sm sm:leading-6" />
+                                            <x-admin.form.inputs name="price" value="{{ old('price') }}" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 sm:text-sm sm:leading-6" placeholder="xxxxx" />
                                         </div>
                                 </div>
                                 <div class="relative w-full mb-3">
