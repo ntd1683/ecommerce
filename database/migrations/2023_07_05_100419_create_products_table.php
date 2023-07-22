@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('sku');
             $table->bigInteger('product_category_id')->nullable();
             $table->string('price');
+            $table->string('special_price')->nullable();
             $table->bigInteger('product_discount_id')->nullable();
             $table->string('pin')->default('0');
             $table->string('unit');

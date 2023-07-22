@@ -51,14 +51,8 @@ class ProductController extends Controller
 
                     $productImage = ProductImage::create([
                         'type' => 0,
-                        'link_image' => $path . $image->extension(),
-                    ]);
-
-                    $productImageId = $productImage->id;
-
-                    ProductImageDetail::create([
+                        'link_image' => $path,
                         'product_id' => $product->id,
-                        'product_image_id' => $productImageId,
                     ]);
                 }
             }
@@ -72,9 +66,9 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Product $product)
     {
-        //
+        return view('user.page.product', compact('product'));
     }
 
     /**

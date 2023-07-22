@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Storage;
 
 class Product extends Model
 {
@@ -17,6 +21,7 @@ class Product extends Model
         'sku',
         'product_category_id',
         'price',
+        'special_price',
         'product_discount_id',
         'pin',
         'unit',
@@ -33,11 +38,35 @@ class Product extends Model
 
     public function productCategory(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(ProductCategory::class);
+    }
+
+    public function productIventory(): HasOne
+    {
+        return $this->hasOne(ProductInventory::class);
     }
 
     public function discount(): BelongsTo
     {
         return $this->belongsTo(Discount::class);
+    }
+
+    protected function quantity(): Attribute
+    {
+        return Attribute::get(function () {
+            return $this->productIventory()->first()->quantity;
+        })->shouldCache();
+    }
+
+    protected function category(): Attribute
+    {
+        return Attribute::get(function () {
+            return $this->productCategory()->first()->name;
+        })->shouldCache();
+    }
+
+    public function productImages(): HasMany
+    {
+        return $this->hasMany(ProductImage::class);
     }
 }

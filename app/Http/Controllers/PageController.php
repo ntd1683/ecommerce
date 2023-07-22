@@ -37,11 +37,7 @@ class PageController extends Controller
     {
         return view('user.page.checkOut');
     }
-
-    public function product(): view
-    {
-        return view('user.page.product');
-    }
+    
     public function wishList(): View
     {
         return view('user/page/wishList');

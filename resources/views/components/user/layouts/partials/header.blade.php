@@ -66,9 +66,6 @@
                                     <ul class="pb-2">
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
-                                                href="{{ route('product') }}">Shop Single</a></li>
-                                        <li class="my-3"><a
-                                                class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"
                                                 href="single-product-configurable.html">Shop Variable</a></li>
                                         <li class="my-3"><a
                                                 class="font-normal text-base capitalize text-dark tracking-wide block hover:text-secondary transition-all"

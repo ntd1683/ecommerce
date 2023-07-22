@@ -64,7 +64,7 @@ Route::get('/shop-grid-left-sidebar', [PageController::class, 'shopGridLeftSideB
 Route::get('/check-out', [PageController::class, 'checkOut'])->name('check-out');
 Route::get('/wish-list', [PageController::class, 'wishList'])->name('wish-list');
 Route::get('/frequently-asked-questions', [PageController::class, 'frequentlyAskedQuestions'])->name('frequently-asked-questions');
-Route::get('/product', [PageController::class, 'product'])->name('product');
+Route::get('/product/{product}', [ProductController::class, 'show'])->name('product.show');
 
 //Ajax
 Route::prefix('ajax')->name('ajax.')->group(function () {

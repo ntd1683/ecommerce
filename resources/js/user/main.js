@@ -2,6 +2,7 @@ import $ from 'jquery';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import '../libraries/password'
+import magnificPopup from 'magnific-popup'
 
 $(function() {
     $(document).on("change",".uploadFile", function()
@@ -541,7 +542,6 @@ var Nav = new Swiper(".gallery-nav .swiper-container", {
 
 var gallery = new Swiper(".gallery .swiper-container", {
     modules: [Navigation, Pagination],
-    spaceBetween: 1,
     spaceBetween: 0,
     loop: false,
     navigation: false,
@@ -793,14 +793,14 @@ $(".count").each(function () {
     });
 });
 
-$(".play-vedio").magnificPopup({
-    disableOn: 700,
-    type: "iframe",
-    mainClass: "mfp-fade",
-    removalDelay: 160,
-    preloader: true,
-    fixedContentPos: true,
-});
+// $(".play-vedio").magnificPopup({
+//     disableOn: 700,
+//     type: "iframe",
+//     mainClass: "mfp-fade",
+//     removalDelay: 160,
+//     preloader: true,
+//     fixedContentPos: true,
+// });
 
 /*---------------------------------
       Scroll Up

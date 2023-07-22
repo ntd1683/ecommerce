@@ -299,10 +299,6 @@
     }
 }
 
-.before\:empty::before {
-    content: "";
-}
-
 .before\:transform::before {
     transform: var(--tw-transform);
 }
@@ -337,19 +333,15 @@
     background-color: rgb(31 34 38/var(--tw-bg-opacity));
 }
 
-.custom-tab-nav .active a {
-    --tw-text-opacity: 1;
-    color: rgb(252 101 57/var(--tw-text-opacity));
-}
-
 .custom-tab-nav li.active a:before {
     width: 100%;
 }
 
-.shop-tab-nav .active {
-    --tw-text-opacity: 1;
-    @apply bg-primary;
-    color: #FFFFFF;
+.custom-tab-nav a:hover::before {
+    left: 0px;
+    right: auto;
+    width: 100%;
+    transition: width 0.3s ease-in;
 }
 
 .checkbox:checked + label::before {

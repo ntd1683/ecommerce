@@ -12,100 +12,82 @@
                         <div class="gallery mb-6">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper w-">
-                                    <div class="swiper-slide">
-                                        <img src="{{ asset('images/user/product1.webp') }}" alt="product image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="{{ asset('images/user/product1.webp') }}" alt="product image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="{{ asset('images/user/product1.webp') }}" alt="product image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="{{ asset('images/user/product1.webp') }}" alt="product image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="{{ asset('images/user/product1.webp') }}" alt="product image">
-                                    </div>
+                                    @forelse($product->productImages()->get() as $image)
+                                        <div class="swiper-slide">
+                                            @if($image->type == '1')
+                                                <img src="{{ $image->link_image }}" alt="{{ __('product image') }}">
+                                            @elseif($image->type == '0')
+                                                <img src="{{ Storage::url($image->link_image) }}" alt="{{ __('product image') }}">
+                                            @endif
+                                        </div>
+                                    @empty
+                                            <img src="https://app.moduncomputer.com//Assets/Templates/Admin/img/no_image.png" alt="{{ __('Image None Available') }}">
+                                    @endforelse
                                 </div>
                             </div>
 
                         </div>
 
-                        <div class="gallery-nav relative">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)">
-                                            <img src="{{ asset('images/user/service2.webp') }}" alt="product image">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)">
-                                            <img src="{{ asset('images/user/service1.webp') }}" alt="product image">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)">
-                                            <img src="{{ asset('images/user/service2.webp') }}" alt="product image">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)">
-                                            <img src="{{ asset('images/user/service1.webp') }}" alt="product image">
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)">
-                                            <img src="{{ asset('images/user/service3.webp') }}" alt="product image">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- If we need pagination -->
-                            <!-- <div class="swiper-pagination"></div> -->
-                            <div class="swiper-buttons">
-                                <div
-                                    class="swiper-button-prev right-auto left-4  w-8 h-8 rounded-full  border border-solid border-gray-500 text-sm text-dark opacity-100 transition-all hover:text-orange-500 hover:border-orange-500">
-                                    <i class="ion-chevron-left"></i>
-                                </div>
-                                <div
-                                    class="swiper-button-next left-auto right-4  w-8 h-8 rounded-full  border border-solid border-gray-500 text-sm text-dark opacity-100 transition-all hover:text-orange-500 hover:border-orange-500">
-                                    <i class="ion-chevron-right"></i>
-                                </div>
-                            </div>
-                        </div>
+{{--                        <div class="gallery-nav relative">--}}
+{{--                            <div class="swiper-container">--}}
+{{--                                <div class="swiper-wrapper">--}}
+{{--                                    @forelse($product->productImages()->get() as $image)--}}
+
+{{--                                        <div class="swiper-slide">--}}
+{{--                                            @if($image->type == '1')--}}
+{{--                                                <a href="javascript:void(0)">--}}
+{{--                                                    <img src="{{ $image->link_image }}" alt="{{ __('product image') }}">--}}
+{{--                                                </a>--}}
+{{--                                            @elseif($image->type == '0')--}}
+{{--                                                <a href="javascript:void(0)">--}}
+{{--                                                    <img src="{{ Storage::url($image->link_image) }}" alt="{{ __('product image') }}">--}}
+{{--                                                </a>--}}
+{{--                                            @endif--}}
+{{--                                        </div>--}}
+{{--                                    @empty--}}
+{{--                                        <img src="https://app.moduncomputer.com//Assets/Templates/Admin/img/no_image.png" alt="{{ __('Image None Available') }}">--}}
+{{--                                    @endforelse--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <!-- If we need pagination -->--}}
+{{--                            <!-- <div class="swiper-pagination"></div> -->--}}
+{{--                            <div class="swiper-buttons">--}}
+{{--                                <div--}}
+{{--                                    class="swiper-button-prev right-auto left-4  w-8 h-8 rounded-full  border border-solid border-gray-500 text-sm text-dark opacity-100 transition-all hover:text-orange-500 hover:border-orange-500">--}}
+{{--                                    <i class="ion-chevron-left"></i>--}}
+{{--                                </div>--}}
+{{--                                <div--}}
+{{--                                    class="swiper-button-next left-auto right-4  w-8 h-8 rounded-full  border border-solid border-gray-500 text-sm text-dark opacity-100 transition-all hover:text-orange-500 hover:border-orange-500">--}}
+{{--                                    <i class="ion-chevron-right"></i>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="font-medium text-2xl capitalize">Airp Variable product</h3>
+                    <h3 class="font-medium text-2xl capitalize">{{ $product->name }}</h3>
                     <h5 class="font-bold text-md leading-none text-orange-500 my-3">
-                        <del class="font-normal text-sm mr-1 inline-block">$110.00</del>
-                        $130.00
+                        @if($product->special_products)
+                            <del class="font-normal text-sm mr-1 inline-block">VNĐ {{ number_shorten($product->special_products) }}</del>
+                        @endif
+                        VNĐ {{ number_shorten($product->price) }}
                     </h5>
-                    <div class="mb-3 text-base">Vendor:<span> Vendor 3 </span></div>
-                    <div class="mb-3 text-base">Type: <span> Type 3 </span></div>
-                    <div class="mb-3 text-base "><span>Availability:</span> <span class="font-semibold text-red-600">9 left in stock</span>
+                    <div class="mb-3 text-base">{{ __('Category') }}:<span> {{ $product->category }} </span></div>
+                    <div class="mb-3 text-base">{{ __('Unit') }}: <span> {{ $product->unit }} </span></div>
+                    <div class="mb-3 text-base "><span>{{ __('Availability') }}:</span> <span class="font-semibold text-red-600">{{ number_shorten($product->quantity) }} {{ __('left in stock') }}</span>
                     </div>
-                    <p class="mb-8 text-base">There are many variations of passages of Lorem Ipsum available, but the
-                        majority have suffered alteration in some form, by injected humour, or randomised words which
-                        don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need
-                        to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-
                     <div>
-
-
                         <div class="flex flex-wrap items-center mb-6 text-base">
-                            <span class="mr-8">Size:</span>
+                            <span class="mr-8">{{ __('Size') }}:</span>
                             <form class="size-swatch" action="#">
                                 <ul class="flex flex-wrap">
                                     <li class="mx-1">
                                         <input class="hidden opacity-0" type="radio" name="radio-group" id="size1">
                                         <label
                                             class="py-2 px-2 leading-none text-sm flex items-center justify-center transition-all bg-gray-300 cursor-pointer capitalize"
-                                            for="size1">S</label>
+                                            for="size1">G</label>
                                     </li>
 
                                     <li class="mx-1">
@@ -113,70 +95,11 @@
                                                checked>
                                         <label
                                             class="py-2 px-2 leading-none text-sm flex items-center justify-center transition-all bg-gray-300 cursor-pointer capitalize"
-                                            for="size2">M</label>
-                                    </li>
-                                    <li class="mx-1">
-                                        <input class="hidden opacity-0" type="radio" name="radio-group" id="size3">
-                                        <label
-                                            class="py-2 px-2 leading-none text-sm flex items-center justify-center transition-all bg-gray-300 cursor-pointer capitalize"
-                                            for="size3">L</label>
-                                    </li>
-
-                                    <li class="mx-1">
-                                        <input class="hidden opacity-0" type="radio" name="radio-group" id="size4">
-                                        <label
-                                            class="py-2 px-2 leading-none text-sm flex items-center justify-center transition-all bg-gray-300 cursor-pointer capitalize"
-                                            for="size4">XL</label>
-                                    </li>
-
-                                    <li class="mx-1">
-                                        <input class="hidden opacity-0" type="radio" name="radio-group" id="size5">
-                                        <label
-                                            class="py-2 px-2 leading-none text-sm flex items-center justify-center transition-all bg-gray-300 cursor-pointer capitalize"
-                                            for="size5">XXL</label>
+                                            for="size2">KG</label>
                                     </li>
                                 </ul>
                             </form>
                         </div>
-
-                        <div class="flex flex-wrap items-center  mb-6 text-base">
-                            <span class="mr-6">Color:</span>
-                            <form action="#" class="colors-swatch">
-                                <ul class="flex flex-wrap">
-                                    <li class="mx-1">
-                                        <input class="hidden opacity-0 " type="radio" checked name="radio-group"
-                                               id="color1">
-                                        <label for="color1"
-                                               class="w-7 h-7 rounded-full text-sm flex items-center justify-center transition-all relative bg-indigo-800 cursor-pointer capitalize"></label>
-                                    </li>
-
-                                    <li class="mx-1">
-                                        <input class="hidden opacity-0" type="radio" name="radio-group" id="color2">
-                                        <label for="color2"
-                                               class="w-7 h-7 rounded-full text-sm flex items-center justify-center transition-all relative bg-pink-600 cursor-pointer capitalize"></label>
-                                    </li>
-                                    <li class="mx-1">
-                                        <input class="hidden opacity-0" type="radio" name="radio-group" id="color3">
-                                        <label for="color3"
-                                               class="w-7 h-7 rounded-full text-sm flex items-center justify-center transition-all relative bg-red-600 cursor-pointer capitalize"></label>
-                                    </li>
-
-                                    <li class="mx-1">
-                                        <input class="hidden opacity-0" type="radio" name="radio-group" id="color4">
-                                        <label for="color4"
-                                               class="w-7 h-7 rounded-full text-sm flex items-center justify-center transition-all relative bg-green-500 cursor-pointer capitalize"></label>
-                                    </li>
-
-                                    <li class="mx-1">
-                                        <input class="hidden opacity-0" type="radio" name="radio-group" id="color5">
-                                        <label for="color5"
-                                               class="w-7 h-7 rounded-full text-sm flex items-center justify-center transition-all relative bg-yellow-500 cursor-pointer capitalize"></label>
-                                    </li>
-                                </ul>
-                            </form>
-                        </div>
-
-
                         <div class="mb-8">
                             <div class="flex flex-wrap items-center mt-8">
                                 <div class="flex count border border-solid border-gray-300 p-2 h-11">
@@ -188,7 +111,7 @@
                                 <div class="ml-2 sm:ml-8">
                                     <button
                                         class="bg-primary leading-none py-4 px-5 md:px-8 font-normal text-sm h-11 text-white transition-all hover:bg-secondary">
-                                        Add to Cart
+                                        {{ __('Add to Cart') }}
                                     </button>
                                 </div>
                                 <a href="#" class="text-md ml-8"><i class="icon-heart"></i></a>
@@ -227,35 +150,18 @@
                 <div class="border border-solid border-gray-300 p-8">
                     <ul class="custom-tab-nav flex flex-wrap items-center mb-10 -mx-5 -my-1 ">
                         <li class="mx-5 my-1"><a
-                                class="pb-3 leading-none capitalize transition-all text-semibold hover:text-secondary text-xl sm:text-lg before:absolute before:left-auto before:right-0 before:bottom-0 before:w-0 before:h-2px before:empty before:bg-primary relative before:transition-all ease-out"
-                                href="#description">Description</a></li>
+                                class="pb-3 leading-none capitalize transition-all font-semibold hover:text-secondary text-xl sm:text-lg before:absolute before:left-auto before:right-0 before:bottom-0 before:w-0 before:h-[2px] before:empty before:bg-primary relative before:transition-all ease-out"
+                                href="#description">{{ __('Description') }}</a></li>
                         <li class="mx-5 my-1"><a
-                                class="pb-3 leading-none capitalize transition-all hover:text-secondary text-xl sm:text-lg before:absolute before:left-auto before:right-0 before:bottom-0 before:w-0 before:h-2px before:empty before:bg-secondary relative before:transition-all ease-out"
-                                href="#product-details">Product Details</a></li>
+                                class="pb-3 leading-none capitalize transition-all font-semibold hover:text-secondary text-xl sm:text-lg before:absolute before:left-auto before:right-0 before:bottom-0 before:w-0 before:h-[2px] before:empty before:bg-primary relative before:transition-all ease-out"
+                                href="#product-details">{{ __('Product Details') }}</a></li>
                         <li class="mx-5 my-1"><a
-                                class="pb-3 leading-none capitalize transition-all hover:text-secondary text-xl sm:text-lg before:absolute before:left-auto before:right-0 before:bottom-0 before:w-0 before:h-2px before:empty before:bg-secondary relative before:transition-all ease-out"
-                                href="#review">Reviews</a></li>
+                                class="pb-3 leading-none capitalize transition-all font-semibold hover:text-secondary text-xl sm:text-lg before:absolute before:left-auto before:right-0 before:bottom-0 before:w-0 before:h-[2px] before:empty before:bg-primary relative before:transition-all ease-out"
+                                href="#review">{{ __('Reviews') }}</a></li>
                     </ul>
                     <div id="description" class="custom-tab-content">
                         <div>
-                            <p class="mb-5 text-base ">There are many variations of passages of Lorem Ipsum available,
-                                but the majority have suffered alteration in some form, by injected humour, or
-                                randomised words which don't look even slightly believable. If you are going to use a
-                                passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                                the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat
-                                predefined chunks as necessary, making this the first true generator on the Internet. It
-                                uses a dictionary of over 200 Latin words, combined with a handful of model sentence
-                                structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is
-                                therefore always free from repetition, injected humour, or non-characteristic words
-                                etc.</p>
-                            <p class=" text-base ">On the other hand, we denounce with righteous indignation and dislike
-                                men who are so beguiled and demoralized by the charms of pleasure of the moment, so
-                                blinded by desire, that they cannot foresee the pain and trouble that are bound to
-                                ensue; and equal blame belongs to those who fail in their duty through weakness of will,
-                                which is the same as saying through shrinking from toil and pain. These cases are
-                                perfectly simple and easy to distinguish. In a free hour, when our power of choice is
-                                untrammelled and when nothing prevents our being able to do what we like best, every
-                                pleasure is to be welcomed and every pain avoided.</p>
+                            {!! $product->description !!}
                         </div>
                     </div>
 
@@ -264,19 +170,12 @@
                             <div class="single-product-desc">
                                 <div class="product-anotherinfo-wrapper text-base">
                                     <ul>
-                                        <li class="mb-4"><span class="font-semibold w-28 inline-block">Weight</span> 400
-                                            g
+                                        <li class="mb-4"><span class="font-semibold w-28 inline-block">{{ __('Shop') }}</span> {{ $product->user()->first()->name }}
                                         </li>
-                                        <li class="mb-4"><span class="font-semibold w-28 inline-block">Dimensions</span>10
-                                            x 10 x 15 cm
+                                        <li class="mb-4"><span class="font-semibold w-28 inline-block">{{ __('Category') }}</span> {{ $product->category }}
                                         </li>
-                                        <li class="mb-4"><span class="font-semibold w-28 inline-block">Materials</span>
-                                            60% cotton, 40% polyester
-                                        </li>
-                                        <li class="mb-4">
-                                            <span class="font-semibold w-28 inline-block">Other Info</span> American
-                                            heirloom jean shorts
-                                            pug seitan letterpress
+                                        <li class="mb-4"><span class="font-semibold w-28 inline-block">{{ __('Price') }}</span>
+                                            {{ number_shorten($product->price) }} VNĐ / {{ $product->unit }}
                                         </li>
                                     </ul>
                                 </div>

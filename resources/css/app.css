@@ -290,3 +290,7 @@
     @apply bg-primary;
     color: #FFFFFF;
 }
+
+.custom-tab-nav .active a {
+    @apply text-primary;
+}
