@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\OptionController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\CheckLogoutMiddleware;
 use App\Http\Middleware\CheckShopMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,8 @@ Route::group([
     Route::get('/', [HomepageController::class, '__invoke'])->name('index');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/user', [UserController::class, 'index'])->name('user.create');
+
 
 //product
     Route::resource('product', ProductController::class);
