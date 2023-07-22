@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomepageController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\DiscountController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
@@ -25,6 +26,9 @@ Route::group([
     Route::get('/', [HomepageController::class, '__invoke'])->name('index');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+//banner
+    Route::get('/banner', [BannerController::class, 'index'])->name('banner');
 
 //product
     Route::resource('product', ProductController::class);
