@@ -198,15 +198,15 @@
 
                         <div class="flex flex-wrap items-center justify-start mb-8">
                             <a href="#"
-                               class="text-md text-facebook hover:text-dark mr-10 leading-none transition relative before:absolute before:top-1/2  before:-translate-y-1/2 before:left-7 before:empty before:bg-gray-900 before:w-4 before:h-1px"><i
+                               class="text-md text-facebook hover:text-secondary mr-10 leading-none transition relative before:absolute before:top-1/2  before:-translate-y-1/2 before:left-7 before:empty before:bg-gray-900 before:w-4 before:h-1px"><i
                                     class="icon-social-facebook"></i></a>
                             <a href="#"
-                               class="text-md text-twitter hover:text-dark mr-10 leading-none transition relative before:absolute before:top-1/2  before:-translate-y-1/2 before:left-7 before:empty before:bg-gray-900 before:w-4 before:h-1px"><i
+                               class="text-md text-twitter hover:text-secondary mr-10 leading-none transition relative before:absolute before:top-1/2  before:-translate-y-1/2 before:left-7 before:empty before:bg-gray-900 before:w-4 before:h-1px"><i
                                     class="icon-social-twitter"></i></a>
                             <a href="#"
-                               class="text-md text-dribbble hover:text-dark mr-10 leading-none transition relative before:absolute before:top-1/2  before:-translate-y-1/2 before:left-7 before:empty before:bg-gray-900 before:w-4 before:h-1px"><i
+                               class="text-md text-dribbble hover:text-secondary mr-10 leading-none transition relative before:absolute before:top-1/2  before:-translate-y-1/2 before:left-7 before:empty before:bg-gray-900 before:w-4 before:h-1px"><i
                                     class="icon-social-instagram"></i></a>
-                            <a href="#" class="text-md text-pinterest hover:text-dark leading-none transition"><i
+                            <a href="#" class="text-md text-youtube hover:text-secondary leading-none transition"><i
                                     class="icon-social-youtube"></i></a>
                             <div>
                             </div>

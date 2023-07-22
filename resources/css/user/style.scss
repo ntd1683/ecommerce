@@ -367,7 +367,7 @@
     height: 0.5rem;
     width: 0.25rem;
     --tw-rotate: 45deg;
-    transform: var(--tw-transform);
+    transform: rotate(45deg);
     border-bottom-width: 2px;
     border-right-width: 2px;
     --tw-border-opacity: 1;
@@ -393,8 +393,7 @@
     height: 10px;
     position: absolute;
     top: 0.5rem;
-    --tw-rotate: -45deg;
-    transform: var(--tw-transform);
+    transform: rotate(-45deg);
     border-radius: 0px;
     border-left-width: 2px;
     border-bottom-width: 2px;
@@ -402,4 +401,39 @@
     --tw-border-opacity: 1;
     border-color: rgb(255 255 255/var(--tw-border-opacity));
     content: "";
+}
+
+.text-facebook {
+    --tw-text-opacity: 1;
+    color: rgb(59 89 153/var(--tw-text-opacity));
+}
+
+.text-twitter {
+    --tw-text-opacity: 1;
+    color: rgb(85 172 238/var(--tw-text-opacity));
+}
+
+.text-dribbble {
+    --tw-text-opacity: 1;
+    color: rgb(234 76 137/var(--tw-text-opacity));
+}
+
+.text-youtube {
+    --tw-text-opacity: 1;
+    color: rgb(189 8 28/var(--tw-text-opacity));
+}
+
+.hover\:text-facebook:hover {
+    --tw-text-opacity: 1;
+    color: rgb(59 89 153/var(--tw-text-opacity));
+}
+
+.hover\:text-twitter:hover {
+    --tw-text-opacity: 1;
+    color: rgb(85 172 238/var(--tw-text-opacity));
+}
+
+.hover\:text-instagram:hover {
+    --tw-text-opacity: 1;
+    color: rgb(195 42 163/var(--tw-text-opacity));
 }
