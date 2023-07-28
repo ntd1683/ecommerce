@@ -122,7 +122,7 @@
                                         href="{{ route('about-us') }}">About Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
-                                        href="{{ route('cart') }}">Cart Page</a></li>
+                                        href="{{ route('cart.index') }}">Cart Page</a></li>
                                 <li class="my-3"><a
                                         class="text-dark font-normal text-base capitalize transition-all hover:text-secondary"
                                         href="{{ route('check-out') }}">Checkout Page</a></li>

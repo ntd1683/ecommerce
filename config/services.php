@@ -31,7 +31,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'ghn' => [
-        'token' => env('GHN_TOKEN')
+        'token' => env('GHN_TOKEN'),
+        'shop_id' => env('GHN_SHOP_ID'),
+        'district' => env('GHN_SHOP_DISTRICT'),
+        'ward' => env('GHN_SHOP_WARD'),
     ],
 
 ];

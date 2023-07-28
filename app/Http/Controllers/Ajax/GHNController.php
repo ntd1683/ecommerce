@@ -124,4 +124,58 @@ class GHNController extends Controller
 
         return $this->successResponse($result, trans('Get Ward Successfully'));
     }
+
+    public function getFeeShip(Request $request)
+    {
+        $url = "https://online-gateway.ghn.vn/shiip/public-api/v2/shipping-order/fee";
+
+        $token = config('services.ghn.token');
+        $shopId = config('services.ghn.shop_id');
+        $district = config('services.ghn.district');
+
+        $district_id = $request->get('district');
+        $ward = $request->get('ward');
+
+        $price = $request->get('price');
+        $count = $request->get('count');
+// ... (your existing code)
+
+        $client = new Client();
+
+        $headers = [
+            'Content-Type' => 'application/json',
+            'Token' => $token,
+            'ShopId' => $shopId,
+        ];
+
+        $data = [
+            "from_district_id" => 1462,
+            "from_ward_code" => "21620",
+            "service_id" => 53320,
+            "service_type_id" => null,
+            "to_district_id" => 2194,
+            "to_ward_code" => $ward,
+            "height" => 50,
+            "length" => 20,
+            "weight" => $count,
+            "width" => 20,
+            "cod_failed_amount" => 2000,
+            "insurance_value" => $price,
+            "coupon" => null,
+        ];
+
+        $response = $client->post($url, [
+            'headers' => $headers,
+            'json' => $data,
+        ]);
+
+        $statusCode = $response->getStatusCode();
+        $data = $response->getBody()->getContents();
+
+        $decodedData = json_decode($data)->data;
+
+        $result = new Collection();
+        return $result;
+
+    }
 }

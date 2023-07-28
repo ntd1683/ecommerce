@@ -8,22 +8,25 @@ class CartController extends Controller
 {
     public function cartList()
     {
-        $cartItems = Cart::getContent();
-        return view('cart', compact('cartItems'));
+        $cartItems = \Cart::getContent();
+        return view('user.page.cart', compact('cartItems'));
     }
     public function addToCart(Request $request)
     {
         \Cart::add([
-            'id' => $request->id,
-            'name' => $request->name,
-            'price' => $request->price,
-            'quantity' => $request->quantity,
+            'id' => $request->get('id'),
+            'name' => $request->get('name'),
+            'price' => $request->get('price'),
+            'quantity' => $request->get('quantity'),
             'attributes' => array(
-                'image' => $request->image,
+                'unit' => $request->get('unit'),
+                'image' => $request->get('image'),
+                'typeImage' => $request->get('typeImage'),
+                'special_price' => $request->get('special_price'),
             )
         ]);
         session()->flash('success', 'Product is Added to Cart Successfully !');
-        return redirect()->route('cart.list');
+        return redirect()->route('cart.index');
     }
     public function updateCart(Request $request)
     {
@@ -37,18 +40,18 @@ class CartController extends Controller
             ]
         );
         session()->flash('success', 'Item Cart is Updated Successfully !');
-        return redirect()->route('cart.list');
+        return redirect()->route('cart.index');
     }
     public function removeCart(Request $request)
     {
         \Cart::remove($request->id);
         session()->flash('success', 'Item Cart Remove Successfully !');
-        return redirect()->route('cart.list');
+        return redirect()->route('cart.index');
     }
     public function clearAllCart()
     {
         \Cart::clear();
         session()->flash('success', 'All Item Cart Clear Successfully !');
-        return redirect()->route('cart.list');
+        return redirect()->route('cart.index');
     }
 }

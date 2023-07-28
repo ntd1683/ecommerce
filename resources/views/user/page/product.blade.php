@@ -101,22 +101,30 @@
                             </form>
                         </div>
                         <div class="mb-8">
-                            <div class="flex flex-wrap items-center mt-8">
-                                <div class="flex count border border-solid border-gray-300 p-2 h-11">
-                                    <button class="decrement flex-auto w-5 leading-none" aria-label="button">-</button>
-                                    <input type="number" min="1" max="100" step="1" value="1"
-                                           class="quantity__input text-sm flex-auto w-8 text-center focus:outline-none input-appearance-none">
-                                    <button class="increment flex-auto w-5 leading-none" aria-label="button">+</button>
-                                </div>
-                                <div class="ml-2 sm:ml-8">
-                                    <button
-                                        class="bg-primary leading-none py-4 px-5 md:px-8 font-normal text-sm h-11 text-white transition-all hover:bg-secondary">
-                                        {{ __('Add to Cart') }}
-                                    </button>
-                                </div>
+                                <form action="{{ route('cart.store') }}" method="post" class="flex flex-wrap items-center mt-8">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $product->id }}">
+                                    <input type="hidden" name="name" value="{{ $product->name }}">
+                                    <input type="hidden" name="unit" value="{{ $product->unit }}">
+                                    <input type="hidden" name="price" value="{{ $product->price }}">
+                                    <input type="hidden" name="special_price" value="{{ $product->special_price }}">
+                                    <input type="hidden" name="typeImage" value="{{ $product->productImages()->first()->type }}">
+                                    <input type="hidden" name="image" value="{{ $product->productImages()->first()->link_image }}">
+                                    <div class="flex count border border-solid border-gray-300 p-2 h-11">
+                                        <button type="button" class="decrement flex-auto w-5 leading-none" aria-label="button">-</button>
+                                        <input type="number" min="1" max="100" step="1" value="1" name="quantity"
+                                               class="quantity__input text-sm flex-auto w-8 text-center focus:outline-none input-appearance-none">
+                                        <button type="button" class="increment flex-auto w-5 leading-none" aria-label="button">+</button>
+                                    </div>
+                                    <div class="ml-2 sm:ml-8">
+                                        <button type="submit"
+                                            class="bg-primary leading-none py-4 px-5 md:px-8 font-normal text-sm h-11 text-white transition-all hover:bg-secondary">
+                                            {{ __('Add to Cart') }}
+                                        </button>
+                                    </div>
                                 <a href="#" class="text-md ml-8"><i class="icon-heart"></i></a>
                                 <a href="#" class="text-md ml-8"><i class="icon-refresh"></i></a>
-                            </div>
+                                </form>
                         </div>
 
                         <div class="flex flex-wrap items-center justify-start mb-8">

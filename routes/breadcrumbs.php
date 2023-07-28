@@ -31,7 +31,7 @@ Breadcrumbs::for('account', function ($trail) {
 // Cart
 Breadcrumbs::for('cart', function ($trail) {
     $trail->parent('home');
-    $trail->push(trans('Your Shopping Cart'), route('cart'));
+    $trail->push(trans('Your Shopping Cart'), route('cart.index'));
 });
 
 // Shop Grid left side bar

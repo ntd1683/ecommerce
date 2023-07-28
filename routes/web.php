@@ -60,7 +60,6 @@ Route::group([
 Route::get('/', [HomepageController::class, '__invoke'])->name('index');
 Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [PageController::class, 'contactUs'])->name('contact-us');
-Route::get('/cart', [PageController::class, 'cart'])->name('cart');
 Route::get('/shop-grid-left-sidebar', [PageController::class, 'shopGridLeftSideBar'])->name('shop-grid-left-sidebar');
 Route::get('/check-out', [PageController::class, 'checkOut'])->name('check-out');
 Route::get('/wish-list', [PageController::class, 'wishList'])->name('wish-list');
@@ -78,6 +77,7 @@ Route::prefix('ajax')->name('ajax.')->group(function () {
     Route::get('GHN/get-province', [GHNController::class, 'getProvinces'])->name('ghn.get-provinces');
     Route::get('GHN/get-district', [GHNController::class, 'getDistrict'])->name('ghn.get-district');
     Route::get('GHN/get-ward', [GHNController::class, 'getWard'])->name('ghn.get-ward');
+    Route::get('GHN/get-fee-ship', [GHNController::class, 'getFeeShip'])->name('ghn.get-fee-ship');
 
 //    Product Category
     Route::get('product/category', [AjaxProductCategoryController::class, '__invoke'])->name('product.category.index');
@@ -86,8 +86,10 @@ Route::prefix('ajax')->name('ajax.')->group(function () {
     Route::get('discount', [AjaxDiscountController::class, '__invoke'])->name('discount.index');
 });
 
-Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
-Route::post('cart', [CartController::class, 'addToCart'])->name('cart.store');
-Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
-Route::post('remove', [CartController::class, 'removeCart'])->name('cart.remove');
-Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
+Route::prefix('cart')->name('cart.')->group(function () {
+    Route::get('', [CartController::class, 'cartList'])->name('index');
+    Route::post('add', [CartController::class, 'addToCart'])->name('store');
+    Route::post('update-cart', [CartController::class, 'updateCart'])->name('update');
+    Route::post('remove', [CartController::class, 'removeCart'])->name('remove');
+    Route::post('clear', [CartController::class, 'clearAllCart'])->name('clear');
+});
